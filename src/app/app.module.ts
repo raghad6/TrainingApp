@@ -13,6 +13,7 @@ import { CreateToDoListComponent } from './create-to-do-list/create-to-do-list.c
 import { UniTraineesListComponent } from './uni-trainees-list/uni-trainees-list.component';
 import { TraineeAccessScreenComponent } from './trainee-access-screen/trainee-access-screen.component';
 import { TrianeeFinishedT } from './trianee-finished-t.h/trianee-finished-t.h.component';
+import { LoginPasswordCreationComponent } from './login-password-creation/login-password-creation.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TrianeeFinishedT } from './trianee-finished-t.h/trianee-finished-t.h.co
     CreateToDoListComponent,
     UniTraineesListComponent,
     TraineeAccessScreenComponent,
-    TrianeeFinishedT.HComponent
+    TrianeeFinishedT.HComponent,
+    LoginPasswordCreationComponent
   ],
   imports: [
     BrowserModule,
