@@ -12,6 +12,7 @@ import { CreateToDoListComponent } from './create-to-do-list/create-to-do-list.c
 import { UniTraineesListComponent } from './uni-trainees-list/uni-trainees-list.component';
 import { TraineeAccessScreenComponent } from './trainee-access-screen/trainee-access-screen.component';
 import { SignupComponent } from './signup/signup.component';
+import { TraineeReportComponent } from './trainee-report/trainee-report.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SignupComponent } from './signup/signup.component';
     CreateToDoListComponent,
     UniTraineesListComponent,
     TraineeAccessScreenComponent,
-    SignupComponent
+    SignupComponent,
+    TraineeReportComponent
     ],
     
   imports: [
