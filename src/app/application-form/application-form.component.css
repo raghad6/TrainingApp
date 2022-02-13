@@ -1,0 +1,83 @@
+body {
+  font-family: Calibri, Helvetica, sans-serif;
+  /* background-color: ; */
+}
+
+.header {
+  background-color: #046926;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding: 50px;
+  /* background-color: lightblue; */
+  /* background-color: #ffffffbe; */
+}
+
+input[type=text],
+input[type=number],
+input[type=file],
+input[type=email],
+input[type=date],
+input[type=password],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=file]:focus,
+input[type=date]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+  background-color: #046926;
+  outline: none;
+}
+
+div {
+  padding: 10px 0;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.butt-center {
+margin: 0;
+position: absolute;
+right: 50%;
+/* size: 70px; */
+justify-content: center;
+align-items: center;
+text-align: center;
+border:none;
+padding: 15px 32px;
+background-color: #4CAF50;
+color: white;
+font-size: medium;
+/* -ms-transform: translateY(-50%);
+transform: translateY(-50%); */
+
+}
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <form>
+
+    <div class="container">
+      <div class="header">
+      <h1> Application Form </h1>
+      <hr>
+      </div>
+
+      <label>
+        <b>First name :</b>
+      </label>
+      <input type="text" name="firstname" placeholder="First name" required />
+
+      <label>
+        <b>Last name :</b>
+      </label>
+      <input type="text" name="lastname" placeholder="Last name" required />
+
+      <label>
+        <b>Phone Number :</b>
+      </label>
+      <input type="text" name="country code" placeholder="Your phone number with country code" value="+970" required />
+
+      <label>
+        <b>ID Number :</b>
+      </label>
+      <input type="text" name="" placeholder="Student ID No " required />
+
+      <label for="email">
+        <b>Email :</b>
+      </label>
+      <input type="email" placeholder="Enter Your Email" name="email" required>
+
+       <label>
+        <b>Address :</b>
+       </label>
+       <input type="text" name="address" placeholder="Your address.." required />
+
+       <label>
+        <b>University :</b>
+      </label>
+      <input type="text" name="uni" placeholder="University name" required />
+
+      <label>
+        <b>Supervisor phone number :</b>
+      </label>
+      <input type="number" name="supno" placeholder="University Supervisor phone number" />
+
+      <label>
+        <b>Upload your Corona vaccination certificate :</b>
+      </label>
+      <input type="file"  name="file" placeholder="">
+
+      <label>
+        <b>Feild of study :</b>
+      </label>
+      <input type="text" name="feildofst" placeholder="" required />
+
+      <label>
+        <b>Expected day of graduation :</b>
+      </label>
+      <input type="date"  name="date" placeholder="" min="2022-01-01">
+
+      <label>
+        <b>Total average :</b>
+      </label>
+      <input type="text"  name="totalavg" placeholder="">
+
+      <div>
+        <label>
+          <b>The training is :</b>
+        </label><br>
+        <input type="radio" value="Mandatory" name="type" checked> Mandatory
+        <input type="radio" value="Optional" name="type"> Optional
+      </div><br> 
+
+      <label>
+        <b>Days and hours available for each day :</b>
+      </label><br>
+      <!-- <input type="text"  name="totalavg" placeholder=""> -->
+      <input type="checkbox" name="sat" value="sat">
+  <label for="sat"> <b>Saturday</b> <br> From <input type="time"> To <input type="time"> </label> <br>
+  <input type="checkbox" name="sun" value="sun">
+  <label for="sun"> <b>Sunday</b> <br> From <input type="time"> To <input type="time"> </label><br>
+  <input type="checkbox" name="mon" value="mon">
+  <label for="mon"> <b>Monday</b> <br> From <input type="time"> To <input type="time"> </label><br>
+  <input type="checkbox" name="tue" value="tue">
+  <label for="tue"> <b>Tuesday</b> <br> From <input type="time"> To <input type="time"> </label><br>
+  <input type="checkbox" name="wed" value="wed">
+  <label for="wed"> <b>Wednesdat</b> <br> From <input type="time"> To <input type="time"> </label><br>
+  <input type="checkbox" name="thu" value="thu" >
+  <label for="thu"> <b>Thursday</b> <br> From <input type="time"> To <input type="time"> </label> <br><br>
+
+  <label>
+    <b>Required training hours :</b>
+  </label>
+  <input type="text"  name="reqhours" placeholder="Required training hours..">
+
+  <label>
+    <b>Upload university request for training :</b>
+  </label>
+  <input type="file"  name="unireq" placeholder="">
+
+  <div>
+    <button type="submit" class="butt-center" ><b>Submit</b></button>
+  </div>
+    </div>
+  </form>
+</body>
+</html>
