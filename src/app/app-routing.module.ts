@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateToDoListComponent } from './create-to-do-list/create-to-do-list.component';
+import { FirstOpenComponent } from './first-open/first-open.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
@@ -12,6 +13,7 @@ import { UniProfileComponent } from './uni-profile/uni-profile.component';
 import { UniTraineesListComponent } from './uni-trainees-list/uni-trainees-list.component';
 
 const routes: Routes = [
+  { path: '' , component: FirstOpenComponent },
   { path :'login' , component: LoginComponent } ,
   { path :'SignUp' , component: SignupComponent } ,  
   { path: 'Create-todolist' , component: CreateToDoListComponent},

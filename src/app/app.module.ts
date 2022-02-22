@@ -13,6 +13,7 @@ import { UniTraineesListComponent } from './uni-trainees-list/uni-trainees-list.
 import { TraineeAccessScreenComponent } from './trainee-access-screen/trainee-access-screen.component';
 import { SignupComponent } from './signup/signup.component';
 import { TraineeReportComponent } from './trainee-report/trainee-report.component';
+import { FirstOpenComponent } from './first-open/first-open.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TraineeReportComponent } from './trainee-report/trainee-report.componen
     UniTraineesListComponent,
     TraineeAccessScreenComponent,
     SignupComponent,
-    TraineeReportComponent
+    TraineeReportComponent,
+    FirstOpenComponent
     ],
     
   imports: [
