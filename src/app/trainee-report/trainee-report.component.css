@@ -1,0 +1,62 @@
+.comming{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: #22c722;
+    border-radius: 25px;
+    border: 1px solid rgb(17, 226, 10);
+    cursor: pointer;
+
+  
+}
+
+
+    .leaving{
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background-color: #22c722;
+        border-radius: 25px;
+        border: 1px solid rgb(17, 226, 10);
+        cursor: pointer;
+
+    }
+
+        .submit{
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+            border-radius: 25px;
+            border: 1px solid rgb(17, 226, 10);
+            cursor: pointer;
+            text-align: center;
+
+
+          
+        }
+        .buttons::after {
+            
+                content: "";
+                clear: both;
+                display: table;
+              }
+              @media screen and (max-width: 300px) {
+                .comming, .leaving {
+                  width: 100%;
+                }
+              }
+              .comming, .leaving {
+                float: left;
+                width: 50%;
+              }
+              
+        
+        
+    

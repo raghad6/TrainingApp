@@ -8,6 +8,9 @@
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  border-radius: 25px;
+  border: 1px solid rgb(17, 226, 10);
+
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -16,13 +19,13 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 hr {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #11d31b;
   margin-bottom: 25px;
 }
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color: #f44336;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -30,6 +33,7 @@ button {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+  border-radius: 25px;
 }
 
 button:hover {
@@ -39,7 +43,7 @@ button:hover {
 /* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
-  background-color: #f44336;
+  background-color: #22c722;
 }
 
 /* Float cancel and signup buttons and add an equal width */

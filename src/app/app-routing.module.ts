@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'Trainer-profile' , component: TrainerProfileComponent},
   { path: 'Uni-profile' , component: UniProfileComponent},
   { path: 'Uni-trainees' , component: UniTraineesListComponent},
-  { path :'Trainee-report' , component: TraineeReportComponent } 
+  { path :'Trainee-report' , component: TraineeReportComponent } ,
 ];
 
 @NgModule({
