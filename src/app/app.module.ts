@@ -14,6 +14,8 @@ import { TraineeAccessScreenComponent } from './trainee-access-screen/trainee-ac
 import { SignupComponent } from './signup/signup.component';
 import { TraineeReportComponent } from './trainee-report/trainee-report.component';
 import { FirstOpenComponent } from './first-open/first-open.component';
+import { ApplicationFormComponent } from './application-form/application-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import { FirstOpenComponent } from './first-open/first-open.component';
     TraineeAccessScreenComponent,
     SignupComponent,
     TraineeReportComponent,
-    FirstOpenComponent
+    FirstOpenComponent,
+    ApplicationFormComponent
     ],
     
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

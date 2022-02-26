@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApplicationFormComponent } from './application-form/application-form.component';
 import { CreateToDoListComponent } from './create-to-do-list/create-to-do-list.component';
 import { FirstOpenComponent } from './first-open/first-open.component';
 import { LoginComponent } from './login/login.component';
@@ -23,7 +24,9 @@ const routes: Routes = [
   { path: 'Trainer-profile' , component: TrainerProfileComponent},
   { path: 'Uni-profile' , component: UniProfileComponent},
   { path: 'Uni-trainees' , component: UniTraineesListComponent},
-  { path :'Trainee-report' , component: TraineeReportComponent } 
+  { path :'Trainee-report' , component: TraineeReportComponent },
+  { path :'Application-Form' , component: ApplicationFormComponent } 
+
 ];
 
 @NgModule({
