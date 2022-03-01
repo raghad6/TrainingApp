@@ -6,7 +6,8 @@
 .responsive {
     width: 20%;
     height: auto;
-    position: initial;
+    float: left;
+    /* position: initial; */
     /* display: inline-block; */
 }
 
