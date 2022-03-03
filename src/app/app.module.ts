@@ -14,6 +14,10 @@ import { TraineeAccessScreenComponent } from './trainee-access-screen/trainee-ac
 import { SignupComponent } from './signup/signup.component';
 import { TraineeReportComponent } from './trainee-report/trainee-report.component';
 import { ComminghoursComponent } from './comminghours/comminghours.component';
+import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
+import { EvaluationScreenComponent } from './evaluation-screen/evaluation-screen.component';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -28,13 +32,16 @@ import { ComminghoursComponent } from './comminghours/comminghours.component';
     TraineeAccessScreenComponent,
     SignupComponent,
     TraineeReportComponent,
-    ComminghoursComponent
+    ComminghoursComponent,
+    EvaluatetraineeComponent,
+    EvaluationScreenComponent,
     ],
     
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    MatIconModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

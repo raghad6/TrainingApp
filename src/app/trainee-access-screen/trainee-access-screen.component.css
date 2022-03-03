@@ -1,0 +1,23 @@
+.btn-group button {
+    background-color: #649981;; 
+    border: 1px solid rgb(17, 226, 10);;
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    width: 50%; 
+    display: block; 
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+    
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-bottom: none; 
+  }
+  
+  .btn-group button:hover {
+    background-color: #17dd84;;
+  }

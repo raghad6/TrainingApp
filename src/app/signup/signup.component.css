@@ -19,7 +19,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 hr {
-  border: 1px solid #11d31b;
+  border: 1px solid rgb(17, 226, 10);
   margin-bottom: 25px;
 }
 
@@ -40,10 +40,10 @@ button:hover {
   opacity:1;
 }
 
-/* Extra styles for the cancel button */
+/* Extra styles for the signup button */
 .cancelbtn {
   padding: 14px 20px;
-  background-color: #22c722;
+  background-color: #649981;;
 }
 
 /* Float cancel and signup buttons and add an equal width */

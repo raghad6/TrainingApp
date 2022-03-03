@@ -1,0 +1,14 @@
+.hr{
+    width:50%;
+    text-align:left;
+    margin-left:0;
+}
+button{
+    background-color: #649981;
+    border-radius: 25px;
+    color: white;
+    border: rgb(17, 226, 10);;
+    float: right;
+
+
+}
