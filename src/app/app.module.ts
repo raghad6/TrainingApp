@@ -16,6 +16,7 @@ import { TraineeReportComponent } from './trainee-report/trainee-report.componen
 import { FirstOpenComponent } from './first-open/first-open.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

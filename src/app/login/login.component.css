@@ -1,7 +1,5 @@
-/* Bordered form */
 form {
-    border: 3px solid #f1f1f1;
-  }
+  border: 1px solid rgb(17, 226, 10);  }
   
   /* Full-width inputs */
   input[type=text], input[type=password] {
@@ -9,19 +7,22 @@ form {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(17, 226, 10);
     box-sizing: border-box;
+    border-radius: 25px;
   }
   
   /* Set a style for all buttons */
   button {
-    background-color: #04AA6D;
+    background-color: #22c722;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
+    border-radius: 25px;
+    font-size: large;
   }
   
   /* Add a hover effect for buttons */
@@ -34,23 +35,16 @@ form {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
-  }
-  
-  /* Center the avatar image inside this container */
-  .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
   }
   
-  /* Avatar image */
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
+  
   
   /* Add padding to containers */
   .container {
     padding: 16px;
+    border-radius: 25px;
+    text-align: center;
   }
   
   
