@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TraineeReportComponent implements OnInit {
 
+  popup = false
+  name = 'Angular'; 
+
   constructor() { }
 
   ngOnInit(): void {
