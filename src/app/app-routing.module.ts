@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateToDoListComponent } from './create-to-do-list/create-to-do-list.component';
 import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
 import { EvaluationScreenComponent } from './evaluation-screen/evaluation-screen.component';
+import { FinishedtraineesComponent } from './finishedtrainees/finishedtrainees.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
@@ -26,6 +27,9 @@ const routes: Routes = [
   { path :'Trainee-report' , component: TraineeReportComponent } ,
   { path :'evaluatetrainee' , component: EvaluatetraineeComponent } ,
   { path :'evaluationscreen' , component: EvaluationScreenComponent } ,
+  { path :'finishedtrainees' , component: FinishedtraineesComponent } ,
+
+
 
 
 

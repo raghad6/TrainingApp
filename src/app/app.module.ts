@@ -17,6 +17,7 @@ import { ComminghoursComponent } from './comminghours/comminghours.component';
 import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
 import { EvaluationScreenComponent } from './evaluation-screen/evaluation-screen.component';
 import {MatIconModule} from '@angular/material/icon';
+import { FinishedtraineesComponent } from './finishedtrainees/finishedtrainees.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {MatIconModule} from '@angular/material/icon';
     ComminghoursComponent,
     EvaluatetraineeComponent,
     EvaluationScreenComponent,
+    FinishedtraineesComponent,
     ],
     
   imports: [
