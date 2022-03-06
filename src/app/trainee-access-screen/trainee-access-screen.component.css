@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+.responsive {
+    width: 20%;
+    height: auto;
+    float: left;
+    /* position: initial; */
+    /* display: inline-block; */
+}
+
+.card {
+    /* margin-top: 0%; */
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 360px;
+    /* background-color: #efefef; */
+    border: none;
+    /* cursor: pointer; */
+    transition: all 0.5s
+}
+
+.allB {
+    /* display: inline-block; */
+    border-radius: 15px;
+    padding: 15px 35px;
+    width: 50%;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}

@@ -17,7 +17,8 @@ import { FirstOpenComponent } from './first-open/first-open.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatIconModule} from '@angular/material/icon';
+import { HeaderComponent } from './header/header.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,14 +33,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignupComponent,
     TraineeReportComponent,
     FirstOpenComponent,
-    ApplicationFormComponent
+    ApplicationFormComponent,
+    HeaderComponent
     ],
     
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

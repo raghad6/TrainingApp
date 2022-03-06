@@ -8,21 +8,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
 })
 export class ApplicationFormComponent implements OnInit {
 
-  Application = new FormGroup({
-    firstname: new FormControl(),
-  lastname: new FormControl(),
-  email: new FormControl(),
-  gender: new FormControl(),
-  isMarried: new FormControl(),
-  country: new FormControl()
-  })
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    console.log(this.Application.value);
-  }
+
 }

@@ -11,18 +11,29 @@
     margin: 0 auto;
 }
 
-#btn1{
-    font-size: 25px
+.firbut{
+    /* font-size: 25px;
+    border-radius: 25px; */
+    background: color #649981 ;
+    background-color:#649981 ;
+     border-radius: 25px; 
+    color: white;
+    width: 251px;
+        height: 58px;
+        font-size: 24px;
 }
 
 #btn2{
     font-size: 20px;
+    border-radius: 25px;
 }
 #btn3{
     font-size: 20px;
+    border-radius: 25px;
 }
 #btn4{
     font-size: 20px;
+    border-radius: 25px;
 }
 
 footer{

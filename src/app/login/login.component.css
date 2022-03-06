@@ -1,5 +1,5 @@
 form {
-  border: 1px solid rgb(17, 226, 10);  }
+  border: 1px solid #649981;  }
   
   /* Full-width inputs */
   input[type=text], input[type=password] {
@@ -7,14 +7,14 @@ form {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid rgb(17, 226, 10);
+    border: 1px solid rgb(17, 226, 10);;
     box-sizing: border-box;
     border-radius: 25px;
   }
   
   /* Set a style for all buttons */
   button {
-    background-color: #22c722;
+    background-color: #649981;;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

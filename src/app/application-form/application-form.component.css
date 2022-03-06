@@ -10,9 +10,7 @@ body {
   }
   
   .container {
-    padding: 50px;
-    /* background-color: lightblue; */
-    /* background-color: #ffffffbe; */
+    padding: 10px;
   }
   
   input[type=text],
