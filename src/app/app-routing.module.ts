@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ApplicationFormComponent } from './application-form/application-form.component';
+import { CertificateComponent } from './certificate/certificate.component';
 import { CreateToDoListComponent } from './create-to-do-list/create-to-do-list.component';
+import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
+import { EvaluationscreenComponent } from './evaluationscreen/evaluationscreen.component';
+import { FinishedtraineesComponent } from './finishedtrainees/finishedtrainees.component';
 import { FirstOpenComponent } from './first-open/first-open.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
@@ -10,6 +14,7 @@ import { TraineeAccessScreenComponent } from './trainee-access-screen/trainee-ac
 import { TraineeProfileComponent } from './trainee-profile/trainee-profile.component';
 import { TraineeReportComponent } from './trainee-report/trainee-report.component';
 import { TrainerProfileComponent } from './trainer-profile/trainer-profile.component';
+import { TrainertraineesComponent } from './trainertrainees/trainertrainees.component';
 import { UniProfileComponent } from './uni-profile/uni-profile.component';
 import { UniTraineesListComponent } from './uni-trainees-list/uni-trainees-list.component';
 
@@ -25,7 +30,15 @@ const routes: Routes = [
   { path: 'Uni-profile' , component: UniProfileComponent},
   { path: 'Uni-trainees' , component: UniTraineesListComponent},
   { path :'Trainee-report' , component: TraineeReportComponent },
-  { path :'Application-Form' , component: ApplicationFormComponent } 
+  { path :'Application-Form' , component: ApplicationFormComponent } ,
+  { path :'trainertrainees' , component: TrainertraineesComponent } ,
+  { path :'finishedtrainees' , component: FinishedtraineesComponent } ,
+  { path :'evaluatetrainee' , component: EvaluatetraineeComponent } ,
+  { path :'evaluationscreen' , component: EvaluationscreenComponent } ,
+  { path :'certificate' , component: CertificateComponent } ,
+
+
+
 
 ];
 

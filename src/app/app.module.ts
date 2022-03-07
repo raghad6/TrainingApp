@@ -18,7 +18,12 @@ import { ApplicationFormComponent } from './application-form/application-form.co
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
-import { HeaderComponent } from './header/header.component'
+import { HeaderComponent } from './header/header.component';
+import { TrainertraineesComponent } from './trainertrainees/trainertrainees.component';
+import { FinishedtraineesComponent } from './finishedtrainees/finishedtrainees.component';
+import { EvaluationscreenComponent } from './evaluationscreen/evaluationscreen.component';
+import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
+import { CertificateComponent } from './certificate/certificate.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +39,12 @@ import { HeaderComponent } from './header/header.component'
     TraineeReportComponent,
     FirstOpenComponent,
     ApplicationFormComponent,
-    HeaderComponent
+    HeaderComponent,
+    TrainertraineesComponent,
+    FinishedtraineesComponent,
+    EvaluationscreenComponent,
+    EvaluatetraineeComponent,
+    CertificateComponent
     ],
     
   imports: [
