@@ -1,0 +1,26 @@
+/* .header{
+    height: 100px;
+    background-image: url("../../assets/headerpic.jpg");
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+mat-icon{
+    position: fixed;
+} */
+
+
+header {
+    background-image: url("../../assets/header.jpg");
+    height: 80px;
+    /* filter: blur(3px);
+    -webkit-filter: blur(3px); */
+  }
+  .bg-text mat-icon {
+   font-size: large;
+   width: 30px;
+  }
