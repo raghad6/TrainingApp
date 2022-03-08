@@ -43,10 +43,10 @@
 
 
             <div>
-                <button class="btn btn-success twoB">Create To-Do List</button> &nbsp; &nbsp;&nbsp; &nbsp;
+                <button (click)="goToPage('Create-todolist')"  class="btn btn-success twoB">Create Task List</button> &nbsp; &nbsp;&nbsp; &nbsp;
 
-                <button class="btn btn-success twoB">My Trainees</button> <br><br><br>
-                <button class="btn  lastB">Log out</button>
+                <button (click)="goToPage('trainertrainees')" class="btn btn-success twoB">My Trainees</button> <br><br><br>
+                <button (click)="goToPage('login')" class="btn  lastB">Log out</button>
             </div>
             <br>
         </div>

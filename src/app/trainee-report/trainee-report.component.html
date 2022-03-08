@@ -3,19 +3,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <body>
+
+    <p>Add your skills and what you learnt today</p>
+   
     <div class="w3-container">
         <div class="w3-show-inline-block">
             <div class="w3-bar">
-                <form action="/html/tags/html_form_tag_action.cfm" method="post">
-                    <textarea name="comments" id="comments"
-                        style="width:92%;padding:2%;height:150px;font:36px/44px cursive;border:10px double yellowgreen;">
-                       </textarea><br>
-                    <input type="submit" value="Submit">
-                    <button class="w3-btn w3-black">Comming Time</button>
-                    <button class="w3-btn w3-teal">Leaving Time</button>
-                </form>
+                 <label > Notes :  </label> <br>
+                  <input class="notes">
+                    <br>
+                    <div class="buttons">
+                        <button type="button" class="comming" (click)="popup = true">Comming Time</button>
+                        <button type="button" class="leaving" (click)="popup = true">Leaving Time</button>
+                        <button type="submit" class="submit"> Submit </button>
+                    </div>
+    
+                </div>
+    
+        </div>
+    </div>
+<div class="overlay" *ngIf="popup">
+    <div class="popup">
+        <h4>pick your comming time </h4>
+        <a class="close" (click)="popup = false">&times;</a>
+        <div class="content">
+            <br>
+            <div class="container">
+                <div class="row">
+                    <label for="sat"> From <input type="time"><br> <br>To  <input type="time"> </label> <br><br> <br>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
 </body>
-</html>
