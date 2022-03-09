@@ -13,38 +13,47 @@
     font-size: 24px;
 }
 
+.cards-container {
+    column-count: 2;
+    width: 90%;
+    margin: 0 auto; 
+    float: none; 
+    margin-top: 10%;
+    padding-right:0;
+    padding-left:0;
+    column-gap: 0;
+}
+
+.card{
+    height: 40%;
+    padding-right:0;
+    padding-left:0;
+}
 img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-}
-
-.card {
-    height: 40%;
+    width: 35%;
 }
   
 #form{
     border-top-left-radius: 10px;
-    width: 60%;
 }
-#trainer{
-    border-bottom-right-radius:10px;
-    width: 60%;
-}
-#trainee{
-    border-bottom-left-radius:10px;
-    width: 60%;
 
+#trainer{
+    border-bottom-left-radius:10px;
+}
+
+#trainee{
+    border-top-right-radius:10px;
 }
 #Uni{
-    border-top-right-radius:10px;
-    width: 60%;
-
+    border-bottom-right-radius:10px;
 }
 .card-text{
-font-size: 20px;
-padding: 2px;
+    font-size: 19px;
+    text-align: center;
+    padding-top: 33px;
 }
 
 footer{

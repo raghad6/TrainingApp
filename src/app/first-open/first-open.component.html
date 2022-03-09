@@ -5,62 +5,46 @@
 
 <app-header></app-header>
 
-<div class="main">
-<div class="row">
-    <div class="col-sm-6">
-        <div class="card" id="form" (click)="goToPage('Application-Form')">
-            <div class="card-body">
-                <div class="img">
-                    <img src=".././../assets/1.png">
-                </div>
-                <p class="card-text">Applied Forms</p>
+<div class="cards-container">
+    <div class="card" id="form" (click)="goToPage('Application-Form')">
+        <div class="card-body">
+            <div class="img">
+                <img src=".././../assets/1.png">
             </div>
+            <p class="card-text">Applied Forms</p>
         </div>
     </div>
 
-    <div class="col-sm-6">
-        <div class="col-md-6">
-            <div class="card" id="trainer">
-                <div class="card-body">
-                    <div class="img">
-                        <img src=".././../assets/2.png">
-                    </div>
-                    <p class="card-text"> Trainer</p>
-                </div>
+    <div class="card" id="trainer" (click)="goToPage('login')">
+        <div class="card-body">
+            <div class="img">
+                <img src=".././../assets/2.png">
             </div>
-        </div>    
+            <p class="card-text"> Trainer</p>
+        </div>
+    </div>
+
+    <div class="card" id="trainee" (click)="goToPage('login')">
+        <div class="card-body">
+            <div class="img">
+                <img src=".././../assets/3.png">
+            </div>
+            <p class="card-text"> Trainee</p>
+        </div>
+    </div>
+
+    <div class="card" id="Uni" (click)="goToPage('login')">
+        <div class="card-body">
+            <div class="img">
+                <img src=".././../assets/4.png">
+            </div>
+            <p class="card-text"> University</p>
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-6">
-        <div class="col-md-6">
-            <div class="card" id="trainee">
-                <div class="card-body">
-                    <div class="img">
-                        <img src=".././../assets/3.png">
-                    </div>
-                    <p class="card-text"> Trainee</p>
-                </div>
-            </div>
-        </div>    
-    </div>
 
-    <div class="col-sm-6">
-        <div class="col-md-6">
-            <div class="card" id="Uni">
-                <div class="card-body">
-                    <div class="img">
-                        <img src=".././../assets/4.png">
-                    </div>
-                    <p class="card-text"> University</p>
-                </div>
-            </div>
-        </div>    
-    </div>
-</div>
-</div>
-
+ 
 <footer>
     <p>&copy; 2022 Jawwal Company</p>
 </footer>
