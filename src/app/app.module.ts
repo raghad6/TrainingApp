@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +23,8 @@ import { TrainertraineesComponent } from './trainertrainees/trainertrainees.comp
 import { FinishedtraineesComponent } from './finishedtrainees/finishedtrainees.component';
 import { EvaluationscreenComponent } from './evaluationscreen/evaluationscreen.component';
 import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
-import { CertificateComponent } from './certificate/certificate.component'
+import { CertificateComponent } from './certificate/certificate.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,9 @@ import { CertificateComponent } from './certificate/certificate.component'
     BrowserAnimationsModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

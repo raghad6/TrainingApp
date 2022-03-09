@@ -9,7 +9,7 @@
   border: none;
   background: #f1f1f1;
   border-radius: 25px;
-  border: 1px solid rgb(17, 226, 10);
+  border: 1px solid rgb(60, 117, 58);
 
 }
 
@@ -19,7 +19,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 hr {
-  border: 1px solid rgb(17, 226, 10);
+  border: 1px solid rgb(60, 117, 58);
   margin-bottom: 25px;
 }
 

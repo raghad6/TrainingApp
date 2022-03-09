@@ -1,16 +1,17 @@
+<app-header></app-header>
 <div>
     <div class=" container mt-4 mb-4 p-3 d-flex justify-content-center ">
         <div class="card container d-flex flex-column align-items-center ">
 
             <button class="btn btn-outline-success " style="margin-left: 50%; border: 0px; background-color: none; ">
-          <mat-icon>notifications</mat-icon>
-        </button>
+                <mat-icon>notifications</mat-icon>
+            </button>
 
             <img style="display: inline-block;" class="responsive" src="assets/Favatar.png " />
 
             <button class="btn cameB">
-              <mat-icon>camera_alt</mat-icon>
-              <!-- <span style="font-size: small;display: block; ">
+                <mat-icon>camera_alt</mat-icon>
+                <!-- <span style="font-size: small;display: block; ">
                 Change Profile Picture
               </span> -->
             </button><br>
@@ -34,18 +35,17 @@
                 <br>
                 <p style="display: inline-block;">Turn On/Off Notifications &nbsp; &nbsp; &nbsp; &nbsp;</p>
                 <label class="switch">
-            <input  class="btn btn-outline-success" type="checkbox" checked>
-            <span class="slider round"></span>
-          </label>
+                    <input class="btn btn-outline-success" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
                 <br><br><br>
             </div>
-
-
-
             <div>
-                <button (click)="goToPage('ToDolist')"  class="btn btn-success twoB">My Task List</button> &nbsp; &nbsp;&nbsp; &nbsp;
+                <button (click)="goToPage('ToDolist')" class="btn btn-success twoB">My Task List</button> &nbsp;
+                &nbsp;&nbsp; &nbsp;
 
-                <button (click)="goToPage('Trainee-report')" class="btn btn-success twoB">Write Notes</button> <br><br><br>
+                <button (click)="goToPage('Trainee-report')" class="btn btn-success twoB">Write Notes</button>
+                <br><br><br>
                 <button (click)="goToPage('login')" class="btn  lastB">Log out</button>
             </div>
             <br>

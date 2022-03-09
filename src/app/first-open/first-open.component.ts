@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-first-open',
@@ -8,9 +9,13 @@ import { Router } from '@angular/router';
 })
 export class FirstOpenComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  title = 'angulartitle';
+  
+  constructor(private router: Router,
+    private titleService:Title) {
+     }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   goToPage(pageName:string){
