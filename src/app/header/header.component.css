@@ -1,34 +1,3 @@
-/* 
-header {
-    background-image: url("../../assets/headerwall.jpg");
-    height: 50px;
-     filter: blur(1px);
-    -webkit-filter: blur(3px);
-  }
-  .bg-text mat-icon {
-   font-size: large;
-   width: 30px;
-  } */
-  
-  /* * {
-    box-sizing: border-box;
-  }
-  
-  .bg-image {
-    background-image: url("../../assets/headerwall.jpg");
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    height: 30%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  mat-icon {
-    font-size: x-large;
-    width: 30px;
-   }  */
-
    @import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
@@ -62,6 +31,11 @@ p {
   padding: 0;
 }
 
+mat-icon {
+  font-size: x-large;
+  width: 30px;
+ }  
+ 
 .flex { /*Flexbox for containers*/
   display: flex;
   justify-content: center;

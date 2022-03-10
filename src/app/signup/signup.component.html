@@ -1,5 +1,5 @@
 <app-header></app-header>
-<form action="action_page.php" style="border:1px solid #ccc">
+<form style="border:1px solid #ccc">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
@@ -17,7 +17,7 @@
 
     <div class="clearfix">
       <button (click)="goToPage('login')" type="button" class="signupbtn">SignUp</button>
-      <button type="submit" class="cancelbtn">Cancel</button>
+      <button (click)="goToPage('login')" type="submit" class="cancelbtn">Cancel</button>
     </div>
   </div>
 </form>

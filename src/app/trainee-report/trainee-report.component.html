@@ -10,13 +10,14 @@
     <div class="w3-container">
         <div class="w3-show-inline-block">
             <div class="w3-bar">
-                 <label > Notes :  </label> <br>
+                 <label style="font-size: 20px;" ><b>Notes : </b>  </label> <br>
                   <input class="notes">
                     <br>
-                    <div class="buttons">
+                    <div class="buttons" style="margin-top: 10%;">
                         <button type="button" class="comming" (click)="popup = true">Comming Time</button>
                         <button type="button" class="leaving" (click)="popup = true">Leaving Time</button>
-                        <button type="submit" class="submit"> Submit </button>
+                        <button (click)="goToPage('Trainee-profile')" type="submit" class="submit btn-success" style="color: black;"> Submit </button>
+
                     </div>
     
                 </div>

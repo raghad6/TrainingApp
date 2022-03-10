@@ -1,15 +1,3 @@
-container {
-  padding: 50px;
-  /* background-color: lightblue; */
-  /* background-color: #ffffffbe; */
-}
-
-.header {
-  background-color: #046926;
-  padding: 30px 40px;
-  color: white;
-  text-align: center;
-}
 
 .box {
   width: 300px;
@@ -25,7 +13,6 @@ container {
   margin: 2% auto;
   position: absolute;
   right: 50%;
-  /* size: 70px; */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -34,50 +21,17 @@ container {
   background-color: #4CAF50;
   color: white;
   font-size: medium;
-  /* -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
-  
   }
 
 
-/* tiny reset */
-/* html, body {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-} */
-/* body */
-/* body{
-  background: #4d244e;
-  font-family: sans-serif;
-  border-top: 5px solid #aa8e8d;
-} */
-/* title */
-/* h1{
-  color: #aa8e8d;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 900;
-} */
-
-/* tasks */
 .tasks{
-  /* width: 300px; */
-  /* height: 405px; */
-  /* position: absolute; */
-  /* top: 20%; */
-  /* left: 0px;  */
-  /* right: 0px; */
-  padding: 30px 40px;
+  padding: 14px 10px;
   margin: 0.2% auto;
 }
 
-/* input[type=checkbox] {
-  display: none;
-  display: block;
-} */
-
+input{
+  width: 30px;
+}
 label{
   background: white;
   height: 69px;
@@ -87,39 +41,25 @@ label{
   color: black;
   text-transform: capitalize;
   font-weight: 900;
-  font-size: 11px;
-  /* letter-spacing: 1px; */
+  font-size: 20px;
   text-indent: 5px;
-  /* cursor: pointer; */
   transition: all 0.7s ease;
   position: relative;
   padding: 2px;
-  /* box-sizing: border-box; */
-  /* -moz-box-sizing: border-box; */
-  /* -webkit-box-sizing: border-box; */
 }
 
 label h2 span{
   display: block;
-  font-size: 12px;
-  /* text-transform: capitalize; */
+  font-size: 16px;
   font-weight: normal;
   color: black;
+  margin-left: 10%;
 }
 
-/* label:before{
-  content:"";
+label h2 input{
   width: 20px;
-  height: 20px;
-  background: white;
-  border: 2px solid;
-  border-color: #046926;
-  display: block;
-  position: absolute;
-    right: 20px;
-  top: 30%;
-  transition: border 0.7s ease
-} */
+  height: 30px;
+}
 
 #label-1:checked ~ label[for=label-1],
 #label-2:checked ~ label[for=label-2],
@@ -127,7 +67,7 @@ label h2 span{
 #label-4:checked ~ label[for=label-4],
 #label-5:checked ~ label[for=label-5]{
   /* background: #5a5a5a; */
-  background: #34495E;
+  background: #979899b4;
 
   border-bottom: 5px solid #5a5a5a;
   color: white;
@@ -141,18 +81,9 @@ label h2 span{
   color: whitesmoke;
 }
 
-/* #label-1:checked ~ label[for=label-1]:before,
-#label-2:checked ~ label[for=label-2]:before,
-#label-3:checked ~ label[for=label-3]:before,
-#label-4:checked ~ label[for=label-4]:before,
-#label-5:checked ~ label[for=label-5]:before{ */
-
-  /* background:  ☑ no-repeat center center ; */
-  /* size: 50px; */
-/* 
-  background: url("https://i.imgur.com/eoPQ05r.png") no-repeat center center;
-} */
-
-
-
-
+button{
+  font-size: 31px;
+  margin-right: auto;
+  margin-left: auto;
+  display: list-item;
+}

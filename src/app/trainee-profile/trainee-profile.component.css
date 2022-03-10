@@ -19,21 +19,23 @@
     transition: all 0.5s
 }
 
+.notification{
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    height: 50px;
+    padding-top: 6px
+}
 .twoB {
     display: inline-block;
     border-radius: 15px;
 }
 
-.cameB {
+/* .cameB {
     background-color: none;
     display: inline-block;
     margin-right: 50%;
     border: 0px;
-}
+} */
 
-.cameB:hover {
-    border: 1px solid;
-}
 
 .lastB {
     background-color: #47475e;

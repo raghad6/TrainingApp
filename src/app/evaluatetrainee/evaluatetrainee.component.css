@@ -9,6 +9,11 @@ button{
     color: white;
     border: rgb(17, 226, 10);;
     float: right;
+    font-size: 16px;
+    /* padding: 1px; */
+}
 
-
+li{
+    height: 30px;
+    font-size: 20px;
 }

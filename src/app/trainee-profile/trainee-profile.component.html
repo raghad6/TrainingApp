@@ -4,42 +4,27 @@
         <div class="card container d-flex flex-column align-items-center ">
 
             <button class="btn btn-outline-success " style="margin-left: 50%; border: 0px; background-color: none; ">
-                <mat-icon>notifications</mat-icon>
+                <mat-icon style="display: inline-block;">notifications_active</mat-icon>
             </button>
 
             <img style="display: inline-block;" class="responsive" src="assets/Favatar.png " />
 
-            <button class="btn cameB">
+            <!-- <button class="btn cameB"> -->
                 <mat-icon>camera_alt</mat-icon>
-                <!-- <span style="font-size: small;display: block; ">
-                Change Profile Picture
-              </span> -->
-            </button><br>
-
-
-
-            <h3>
-                Nagham Hejja
-            </h3>
+            <!-- </button><br> -->
+            <h3> Nagham Hejja</h3>
             <p class="idd" style="opacity: 0.5;">
                 ahmadarafeh@gmail.com
             </p>
-            <br><br>
 
-            <div>
-                <h5 style="text-align: start;">
-                    Notifications
-                    <mat-icon style="display: inline-block;">notifications_active</mat-icon>
-
-                </h5>
-                <br>
+            <div class="notification">
                 <p style="display: inline-block;">Turn On/Off Notifications &nbsp; &nbsp; &nbsp; &nbsp;</p>
                 <label class="switch">
                     <input class="btn btn-outline-success" type="checkbox" checked>
                     <span class="slider round"></span>
                 </label>
-                <br><br><br>
-            </div>
+            </div> <br><br>
+
             <div>
                 <button (click)="goToPage('ToDolist')" class="btn btn-success twoB">My Task List</button> &nbsp;
                 &nbsp;&nbsp; &nbsp;

@@ -12,6 +12,11 @@ form {
     border-radius: 25px;
   }
   
+  a {
+    color: #0d6efd;
+    text-decoration: underline;
+    /* text-align: left; */
+  }
   /* Set a style for all buttons */
   button {
     background-color: #649981;
@@ -38,15 +43,12 @@ form {
     text-align: center;
   }
   
-  
-  
   /* Add padding to containers */
   .container {
     padding: 16px;
     border-radius: 25px;
     text-align: center;
   }
-  
   
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {

@@ -1,22 +1,37 @@
+form{
+  margin-top: 10%;
+}
+
+img{
+  width:60px;
+}
+h1{
+  font-size: 30px;
+}
+
+h2{
+  margin-left: 10%;
+}
 input{
-    width: 50%;
-  padding: 7px;
+  width: 24%;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
-  border: 1px solid rgb(17, 226, 10);
+  border: 1px solid #649981;
+  height: 61px;
 }
 textarea{
- width: 50%;
-  padding: 20px;
+  width: 59%;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
-  border: 1px solid rgb(17, 226, 10);
+  border: 1px solid #649981;
+  height: 125px;
+  margin-left: 29%;
 }
 
 button {
-    background-color: #649981;;
+    background-color: #649981;
     color: white;
     padding: 14px 20px;
     border: none;
@@ -27,9 +42,8 @@ button {
     clear: both;
     display:inline-block;
     clear: both;
-    margin: 0 auto;
-
-
+    margin: 0 auto; 
+    font-size: 17px;
   }
 button:hover{
     background: rgb(4, 105, 4);
