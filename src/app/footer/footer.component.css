@@ -1,0 +1,9 @@
+footer{
+    text-align: center;
+    position: fixed;  
+    left: 10px;  
+    bottom: 5px;  
+    right: 10px;   
+    width: 95%; 
+}
+

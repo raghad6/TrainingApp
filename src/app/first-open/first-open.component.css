@@ -18,14 +18,15 @@
     width: 90%;
     margin: 0 auto; 
     float: none; 
-    margin-top: 10%;
+    margin-top: 15%;
     padding-right:0;
     padding-left:0;
     column-gap: 0;
+    height: 40%;
 }
 
 .card{
-    height: 40%;
+    height: 50%;
     padding-right:0;
     padding-left:0;
 }
@@ -54,15 +55,6 @@ img{
     font-size: 19px;
     text-align: center;
     padding-top: 33px;
-}
-
-footer{
-    text-align: center;
-    position: fixed;  
-    left: 10px;  
-    bottom: 5px;  
-    right: 10px;   
-    width: 95%; 
 }
 
 

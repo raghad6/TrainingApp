@@ -24,6 +24,7 @@ import { FinishedtraineesComponent } from './finishedtrainees/finishedtrainees.c
 import { EvaluationscreenComponent } from './evaluationscreen/evaluationscreen.component';
 import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
 import { CertificateComponent } from './certificate/certificate.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CertificateComponent } from './certificate/certificate.component';
     FinishedtraineesComponent,
     EvaluationscreenComponent,
     EvaluatetraineeComponent,
-    CertificateComponent
+    CertificateComponent,
+    FooterComponent
     ],
     
   imports: [
