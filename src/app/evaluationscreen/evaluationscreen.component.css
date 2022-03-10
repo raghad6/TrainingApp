@@ -21,13 +21,14 @@ input{
   height: 61px;
 }
 textarea{
-  width: 59%;
+  width: 70%;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
   border: 1px solid #649981;
   height: 125px;
-  margin-left: 29%;
+  margin-left: 23%;
+  margin-top: -4px;
 }
 
 button {
