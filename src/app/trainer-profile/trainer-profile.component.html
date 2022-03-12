@@ -1,19 +1,40 @@
-<div>
+<app-header>
+    <h1>Trainee profile</h1>
+</app-header>
+
+
+<div class="dropdown">
+
+    <button (click)="dropdown = true" class="btn btn-outline-success " style=" float: right;  border: 0px; background-color: none; ">
+    <mat-icon style="display: inline-block;">notifications_active</mat-icon>
+  </button>
+
+
     <div class=" container mt-4 mb-4 p-3 d-flex justify-content-center ">
         <div class="card container d-flex flex-column align-items-center ">
 
-            <button class="btn btn-outline-success " style="margin-left: 50%; border: 0px; background-color: none; ">
-          <mat-icon>notifications</mat-icon>
-        </button>
+            <div class="dropdown-content">
+                <i class="fa fa-flag-o" style="font-size:24px; color: green; padding: 20px; "></i>
+                <p (click)="goToPage('')">New trainee finished training hours!
+                    <br> <br> <br>
+                    <p (click)="goToPage('')">New trainee finished training hours!
+                        <br> <br> <br>
+                        <p (click)="goToPage('')">New trainee finished training hours!
+                            <br> <br> <br>
+                            <p (click)="goToPage('')">New trainee finished training hours!
+                                <br> <br> <br>
+            </div>
 
-            <img style="display: inline-block;" class="responsive" src="assets/Favatar.png " />
+            <img style="display: inline-block;" class="responsive" src="assets/Mavatar.png " />
 
             <button class="btn cameB">
-              <mat-icon>camera_alt</mat-icon>
-              <!-- <span style="font-size: small;display: block; ">
+        <input type="file" hidden>
+        <mat-icon>camera_alt</mat-icon>
+        <!-- <span style="font-size: small;display: block; ">
                 Change Profile Picture
               </span> -->
-            </button><br>
+      </button><br>
+
 
 
 
@@ -34,20 +55,21 @@
                 <br>
                 <p style="display: inline-block;">Turn On/Off Notifications &nbsp; &nbsp; &nbsp; &nbsp;</p>
                 <label class="switch">
-            <input  class="btn btn-outline-success" type="checkbox" checked>
-            <span class="slider round"></span>
-          </label>
+          <input class="btn btn-outline-success" type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
                 <br><br><br>
             </div>
 
 
 
             <div>
-                <button class="btn btn-success twoB">Create To-Do List</button> &nbsp; &nbsp;&nbsp; &nbsp;
+                <button (click)="goToPage('Create-todolist')" class="btn btn-success twoB">Create Task List</button> &nbsp; &nbsp;&nbsp; &nbsp;
 
-                <button class="btn btn-success twoB">My Trainees</button> <br><br><br>
-                <button class="btn  lastB">Log out</button>
+                <button (click)="goToPage('evaluatetrainee')" class="btn btn-success twoB">My Trainees</button> <br><br><br>
+                <button (click)="goToPage('login')" class="btn  lastB">Log out</button>
             </div>
             <br>
         </div>
     </div>
+    <app-footer></app-footer>
