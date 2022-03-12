@@ -86,4 +86,5 @@ button{
   margin-right: auto;
   margin-left: auto;
   display: list-item;
+  border-radius: 25px;
 }

@@ -10,6 +10,10 @@ import { Router } from '@angular/router';
 export class UniProfileComponent implements OnInit {
 
   constructor(private router: Router) { }
+  dropdown = false
+  name = 'Angular'
+
+  
 
 
   ngOnInit(): void {

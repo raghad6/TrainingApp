@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class TraineeProfileComponent implements OnInit {
   constructor(private router: Router) { }
+  dropdown = false
+  name = 'Angular'
 
 
 
