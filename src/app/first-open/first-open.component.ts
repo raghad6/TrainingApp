@@ -9,7 +9,7 @@ import {Title} from "@angular/platform-browser";
 })
 export class FirstOpenComponent implements OnInit {
 
-  title = 'angulartitle';
+  title = 'This is a test for dynamic title';
   
   constructor(private router: Router,
     private titleService:Title) {

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+     <app-header></app-header>
 
 <body>
   <form>
 
     <div class="container">
-     <app-header></app-header>
 
       <label>
         <b>First name :</b>
@@ -76,22 +76,24 @@
         <input type="radio" value="Optional" name="type"> Optional
       </div><br> 
 
-      <label>
-        <b>Days and hours available for each day :</b>
-      </label><br>
-      <!-- <input type="text"  name="totalavg" placeholder=""> -->
-      <input type="checkbox" name="sat" value="sat">
-  <label for="sat"> <b>Saturday</b> <br> From <input type="time"> To <input type="time"> </label> <br>
-  <input type="checkbox" name="sun" value="sun">
-  <label for="sun"> <b>Sunday</b> <br> From <input type="time"> To <input type="time"> </label><br>
-  <input type="checkbox" name="mon" value="mon">
-  <label for="mon"> <b>Monday</b> <br> From <input type="time"> To <input type="time"> </label><br>
-  <input type="checkbox" name="tue" value="tue">
-  <label for="tue"> <b>Tuesday</b> <br> From <input type="time"> To <input type="time"> </label><br>
-  <input type="checkbox" name="wed" value="wed">
-  <label for="wed"> <b>Wednesdat</b> <br> From <input type="time"> To <input type="time"> </label><br>
-  <input type="checkbox" name="thu" value="thu" >
-  <label for="thu"> <b>Thursday</b> <br> From <input type="time"> To <input type="time"> </label> <br><br>
+      <div class="avaliable">
+        <label>
+          <b>Days and hours available for each day :</b>
+        </label><br>
+        <input id="checkbox" type="checkbox" name="sat" value="sat">
+        <label for="sat"> <b>Saturday</b> <br> From <input type="time"> To <input type="time"> </label> <br>
+        <input  id="checkbox" type="checkbox" name="sun" value="sun">
+        <label for="sun"> <b>Sunday</b> <br> From <input type="time"> To <input type="time"> </label><br>
+        <input  id="checkbox" type="checkbox" name="mon" value="mon">
+        <label for="mon"> <b>Monday</b> <br> From <input type="time"> To <input type="time"> </label><br>
+        <input  id="checkbox" type="checkbox" name="tue" value="tue">
+        <label for="tue"> <b>Tuesday</b> <br> From <input type="time"> To <input type="time"> </label><br>
+        <input  id="checkbox" type="checkbox" name="wed" value="wed">
+        <label for="wed"> <b>Wednesdat</b> <br> From <input type="time"> To <input type="time"> </label><br>
+        <input  id="checkbox"type="checkbox" name="thu" value="thu">
+        <label for="thu"> <b>Thursday</b> <br> From <input type="time"> To <input type="time"> </label> <br><br>
+      
+      </div>
 
   <label>
     <b>Required training hours :</b>
@@ -102,12 +104,10 @@
     <b>Upload university request for training :</b>
   </label>
   <input type="file"  name="unireq" placeholder="">
-
-  <div>
-    <button type="submit" class="butt-center" ><b>Submit</b></button>
-  </div>
     </div>
-  </form>
+  </form> 
+    <button type="submit" class="butt-center" ><b>Submit</b></button><br><br>
+  <br><br>
 </body>
-<app-footer></app-footer>
 </html>
+<app-footer></app-footer>
