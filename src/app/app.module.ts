@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +19,7 @@ import { FirstOpenComponent } from './first-open/first-open.component';
 import { ApplicationFormComponent } from './application-form/application-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule} from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
 import { TrainertraineesComponent } from './trainertrainees/trainertrainees.component';
 import { FinishedtraineesComponent } from './finishedtrainees/finishedtrainees.component';
@@ -25,6 +27,7 @@ import { EvaluationscreenComponent } from './evaluationscreen/evaluationscreen.c
 import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
 import { CertificateComponent } from './certificate/certificate.component';
 import { FooterComponent } from './footer/footer.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -55,7 +58,10 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    HttpModule,
+    MatFormFieldModule
   ],
   providers: [
     Title
