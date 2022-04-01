@@ -30,16 +30,16 @@ export class ApplicationFormComponent implements OnInit {
             email: ['', Validators.required],
             address: ['', Validators.required]
         });
+
         this.personal2Details = this.formBuilder.group({
-            university: ['', Validators.required],
+          university: ['', Validators.required],
             // subphone: ['', Validators],
             corona: ['',Validators.required],
             feild: ['', Validators.required],
             daygrad: ['', Validators.required],
             avg: ['', Validators.required]
+      });
 
-
-        });
         this.personal3Details = this.formBuilder.group({
             training: ['', Validators.required],
             available: ['', Validators.required],
