@@ -5,42 +5,47 @@
 
 <app-header></app-header>
 
+
 <div class="cards-container">
-    <div class="card" id="form" (click)="goToPage('Application-Form')">
-        <div class="card-body">
-            <div class="img">
-                <img src=".././../assets/1.png">
-            </div>
-            <p class="card-text">Apply for Training </p>
-        </div>
-    </div>
 
-    <div class="card" id="trainer" (click)="goToPage('login')">
-        <div class="card-body">
-            <div class="img">
-                <img src=".././../assets/2.png">
-            </div>
-            <p class="card-text"> Trainer</p>
-        </div>
-    </div>
 
-    <div class="card" id="trainee" (click)="goToPage('login')">
-        <div class="card-body">
-            <div class="img">
-                <img src=".././../assets/3.png">
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" id="form" (click)="goToPage('Application-Form')">
+                <div class="card-body">
+                        <img src=".././../assets/1.png">
+                    <p class="card-text" id="text">Apply for Training </p>
+                </div>
             </div>
-            <p class="card-text"> Trainee</p>
-        </div>
-    </div>
-
-    <div class="card" id="Uni" (click)="goToPage('login')">
-        <div class="card-body">
-            <div class="img">
-                <img src=".././../assets/4.png">
+          </div>
+          <div class="col">
+            <div class="card" id="trainer" (click)="goToPage('login')">
+                <div class="card-body">
+                        <img src=".././../assets/2.png">
+                    <p class="card-text"> Log in as Trainer</p>
+                </div>
             </div>
-            <p class="card-text"> University Training Supervisor</p>
+          </div>
+          <div class="w-100"></div>
+          <div class="col">
+            <div class="card" id="trainee" (click)="goToPage('login')">
+                <div class="card-body">
+                        <img src=".././../assets/3.png">
+                    <p class="card-text">Log in as Trainee</p>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" id="Uni" (click)="goToPage('login')">
+                <div class="card-body">
+                        <img src=".././../assets/4.png">
+                    <p class="card-text" >Log in as University </p>
+                </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 </div>
 
 <app-footer></app-footer>

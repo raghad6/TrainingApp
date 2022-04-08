@@ -16,4 +16,7 @@ export class SignupComponent implements OnInit {
   goToPage(pageName:string){
     this.router.navigate([`${pageName}`]);
   }
+
+
+  
 }
