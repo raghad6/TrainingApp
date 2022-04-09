@@ -5,6 +5,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Router } from "@angular/router";
 // import { ConfirmedValidator } from '../../helpers/confirmed.validator';
 
+
 @Component({
   selector: 'app-application-form',
   templateUrl: './application-form.component.html',
