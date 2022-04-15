@@ -25,19 +25,6 @@ height: 310px;
 width: 100px
 }
 
-<<<<<<< HEAD
-  .leaving{
-      width: 35px;
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      /* display: inline-block; */
-      border: none;
-      background-color: #649981;;
-      border-radius: 25px;
-      border: 1px solid #649981;
-      cursor: pointer;
-      float: right;
-=======
     .leaving{
         width:70px;
         padding: 15px;
@@ -50,9 +37,6 @@ width: 100px
         cursor: pointer;
 
     }
->>>>>>> 354b630796724ba7132bfd8cedc8b02ff9b7db9b
-
-  }
 
       .submit{
           width: 50%;
