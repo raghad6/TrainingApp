@@ -1,1 +1,48 @@
-<p>login works!</p>
+<app-header>
+    {{Title}}</app-header>
+<!DOCTYPE html>
+<html>
+<form [formGroup]="loginForm">
+    <div class="imgcontainer">
+
+    </div>
+
+    <div class="container">
+
+        <label for="email"><b>Email</b></label>
+        <div class="col container">
+            <input class="form-control" type="email" placeholder="Enter your Email" name="email" required formControlName="email" [ngClass]="{ 'is-invalid': valida['email'].errors }">
+            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" loginForm.controls[ 'email'].errors ">
+                <div class="req " *ngIf="valida[ 'email'].errors?.[ 'required'] " class="alert alert-danger">Please enter your Email</div>
+            </div>
+        </div>
+
+
+        <label for="pass"><b>Password</b></label>
+        <div class="col container">
+            <input class="form-control" type="password" placeholder="Enter your Password" name="pass" required formControlName="pass" [ngClass]="{ 'is-invalid': valida['pass'].errors }">
+            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" loginForm.controls[ 'pass'].errors ">
+                <div class="req " *ngIf="valida[ 'pass'].errors?.[ 'required'] " class="alert alert-danger">Please enter your Password</div>
+            </div>
+        </div>
+
+        <button (click)="submit()" type="submit " [disabled]="!loginForm.valid" value="Submit">Login</button>
+    </div>
+    <a routerLink="/signup">Don't have an account? SignUp</a>
+
+
+    <!-- <div class="container " style="background-color:#f1f1f1 ">
+      <button type="button " class="cancelbtn ">Cancel</button>
+    </div> -->
+</form>
+<!DOCTYPE html>
+<html>
+
+<body>
+
+</body>
+
+</html>
+
+</html>
+<app-footer></app-footer>

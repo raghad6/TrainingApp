@@ -3,16 +3,14 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Router } from "@angular/router";
-// import { ConfirmedValidator } from '../../helpers/confirmed.validator';
-
 
 @Component({
   selector: 'app-application-form',
   templateUrl: './application-form.component.html',
   styleUrls: ['./application-form.component.css']
 })
-
 export class ApplicationFormComponent implements OnInit {
+
 
   personal1Details!: FormGroup;
   personal2Details!: FormGroup;

@@ -1,0 +1,55 @@
+<app-header></app-header>
+<form [formGroup]="signupForm" style="border:1px solid #ccc">
+    <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+
+        <div>
+            <label for="email"><b>Email</b></label>
+            <div class="col container">
+                <input class="form-control" type="email" placeholder="Enter your Email" name="email" required formControlName="email" [ngClass]="{ 'is-invalid': valida['email'].errors }">
+                <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'email'].errors ">
+                    <div class="req " *ngIf="valida[ 'email'].errors?.[ 'required'] " class="alert alert-danger">Please enter your Email</div>
+                    <div class="req " *ngIf="valida[ 'email'].errors?.[ 'email'] " class="alert alert-danger">Must be an email</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <label for="pass1"><b>Create Password</b></label>
+            <div class="col container">
+                <input class="form-control" type="password" placeholder="Enter your Password" name="pass1" required formControlName="pass1" [ngClass]="{ 'is-invalid': valida['pass1'].errors }">
+                <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'pass1'].errors ">
+                    <div *ngIf="valida[ 'pass1'].touched && valida['pass1'].invalid">
+                        <div class="req " *ngIf="valida[ 'pass1'].errors?.[ 'required'] " class="alert alert-danger">Please enter your Password</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <label for="pass2"><b>Confirm Password</b></label>
+
+            <div class="col container">
+                <input class="form-control" type="password" placeholder="Repeat Password" name="pass2" required formControlName="pass2" [ngClass]="{ 'is-invalid': valida['pass2'].errors }">
+                <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'pass2'].errors ">
+                    <div *ngIf="valida[ 'pass2'].touched && valida['pass2'].invalid">
+                        <div class="req " *ngIf="valida[ 'pass2'].errors?.[ 'required'] " class="alert alert-danger">Please confirm your Password</div>
+                        <div class="req " *ngIf="valida[ 'pass2'].errors?.[ 'confirmedValidator']" class="alert alert-danger">Password and Confirm Password must be match.</div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="clearfix" style="margin: 20px;">
+            <button (click)="submit()" type="button" [disabled]="!signupForm.valid" value="Submit" class="signupbtn">SignUp</button>
+            <button (click)="goToPage('login')" class="cancelbtn">Cancel</button>
+        </div>
+    </div>
+</form>
+<app-footer></app-footer>
