@@ -25,7 +25,7 @@ p {
 }
 
 .leaving {
-    width: 100%;
+    width: 70px;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
@@ -67,7 +67,6 @@ p {
 .leaving {
     float: left;
     width: 50%;
-    color: black;
 }
 
 .overlay {
