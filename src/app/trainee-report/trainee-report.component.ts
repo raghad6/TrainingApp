@@ -11,6 +11,7 @@ import {MatDialog} from '@angular/material/dialog';
 
 export class TraineeReportComponent implements OnInit {
   popup = false
+  dialog = false
   name = 'Angular';
 
   constructor(private router: Router) { }
@@ -21,6 +22,8 @@ export class TraineeReportComponent implements OnInit {
   goToPage(pageName:string){
     this.router.navigate([`${pageName}`]);
   }
+
+  
 
 
   // openDialog() {

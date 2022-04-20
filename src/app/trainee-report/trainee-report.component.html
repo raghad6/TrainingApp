@@ -16,7 +16,7 @@
                 <br>
                 <div class="buttons">
                     <button type="button" class="comming" (click)="popup = true">Comming Time</button>
-                    <!-- <button mat-button class="comming" (click)="openDialog()">Launch dialog</button> -->
+                    <!-- <button mat-button class="comming" (click)="dialog = true">Launch dialog</button> -->
                     <button type="button" class="leaving" (click)="popup = true">Leaving Time</button>
                     <button (click)="goToPage('Trainee-profile')" type="submit" class="submit btn-success" style="color: black;"> Submit </button>
 
@@ -27,8 +27,11 @@
         </div>
     </div>
 
-    <!-- <h1 mat-dialog-title>pick your comming time</h1>
-    <div mat-dialog-content><a class="close" (click)="popup = false">&times;</a>
+
+
+    <!-- <div class="overlay" *ngIf="dialog">
+        <h1 mat-dialog-title>pick your comming time</h1>
+        <div class="popup" mat-dialog-content><a class="close" (click)="dialog = false">&times;</a>
             <div class="content">
                 <br>
                 <div class="container">
@@ -36,10 +39,16 @@
                         <label for="sat"> From <input type="time"><br> <br>To  <input type="time"> </label> <br><br> <br>
                         <button type="button" class="btn btn-success" data-dismiss="dialog" mat-button mat-dialog-close>Confirm</button> </div>
                 </div>
-            </div></div>
-    <div mat-dialog-actions>
-        <button mat-button mat-dialog-close>Close</button>
+            </div>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-button mat-dialog-close>Close</button>
+        </div>
     </div> -->
+
+
+
+
 
     <div class="overlay" *ngIf="popup">
         <div class="popup">
@@ -57,5 +66,6 @@
     </div>
 
 </body>
+<app-footer></app-footer>
 <app-footer></app-footer>
 <app-footer></app-footer>
