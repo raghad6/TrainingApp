@@ -7,11 +7,22 @@ body {
   background-color: #046926;
   text-align: center;
   color: white;
+  position: absolute;
 }
 
 .container {
   padding: 1px;
 }
+
+mat-icon {
+  font-size: xx-large;
+  float: left;
+  margin-left: 3%;
+  margin-top: -24%;
+  position: relative;
+  color: white;
+}  
+ 
 
 input[type=text],
 input[type=number],

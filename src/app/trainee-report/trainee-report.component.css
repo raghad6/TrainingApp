@@ -25,18 +25,19 @@ height: 310px;
 width: 100px
 }
 
-    .leaving{
-        width:70px;
-        padding: 15px;
-        margin: 5px 0 22px 0;
-        display: inline-block;
-        border: none;
-        background-color: #649981;;
-        border-radius: 25px;
-        border: 1px solid #649981;
-        cursor: pointer;
+  .leaving{
+      width: 35px;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      /* display: inline-block; */
+      border: none;
+      background-color: #649981;;
+      border-radius: 25px;
+      border: 1px solid #649981;
+      cursor: pointer;
+      float: right;
 
-    }
+  }
 
       .submit{
           width: 50%;
@@ -158,4 +159,17 @@ margin-top: -360px;
 height: 41px;
 width: 43px;
 margin-left: 90px;
+}
+.button{
+  background-color: #649981;
+    color: white;
+    padding: 7px 33px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    opacity: 0.9;
+    border-radius: 25px;
+    margin: 0 auto;
+    font-size: 23px;
+    display: list-item;
 }

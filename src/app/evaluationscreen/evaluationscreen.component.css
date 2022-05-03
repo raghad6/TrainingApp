@@ -31,21 +31,17 @@ textarea{
   margin-top: -4px;
 }
 
-button {
-    background-color: #649981;
+.submit{
+  background-color: #649981;
     color: white;
-    padding: 14px 20px;
+    padding: 18px 33px;
     border: none;
     cursor: pointer;
-    width: 50%;
+    width: 40%;
     opacity: 0.9;
     border-radius: 25px;
-    clear: both;
-    display:inline-block;
-    clear: both;
-    margin: 0 auto; 
-    font-size: 17px;
-  }
-button:hover{
-    background: rgb(4, 105, 4);
+    margin: 0 auto;
+    font-size: 23px;
+    display: list-item;
+
 }

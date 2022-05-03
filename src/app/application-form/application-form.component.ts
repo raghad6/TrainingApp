@@ -19,7 +19,7 @@ export class ApplicationFormComponent implements OnInit {
   personal2_step = false;
   personal3_step = false;
   step = 1;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder  ,private router: Router) { }
   ngOnInit() {
         this.personal1Details = this.formBuilder.group({
             fname: ['', Validators.required],
@@ -76,5 +76,8 @@ export class ApplicationFormComponent implements OnInit {
       this.personal3_step = true;
       if (this.personal3Details.invalid) { return }
     }
+  }
+  goToPage(pageName:string){
+    this.router.navigate([`${pageName}`]);
   }
 }

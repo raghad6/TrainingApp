@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,12 @@ import { Title } from '@angular/platform-browser';
 export class HeaderComponent implements OnInit {
   title = 'Welcom';
 
-  constructor(private titleService:Title) { }
+  constructor(private titleService:Title ,private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  goToPage(pageName:string){
+    this.router.navigate([`${pageName}`]);
+  }
 }

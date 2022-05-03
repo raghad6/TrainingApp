@@ -32,9 +32,12 @@ p {
 }
 
 mat-icon {
-  font-size: x-large;
-  width: 30px;
- }  
+
+  font-size: xx-large;
+  float: left;
+  margin-left: 3%;
+  margin-top: -15%;
+}  
  
 .flex { /*Flexbox for containers*/
   display: flex;

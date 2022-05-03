@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinishedtraineesComponent implements OnInit {
 
+  popup = false
+  name = 'Angular';
+  router: any;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+goToPage(pageName:string){
+    this.router.navigate([`${pageName}`]);
+}
 }

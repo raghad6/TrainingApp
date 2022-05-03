@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+// import { ConfirmedValidator } from '../confirmed.validator';
 
 @Component({
   selector: 'app-signup',
@@ -8,15 +10,41 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  signupForm = new FormGroup({
+    email: new FormControl(''),
+    pass1: new FormControl(''),
+    pass2: new FormControl(''),
+
+  });
+  formBuilder: any;
+
+
+  constructor(private router: Router ,
+    formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.signupForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      pass1: ['', Validators.required],
+      pass2: ['', Validators.required],
+
+  },
+  {
+    // validator: ConfirmedValidator('pass1', 'pass2')
   }
-  
-  goToPage(pageName:string){
-    this.router.navigate([`${pageName}`]);
+  );
   }
 
+  get valida() { return this.signupForm.controls; }
 
-  
+goToPage(pageName:string){
+  this.router.navigate([`${pageName}`]);
 }
+
+submit(){
+    if (this.signupForm.invalid) { return  }
+    else   this.router.navigate([`login`]);
+
+  }
+}
+  

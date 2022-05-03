@@ -1,25 +1,44 @@
 <app-header></app-header>
-<h1 style="text-align: center;">Trainees who finished training hours</h1>
+<h1 style="text-align: center;">Trainees Who Finished Training Hours</h1>
+<div class="list">
 <ul style="list-style-type:none;">
-    <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr>
-    <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr>
-    <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr> 
-   <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr>
-    <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr>
-    <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr>
-    <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr>
-    <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr>
-    <li>Nagham</li>
+    <li (click)="popup=true">Nagham</li>
     <hr>
-
   </ul>
+</div>
+
+<div class="overlay" *ngIf="popup">
+  <div class="popup">
+    <h1> <img src="../../assets/Favatar.png"> Nagham Hijje</h1>
+    <h3>Major: </h3>
+    <h3>year: </h3>  
+    <h3>Email: </h3>
+    <h3>PhoneNo: </h3>  
+    <h3>Total Hours: </h3>  
+
+    
+
+
+      <a class="close" (click)="popup = false">&times;</a>
+  </div>
+</div>
+
+
   <app-footer></app-footer>
 
