@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Router } from "@angular/router";
+import { ServiceService } from '../../app/services/service.service';
 
 @Component({
   selector: 'app-application-form',
@@ -19,8 +20,11 @@ export class ApplicationFormComponent implements OnInit {
   personal2_step = false;
   personal3_step = false;
   step = 1;
-  constructor(private formBuilder: FormBuilder  ,private router: Router) { }
+  constructor(private formBuilder: FormBuilder,private router: Router,private dataService: ServiceService) { }
   ngOnInit() {
+
+    // this.dataService.post().subscribe(  );
+
         this.personal1Details = this.formBuilder.group({
             fname: ['', Validators.required],
             lname: ['', Validators.required],

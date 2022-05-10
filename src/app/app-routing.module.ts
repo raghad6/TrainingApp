@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApplicationFormComponent } from './application-form/application-form.component';
-import { CertificateComponent } from './certificate/certificate.component';
-import { CreateToDoListComponent } from './create-to-do-list/create-to-do-list.component';
-import { EvaluatetraineeComponent } from './evaluatetrainee/evaluatetrainee.component';
-import { EvaluationscreenComponent } from './evaluationscreen/evaluationscreen.component';
-import { FinishedtraineesComponent } from './finishedtrainees/finishedtrainees.component';
-import { FirstOpenComponent } from './first-open/first-open.component';
-import { HeaderComponent } from './header/header.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ToDoListComponent } from './to-do-list/to-do-list.component';
-import { TraineeAccessScreenComponent } from './trainee-access-screen/trainee-access-screen.component';
-import { TraineeProfileComponent } from './trainee-profile/trainee-profile.component';
-import { TraineeReportComponent } from './trainee-report/trainee-report.component';
-import { TrainerProfileComponent } from './trainer-profile/trainer-profile.component';
-import { TrainertraineesComponent } from './trainertrainees/trainertrainees.component';
-import { UniProfileComponent } from './uni-profile/uni-profile.component';
-import { UniTraineesListComponent } from './uni-trainees-list/uni-trainees-list.component';
+import { ApplicationFormComponent } from '../pages/application-form/application-form.component';
+import { CertificateComponent } from '../pages/certificate/certificate.component';
+import { CreateToDoListComponent } from '../pages/create-to-do-list/create-to-do-list.component';
+import { EvaluatetraineeComponent } from '../pages/evaluatetrainee/evaluatetrainee.component';
+import { EvaluationscreenComponent } from '../pages/evaluationscreen/evaluationscreen.component';
+import { FinishedtraineesComponent } from '../pages/finishedtrainees/finishedtrainees.component';
+import { FirstOpenComponent } from '../pages/first-open/first-open.component';
+import { HeaderComponent } from '../pages/header/header.component';
+import { LoginComponent } from '../pages/login/login.component';
+import { SignupComponent } from '../pages/signup/signup.component';
+import { ToDoListComponent } from '../pages/to-do-list/to-do-list.component';
+import { TraineeAccessScreenComponent } from '../pages/trainee-access-screen/trainee-access-screen.component';
+import { TraineeProfileComponent } from '../pages/trainee-profile/trainee-profile.component';
+import { TraineeReportComponent } from '../pages/trainee-report/trainee-report.component';
+import { TrainerProfileComponent } from '../pages/trainer-profile/trainer-profile.component';
+import { TrainertraineesComponent } from '../pages/trainertrainees/trainertrainees.component';
+import { UniProfileComponent } from '../pages/uni-profile/uni-profile.component';
+import { UniTraineesListComponent } from '../pages/uni-trainees-list/uni-trainees-list.component';
  
 const routes: Routes = [
   { path: '', component: FirstOpenComponent },
