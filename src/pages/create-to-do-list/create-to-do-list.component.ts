@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-create-to-do-list',
@@ -8,36 +9,40 @@ import { Component, OnInit } from '@angular/core';
 export class CreateToDoListComponent implements OnInit {
 
   newTodo: string;
-  todos: any;
-  todoObj: any;
+    todos: any;
+    todoObj: any;
 
-  constructor() {
-    this.newTodo = '';
-    this.todos = [];
-  }
-
-  addTodo(event: { preventDefault: () => void; }) {
-    this.todoObj = {
-      newTodo: this.newTodo,
-      completed: false
+    constructor(private router: Router) {
+      this.newTodo = '';
+      this.todos = [];
     }
-    this.todos.push(this.todoObj);
-    this.newTodo = '';
-    event.preventDefault();
-  }
 
-  deleteTodo(index: any) {
-    this.todos.splice(index, 1);
-  }
+    addTodo(event: { preventDefault: () => void; }) {
+      this.todoObj = {
+        newTodo: this.newTodo,
+        completed: false
+      }
+      this.todos.push(this.todoObj);
+      this.newTodo = '';
+      event.preventDefault();
+    }
 
-  deleteSelectedTodos() {
-    //need ES5 to reverse loop in order to splice by index
-    for(var i=(this.todos.length -1); i > -1; i--) {
-      if(this.todos[i].completed) {
-        this.todos.splice(i, 1);
+    deleteTodo(index: any) {
+      this.todos.splice(index, 1);
+    }
+
+    deleteSelectedTodos() {
+      //need ES5 to reverse loop in order to splice by index
+      for(var i=(this.todos.length -1); i > -1; i--) {
+        if(this.todos[i].completed) {
+          this.todos.splice(i, 1);
+        }
       }
     }
+  ngOnInit(): void {
   }
-ngOnInit(): void {
-}
+
+  goToPage(pageName:string){
+    this.router.navigate([`${pageName}`]);
+  }
 }

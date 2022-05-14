@@ -1,4 +1,6 @@
 <app-header></app-header>
+<mat-icon (click)="goToPage('Trainer-profile')">keyboard_backspace</mat-icon>
+
 <br>
 <div class="todos">
 
@@ -7,30 +9,26 @@
     
   <form (submit)="addTodo($event)">
     
-    
-  <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="textfield" name="newTodo" placeholder="ToDos">
-    <button  type="submit" [disabled]="newTodo===''">Add Todo</button>
+    <h3> Create To-Do List</h3>
+  <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="newTodo" placeholder="ToDos">
+    <button  type="submit" class="btn btn-outline-success" [disabled]="newTodo===''">Add Todo</button>
   </form>
   </div>
 
-  <div [hidden]="newTodo">
-    Type in a new todo...
-  </div>
-
   <div [hidden]="!newTodo">
-    Typing: {{ newTodo }}
+  Typing {{ newTodo }}
   </div>
 
-  <ul>
-  <li *ngFor="let todo of todos; let i=index">
+  <ul class="list-group">
+  <li   class="list-group-item" *ngFor="let todo of todos; let i=index">
     <input type="checkbox" class="checkbox" [(ngModel)]="todo.completed" />
   <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }}</span>
-  <span (click)="deleteTodo(i)" class="delete-icon">[X]</span>
+  <span (click)="deleteTodo(i)" class="delete-icon"></span>
     </li>
     </ul>
-
+<br><br>
     <div class="mtop20">
-  <button (click)="deleteSelectedTodos()">Delete Selected</button>
+  <button  class="btn btn-outline-success " (click)="deleteSelectedTodos()">Delete Selected</button>
   </div>
 
 </div>

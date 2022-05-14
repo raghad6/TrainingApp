@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+
+
 
 @Component({
   selector: 'app-to-do-list',
@@ -12,7 +13,7 @@ export class ToDoListComponent implements OnInit {
     todos: any;
     todoObj: any;
 
-    constructor(private router: Router) {
+    constructor() {
       this.newTodo = '';
       this.todos = [];
     }
@@ -42,9 +43,4 @@ export class ToDoListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToPage(pageName:string){
-    this.router.navigate([`${pageName}`]);
-  }
 }
-
-
