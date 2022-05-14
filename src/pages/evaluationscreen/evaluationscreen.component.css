@@ -4,13 +4,15 @@ form{
 
 img{
   width:60px;
+  margin: 1%;
 }
+
 h1{
   font-size: 30px;
 }
 
 h2{
-  margin-left: 10%;
+  margin-left:2%;
 }
 input{
   width: 24%;
@@ -28,7 +30,7 @@ textarea{
   border: 1px solid #649981;
   height: 125px;
   margin-left: 23%;
-  margin-top: -4px;
+  margin-top: -42px;
 }
 
 .submit{
@@ -39,9 +41,66 @@ textarea{
     cursor: pointer;
     width: 40%;
     opacity: 0.9;
-    border-radius: 25px;
+    border-radius: 53px;
     margin: 0 auto;
     font-size: 23px;
     display: list-item;
 
+}
+.tasks{
+  padding: 14px 10px;
+  margin: 0.2% auto;
+}
+input{
+  width: 30px;
+}
+label{
+  background: white;
+  height: 69px;
+  display: block;
+  border-bottom: 1.5px solid #2C3E50;
+  color: black;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 20px;
+  text-indent: 5px;
+  transition: all 0.7s ease;
+  position: relative;
+  padding: 2px;
+}
+
+label h2 span{
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  color: black;
+  margin-left: 10%;
+  }
+  label h2 input{
+    width: 20px;
+    height: 30px;
+  }
+
+#label-1:checked ~ label[for=label-1],
+#label-2:checked ~ label[for=label-2],
+#label-3:checked ~ label[for=label-3],
+#label-4:checked ~ label[for=label-4],
+#label-5:checked ~ label[for=label-5]{
+  /* background: #5a5a5a; */
+  background: #979899b4;
+
+  border-bottom: 5px solid #5a5a5a;
+  color: white;
+}
+#label-1:checked ~ label[for=label-1] h2 span,
+#label-2:checked ~ label[for=label-2] h2 span,
+#label-3:checked ~ label[for=label-3] h2 span,
+#label-4:checked ~ label[for=label-4] h2 span,
+#label-5:checked ~ label[for=label-5] h2 span{
+  color: whitesmoke;
+}
+h3{
+   text-align: center;
+    font-size: 174%;
+    margin-top: -8%;
 }
