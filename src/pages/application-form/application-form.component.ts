@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Router } from "@angular/router";
-import { ServiceService } from '../../app/services/service.service';
+import { ServiceService } from '../../services/service.service';
 
 @Component({
   selector: 'app-application-form',
