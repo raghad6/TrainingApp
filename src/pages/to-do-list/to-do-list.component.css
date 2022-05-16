@@ -85,3 +85,11 @@ button{
   text-align: center;
   font-size: 20px;
 }
+mat-icon {
+  font-size: xx-large;
+  float: left;
+  margin-left: 3%;
+  margin-top: -24%;
+  position: relative;
+  color: white;
+}  

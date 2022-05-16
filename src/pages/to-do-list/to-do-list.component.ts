@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 
 
@@ -8,15 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./to-do-list.component.css']
 })
 export class ToDoListComponent implements OnInit {
+  
+  
 
   newTodo: string;
     todos: any;
     todoObj: any;
 
-    constructor() {
+    constructor(private router: Router) {
       this.newTodo = '';
       this.todos = [];
+
     }
+
 
     addTodo(event: { preventDefault: () => void; }) {
       this.todoObj = {
@@ -37,10 +43,21 @@ export class ToDoListComponent implements OnInit {
       for(var i=(this.todos.length -1); i > -1; i--) {
         if(this.todos[i].completed) {
           this.todos.splice(i, 1);
+
+
+          
         }
+        
       }
+      
     }
+
+
+    
   ngOnInit(): void {
+  }
+  goToPage(pageName:string){
+    this.router.navigate([`${pageName}`]);
   }
 
 }

@@ -9,9 +9,9 @@
     
   <form (submit)="addTodo($event)">
     
-    <h3> Create To-Do List</h3>
-  <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="newTodo" placeholder="ToDos">
-    <button  type="submit" class="btn btn-outline-success" [disabled]="newTodo===''">Add Todo</button>
+    <h3> Create Task List</h3>
+  <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="newTodo" placeholder="Tasks">
+    <button  type="submit" class="btn btn-outline-success" [disabled]="newTodo===''">Add Task</button>
   </form>
   </div>
 
