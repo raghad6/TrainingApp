@@ -3,15 +3,14 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Router } from "@angular/router";
-import { ServiceService } from '../../services/service.service';
-
+import { DataService } from '../../services/data.service';
+import { Forms } from 'src/app/Forms';
 @Component({
   selector: 'app-application-form',
   templateUrl: './application-form.component.html',
   styleUrls: ['./application-form.component.css']
 })
 export class ApplicationFormComponent implements OnInit {
-
 
   personal1Details!: FormGroup;
   personal2Details!: FormGroup;
@@ -20,37 +19,47 @@ export class ApplicationFormComponent implements OnInit {
   personal2_step = false;
   personal3_step = false;
   step = 1;
-  constructor(private formBuilder: FormBuilder,private router: Router,private dataService: ServiceService) { }
+  forms: Forms[] = [];
+
+  constructor(private formBuilder: FormBuilder,private router: Router,private dataService: DataService) {
+         dataService.getForms().subscribe(
+        (data: Forms[] )=> {
+          this.forms = data;
+          console.log(data,"jklfjgdj");
+        }
+      )
+   }
   ngOnInit() {
 
+    console.log("kjfkj",this.dataService);
     // this.dataService.post().subscribe(  );
+    this.personal1Details = this.formBuilder.group({
+      fname: ['', Validators.required],
+      lname: ['', Validators.required],
+      phone: ['', Validators.required],
+      studentid: ['', Validators.required],
+      email: ['', Validators.required],
+      address: ['', Validators.required]
+    });
 
-        this.personal1Details = this.formBuilder.group({
-            fname: ['', Validators.required],
-            lname: ['', Validators.required],
-            phone: ['', Validators.required],
-            studentid: ['', Validators.required],
-            email: ['', Validators.required],
-            address: ['', Validators.required]
-        });
+    this.personal2Details = this.formBuilder.group({
+      university: ['', Validators.required],
+      // subphone: ['', Validators],
+      corona: ['', Validators.required],
+      feild: ['', Validators.required],
+      daygrad: ['', Validators.required],
+      avg: ['', Validators.required]
+    });
 
-        this.personal2Details = this.formBuilder.group({
-          university: ['', Validators.required],
-            // subphone: ['', Validators],
-            corona: ['',Validators.required],
-            feild: ['', Validators.required],
-            daygrad: ['', Validators.required],
-            avg: ['', Validators.required]
-      });
+    this.personal3Details = this.formBuilder.group({
+      training: ['', Validators.required],
+      available: ['', Validators.required],
+      reqtraining: ['', Validators.required],
+      request: ['', Validators.required]
 
-        this.personal3Details = this.formBuilder.group({
-            training: ['', Validators.required],
-            available: ['', Validators.required],
-            reqtraining: ['',Validators.required],
-            request: ['', Validators.required]
-
-        });
+    });
   }
+
   get personal1() { return this.personal1Details.controls; }
   get personal3() { return this.personal3Details.controls; }
   get personal2() { return this.personal2Details.controls; }

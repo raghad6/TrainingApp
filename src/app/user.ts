@@ -1,13 +1,13 @@
-export class Users {
+export class User {
     public ID: number;
-    public name: string;
-    public pwd:string;
-    public email:string;
+    public Name: string;
+    public Password:string;
+    public Email:string;
     
     constructor(ID:number,name: string,pwd:string,email:string) {
     this.ID = ID;
-    this.name = name;
-    this.pwd = pwd;
-    this.email = email;
+    this.Name = name;
+    this.Password = pwd;
+    this.Email = email;
     }
     }

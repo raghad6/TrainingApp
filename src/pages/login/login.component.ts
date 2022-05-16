@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { DataService } from 'src/services/data.service';
+import { User } from 'src/app/user';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,7 +11,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class LoginComponent implements OnInit {
 
-
+  Users: User[] = [];
   Title = 'Log In';
   login = new FormControl('vali');
 
@@ -22,7 +23,15 @@ export class LoginComponent implements OnInit {
 
 
   constructor(private router: Router ,
-    formBuilder: FormBuilder) { }
+    formBuilder: FormBuilder,
+    private dataService: DataService) {
+      // dataService.getUserFromServer().subscribe(
+      //   (data: User[] )=> {
+      //     this.Users = data;
+      //     console.log(data);
+      //   }
+      // )
+     }
 
     ngOnInit(): void {
       this.loginForm = this.formBuilder.group({
