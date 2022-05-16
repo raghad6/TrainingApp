@@ -1,44 +1,31 @@
 <app-header></app-header>
+<mat-icon (click)="goToPage('Uni-profile')">keyboard_backspace</mat-icon>
+
 <h1 style="text-align: center;">My Trainees List</h1>
 <div class="list">
 <ul style="list-style-type:none;">
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')" >Nagham</li>
     <hr>
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')">Nagham</li>
     <hr>
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')">Nagham</li>
     <hr> 
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')">Nagham</li>
     <hr>
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')">Nagham</li>
     <hr>
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')">Nagham</li>
     <hr>
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')">Nagham</li>
     <hr>
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')">Nagham</li>
     <hr>
-    <li (click)="popup=true">Nagham</li>
+    <li (click)="goToPage('Trainee-Access')">Nagham</li>
     <hr>
   </ul>
 </div>
 
-<div class="overlay" *ngIf="popup">
-  <div class="popup">
-    <h1> <img src="../../assets/Favatar.png"> Nagham Hijje</h1>
-      <h3>Major: </h3>
-      <h3>year: </h3>  
-      <h3>Email: </h3>
-      <h3>PhoneNo: </h3>  
-      <h3>Status: </h3>  
-      <h3>Total Hours: </h3>  
 
-  
-
-
-      <a class="close" (click)="popup = false">&times;</a>
-  </div>
-</div>
 
 
   <app-footer></app-footer>

@@ -1,10 +1,11 @@
-.comming{
+.comming {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background-color: #649981;;
+  background-color: #649981;
+  ;
   border-radius: 25px;
   /* border: 1px solid rgb(17, 226, 10); */
   cursor: pointer;
@@ -12,164 +13,217 @@
 
 }
 
-p{
-font-size: 20px;
+p {
+  font-size: 20px;
+  margin-top: 3%;
 }
 
-.notes{
-margin-left: 20%;
-border: 1px solid;
-padding: 10px;
-box-shadow: 7px 7px #649981;
-height: 310px;
-width: 100px
+.notes {
+  margin-left: 20%;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 7px 7px #649981;
+  height: 310px;
+  width: 100px;
+  box-sizing: border-box;
+  margin-bottom: 4%;
 }
 
-  .leaving{
-      width: 35px;
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      /* display: inline-block; */
-      border: none;
-      background-color: #649981;;
-      border-radius: 25px;
-      border: 1px solid #649981;
-      cursor: pointer;
-      float: right;
 
-  }
 
-      .submit{
-          width: 50%;
-          padding: 15px;
-          margin: 5px 0 22px 0;
-          /* display: inline-block; */
-          border: none;
-          background: #f1f1f1;
-          border-radius: 25px;
-          border: 1px solid #649981;
-          cursor: pointer;
-          text-align: center;
-          margin-left: 25%;
-          
 
-        
-      }
-      .buttons::after {
-          
-              content: "";
-              clear: both;
-              display: table;
-            }
-            @media screen and (max-width: 300px) {
-              .comming, .leaving {
-                width: 100%;
-              }
-            }
-            .comming, .leaving {
-              width: 35%;
-              margin-right: 6%;
-              margin-left: 6%;
-
-            }
-            
-     
-            .overlay {
-              position: fixed;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              background: rgba(0, 0, 0, 0.7);
-              transition: opacity 500ms;
-            visibility: visible;
-              opacity: 1;
-            }
-            
-            
-            .popup {
-              margin: 70px auto;
-              padding: 20px;
-              background: #fff;
-              border-radius: 5px;
-              width: 40%;
-              position: relative;
-              transition: all 5s ease-in-out;
-            }
-            
-            h4{
-              font-size: 20px;
-              margin-top: 17%;
-            }
-            .popup h2 {
-              margin-top: 0;
-              color: #333;
-              font-size: 20px;
-              font-family: Tahoma, Arial, sans-serif;
-            }
-            .popup .close {
-              position: absolute;
-              top: 6px;
-              right: 19px;
-              transition: all 200ms;
-              font-size: 30px;
-              font-weight: bold;
-              text-decoration: none;
-              color: #333;
-            }
-            .popup .close:hover {
-              color: red;
-              cursor: pointer;
-            }
-            .popup .content {
-              max-height: 30%;
-              overflow: auto;
-            }
-            
-            @media screen and (max-width: 700px){
-              
-              .popup{
-                width: 70%;
-              }
-            }
-          
-            .icon{
-                border-radius: 50%;
-                border: 0;
-            }
-    
-    label{
-    text-align: center;
-    color: black;  
-    font-size: 20px;
-    }
-  
-    .notes{
-      width: 310px;
-      height:200px;
-        border: 1px solid black;
-    }
-input{
-width: 107px;
-height: 47px;
-border: 1px solid;
-}
-.image{
-margin-top: -360px;
-height: 41px;
-width: 43px;
-margin-left: 90px;
-}
-.button{
+.leaving {
+  width: 35px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  /* display: inline-block; */
+  border: none;
   background-color: #649981;
-    color: white;
-    padding: 7px 33px;
-    border: none;
-    cursor: pointer;
-    width: 40%;
-    opacity: 0.9;
-    border-radius: 25px;
-    margin: 0 auto;
-    font-size: 23px;
-    display: list-item;
+  ;
+  border-radius: 25px;
+  border: 1px solid #649981;
+  cursor: pointer;
+  float: right;
+
+}
+
+.submit {
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  /* display: inline-block; */
+  border: none;
+  background: #f1f1f1;
+  border-radius: 25px;
+  border: 1px solid #649981;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 25%;
+
+
+
+}
+
+.buttons::after {
+
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+@media screen and (max-width: 300px) {
+
+  .comming,
+  .leaving {
+    width: 100%;
+  }
+}
+
+.comming,
+.leaving {
+  width: 35%;
+  margin-right: 6%;
+  margin-left: 6%;
+
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+h4 {
+  font-size: 20px;
+  margin-top: 17%;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 20px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 6px;
+  right: 19px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+
+  .popup {
+    width: 70%;
+  }
+}
+
+.icon {
+  border-radius: 50%;
+  border: 0;
+}
+
+label {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+.notes {
+  width: 310px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+input {
+  width: 107px;
+  height: 47px;
+  border: 1px solid;
+}
+
+.image {
+  margin-top: -360px;
+  height: 41px;
+  width: 43px;
+  margin-left: 90px;
+}
+
+.button {
+  background-color: #649981;
+  color: white;
+  padding: 7px 33px;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 0.9;
+  border-radius: 25px;
+  margin: 0 auto;
+  font-size: 23px;
+  display: list-item;
+}
+
+.buttons {
+  margin-top: 10%;
+
+}
+
+mat-icon {
+  font-size: xx-large;
+  float: left;
+  margin-left: 3%;
+  margin-top: -24%;
+  position: relative;
+  color: white;
+}
+
+input[_ngcontent-ynx-c75] {
+  width: 118px;
+  height: 51px;
+  border: 1px solid;
+  margin-left: 3%;
+}
+
+form {
+  margin-top: -9%;
+}
+
+input {
+  width: 107px;
+  height: 47px;
+  border: 1px solid;
+  margin-left: 4%;
 }

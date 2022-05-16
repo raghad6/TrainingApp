@@ -11,7 +11,7 @@
       <div class="col container">
           <input class="form-control" type="email" placeholder="Enter your Email" name="email" required formControlName="email" [ngClass]="{ 'is-invalid': valida['email'].errors }">
           <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" loginForm.controls[ 'email'].errors ">
-              <div class="req " *ngIf="valida[ 'email'].errors?.[ 'required'] " class="alert alert-danger">Please enter your Email</div>
+              <div class="req " *ngIf="valida[ 'email'].errors?.[ 'required'] " class="alert-danger">Please enter your Email</div>
           </div>
       </div>
 
@@ -20,7 +20,8 @@
       <div class="col container">
           <input class="form-control" type="password" placeholder="Enter your Password" name="pass" required formControlName="pass" [ngClass]="{ 'is-invalid': valida['pass'].errors }">
           <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" loginForm.controls[ 'pass'].errors ">
-              <div class="req " *ngIf="valida[ 'pass'].errors?.[ 'required'] " class="alert alert-danger">Please enter your Password</div>
+              <div class="req " *ngIf="valida[ 'pass'].errors?.[ 'required'] " class=" alert-danger" style=
+              >Please enter your Password</div>
           </div>
       </div>
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -10,9 +12,8 @@ export class UniTraineesListComponent implements OnInit {
 
   popup = false
   name = 'Angular'; 
-  router: any;
 
-constructor() { }
+  constructor(private router: Router) { }
 
 ngOnInit(): void {
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-finishedtrainees',
@@ -9,9 +12,8 @@ export class FinishedtraineesComponent implements OnInit {
 
   popup = false
   name = 'Angular';
-  router: any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }

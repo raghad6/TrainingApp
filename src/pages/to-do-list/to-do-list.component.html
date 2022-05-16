@@ -1,39 +1,38 @@
 <app-header></app-header>
-<mat-icon (click)="goToPage('Trainer-profile')">keyboard_backspace</mat-icon>
+<mat-icon (click)="goToPage('Trainee-profile')">keyboard_backspace</mat-icon>
 
 <br>
-<div class="todos">
+<div class="tasks">
 
-  <div class="text">
+  <h3> <b> Please select the tasks that you've done</b></h3> <br>
+  <label for='label-1'>
+    <h2><input id='label-1' type='checkbox' checked />Set up first flutter application
+    </h2>
+  </label>
 
-    
-  <form (submit)="addTodo($event)">
-    
-    <h3> Create To-Do List</h3>
-  <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="newTodo" placeholder="ToDos">
-    <button  type="submit" class="btn btn-outline-success" [disabled]="newTodo===''">Add Todo</button>
-  </form>
-  </div>
+  <label for='label-2'>
+    <h2>  <input id='label-2' type='checkbox' checked  />
+Set up first angular application
+     
+    </h2>
+  </label>
 
-  <div [hidden]="!newTodo">
-  Typing {{ newTodo }}
-  </div>
+  <label for='label-3'>
+    <h2>  <input id='label-3' type='checkbox' />
+Design web page
+    </h2>
+  </label>
 
-  <ul class="list-group">
-  <li   class="list-group-item" *ngFor="let todo of todos; let i=index">
-    <input type="checkbox" class="checkbox" [(ngModel)]="todo.completed" />
-  <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }}</span>
-  <span (click)="deleteTodo(i)" class="delete-icon"></span>
-    </li>
-    </ul>
-<br><br>
-    <div class="mtop20">
-  <button  class="btn btn-outline-success " (click)="deleteSelectedTodos()">Delete Selected</button>
-  </div>
+  <label for='label-4'>
+    <h2>  <input id='label-4' type='checkbox' />
+Review coding
+    </h2>
+  </label>
 
-</div>
-
-
- 
-<app-footer></app-footer>
-
+  <label for='label-5'>
+    <h2>  <input id='label-5' type='checkbox' />
+Create database
+    </h2>
+  </label>
+</div><br>
+<button type="button" class="btn btn-outline-success">Save</button>

@@ -1,3 +1,9 @@
+h1{
+  text-align: center;
+  margin-bottom: 15%;
+  margin-top: 32px;
+}
+
 hr{
     width: 100%;
     text-align: left;
@@ -64,3 +70,12 @@ hr{
   img{
     width:60px;
   }
+  mat-icon {
+    font-size: xx-large;
+    float: left;
+    margin-left: 3%;
+    margin-top: -24%;
+    position: relative;
+    color: white;
+  }  
+  

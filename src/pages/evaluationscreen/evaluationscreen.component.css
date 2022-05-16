@@ -104,3 +104,11 @@ h3{
     font-size: 174%;
     margin-top: -8%;
 }
+mat-icon {
+  font-size: xx-large;
+  float: left;
+  margin-left: 3%;
+  margin-top: -24%;
+  position: relative;
+  color: white;
+}  

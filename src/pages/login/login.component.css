@@ -13,7 +13,7 @@
 input[type=text],
 input[type=password] {
   width: 100%;
-  padding: 12px 20px;
+  padding: 15px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #649981;
@@ -82,4 +82,18 @@ button:hover {
   .cancelbtn {
       width: 100%;
   }
+}
+.form-control{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 25px;
+    border: 1px solid #649981;
+}
+.alert-danger {
+  color: red;
+  background-color: white;
 }
