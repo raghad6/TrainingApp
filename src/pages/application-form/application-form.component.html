@@ -15,52 +15,41 @@
                 </ul>
 
                 <fieldset *ngIf="step == 1">
-                    <label>
-                  <b>Your name :</b>
-                </label>
-                    <div class="row container">
+                    
                         <div class="col container">
                             <input class="form-control" type="text" formControlName="fname" [ngClass]="{ 'is-invalid': personal1_step && personal1['fname'].errors }" placeholder="First name">
                             <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['fname'].errors">
                                 <div class="req" *ngIf="personal1['fname'].errors?.['required']">The first name is required</div>
                             </div>
+                            
                         </div>
-
+                                
                         <div class="col container">
                             <input class="form-control" type="text" formControlName="lname" [ngClass]="{ 'is-invalid': personal1_step && personal1['lname'].errors }" placeholder="Last name">
                             <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['lname'].errors">
                                 <div class="req" *ngIf="personal1['lname'].errors?.['required']">The last name is required</div>
                             </div>
                         </div>
-                    </div>
 
-                    <label>
-                  <b>Phone Number :</b>
-                </label>
+                
                     <input class="form-control" type="text" formControlName="phone" name="phone" [ngClass]="{ 'is-invalid': personal1_step && personal1['phone'].errors }" placeholder="Your phone number with country code +97X XXX ..." />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['phone'].errors">
                         <div class="req" *ngIf="personal1['phone'].errors?.['required']">Phone number is required</div>
                     </div>
 
-                    <label>
-                  <b>ID Number :</b>
-                </label>
+                   
                     <input class="form-control" type="text" formControlName="studentid" [ngClass]="{ 'is-invalid': personal1_step && personal1['phone'].errors }" name="studentid" placeholder="Student ID Number" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['studentid'].errors">
                         <div class="req" *ngIf="personal1['studentid'].errors?.['required']">ID is required</div>
                     </div>
 
-                    <label for="email">
-                  <b>Email :</b>
-                </label>
+                   
                     <input class="form-control" type="email" formControlName="email" [ngClass]="{ 'is-invalid': personal1_step && personal1['email'].errors }" name="email" placeholder="Enter Your Email" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['email'].errors">
                         <div class="req" *ngIf="personal1['email'].errors?.['required']">Email is required</div>
                     </div>
 
-                    <label>
-                  <b>Address :</b>
-                 </label>
+                    
                     <input class="form-control" type="text" formControlName="address" [ngClass]="{ 'is-invalid': personal1_step && personal1['address'].errors }" name="address" placeholder="Enter Your address" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['address'].errors">
                         <div class="req" *ngIf="personal1['address'].errors?.['required']">Address is required</div>
@@ -74,50 +63,42 @@
             <div class="container">
                 <fieldset *ngIf="step == 2">
 
-                    <label>
-                <b>University :</b>
-              </label>
+                    
                     <input class="form-control" type="text" formControlName="university" [ngClass]="{ 'is-invalid': personal2_step && personal2['university'].errors }" name="university" placeholder="University name" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['university'].errors">
                         <div class="req" *ngIf="personal2['university'].errors?.['required']">University name is required</div>
                     </div>
 
-                    <label>
-                  <b>Supervisor phone number :</b>
-                </label>
+                    
                     <input class="form-control" type="text" formControlName="subphone" placeholder="University Supervisor phone number" />
                     <!-- <div *ngIf="personal2_step && personal2Details.controls['subphone'].errors">
                         <div style=" padding-top: 0%;" *ngIf="personal2['subphone'].errors?.['required']">Supervisor phone number is required</div>
                     </div> -->
 
                     <label>
-                  <b>Upload your Corona vaccination certificate :</b>
-                </label>
-                    <input class="form-control" type="file" formControlName="corona" placeholder="" />
+                        <b> Corona vaccination certificate :</b> 
+                    </label>
+                    <input class="form-control" type="file" formControlName="corona" placeholder="Upload your corona vaccination certificate" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['corona'].errors">
                         <div class="req" *ngIf="personal2['corona'].errors?.['required']">vaccination certificate is required</div>
                     </div>
 
-                    <label>
-                  <b>Feild of study :</b>
-                </label>
-                    <input class="form-control" type="text" formControlName="feild" placeholder="" />
+                    
+                    <input class="form-control" type="text" formControlName="feild" placeholder="Enter your field of study" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['feild'].errors">
                         <div class="req" *ngIf="personal2['feild'].errors?.['required']">Feild is required</div>
                     </div>
 
                     <label>
-                  <b>Expected day of graduation :</b>
-                </label>
+                        <b>Expected day of graduation :</b>
+                      </label>
                     <input class="form-control" type="date" min="2022-01-01" formControlName="daygrad" placeholder="" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['daygrad'].errors">
                         <div class="req" *ngIf="personal2['daygrad'].errors?.['required']">Expected day of graduation is required</div>
                     </div>
 
-                    <label>
-                  <b>Total average :</b>
-                </label>
-                    <input class="form-control" type="text" formControlName="avg" placeholder="">
+                    
+                    <input class="form-control" type="text" formControlName="avg" placeholder="Enter your total average">
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['avg'].errors">
                         <div class="req" *ngIf="personal2['avg'].errors?.['required']">Total Avg is required</div>
                     </div>
@@ -132,8 +113,8 @@
                 <fieldset *ngIf="step == 3">
 
                     <label>
-                <b>The training is :</b>
-              </label><br>
+                        <b>The training is :</b>
+                      </label><br>
                     <input type="radio" formControlName="training" value="Mandatory" placeholder="" name="training" checked/>Mandatory<br>
                     <input type="radio" formControlName="training" value="Optional" placeholder="" name="training" />Optional
                     <!-- <div *ngIf="personal3_step && personal3Details.controls['training'].errors">
@@ -142,8 +123,8 @@
 
                     <div class="avaliable">
                         <label>
-                    <b>Days and hours available for each day :</b>
-                  </label><br>
+                            <b>Days and hours available for each day :</b>
+                          </label><br>
                         <input id="checkbox" type="checkbox" name="sat" value="sat">
                         <label for="sat"> <b>Saturday</b> <br> From <input type="time"> To <input type="time"> </label> <br>
                         <input id="checkbox" type="checkbox" name="sun" value="sun">
@@ -158,9 +139,7 @@
                         <label for="thu"> <b>Thursday</b> <br> From <input type="time"> To <input type="time"> </label> <br><br>
                     </div>
 
-                    <label>
-                  <b>Required training hours :</b>
-                </label>
+                    
                     <input class="form-control" type="text" formControlName="reqtraining" placeholder="Required training hours.." />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal3_step && personal3Details.controls['reqtraining'].errors">
                         <div class="req" *ngIf="personal3['reqtraining'].errors?.['required']">Required training hours is required</div>

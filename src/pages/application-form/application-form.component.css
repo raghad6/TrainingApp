@@ -171,14 +171,13 @@ margin-top: 30px;
 
 #msform .action-button {
   width: 100px;
-  /* background: #ee0979; */
-  font-weight: bold;
-  color: rgb(65, 64, 64);
-  border: 0 none;
-  border-radius: 25px;
-  cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
+    font-weight: bolder;
+    color: #000000;
+    border: 0 none;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    font-size: large;
 }
 
 #msform .action-button:hover,
@@ -188,11 +187,10 @@ margin-top: 30px;
 
 #msform .action-button-previous {
   width: 100px;
-  background: #C5C5F1;
+  background: #649981;;
   font-weight: bold;
   color: white;
   border: 0 none;
-  border-radius: 25px;
   cursor: pointer;
   padding: 10px 5px;
   margin: 10px 5px;
@@ -232,7 +230,9 @@ margin-top: 30px;
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
+    margin-left: -8%;
 }
+
 
 #progressbar li {
   list-style-type: none;
@@ -249,8 +249,8 @@ margin-top: 30px;
   /* content: counter(step); */
   content: '';
   counter-increment: step;
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
   line-height: 26px;
   display: block;
   font-size: 12px;
@@ -376,7 +376,9 @@ fieldset {
     display: inline-block;
     border: none;
     background: #f1f1f1;
-    border-radius: 25px;
     border: 1px solid #649981;
 
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+  border-color: #dc3545;
 }

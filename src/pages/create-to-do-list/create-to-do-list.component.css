@@ -83,3 +83,9 @@ form ul , li {
   width: 39px;
   height: 17px;
 }
+.btn-outline-success {
+  color: white;
+  border-color: #198754;
+  background-color: #649981;
+
+}

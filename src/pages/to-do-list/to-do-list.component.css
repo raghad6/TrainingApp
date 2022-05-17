@@ -43,16 +43,14 @@ label{
   padding: 2px;
 }
 
-label h2 span{
-  display: block;
-  font-size: 16px;
-  font-weight: normal;
-  color: black;
-  margin-left: 10%;
-  }
+
   label h2 input{
     width: 20px;
     height: 30px;
+    width: 26px;
+    height: 24px;
+    margin: 2%;
+    padding: 57%;
   }
 
   #label-1:checked ~ label[for=label-1],
@@ -79,6 +77,10 @@ button{
   margin-left: auto;
   display: list-item;
   border-radius: 25px;
+  background-color: #649981;
+  color: white;
+  height: 8%;
+  width: 31%;
 }
 
 .tasks h3{
