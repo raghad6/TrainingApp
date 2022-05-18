@@ -5,6 +5,7 @@ export class Forms {
     public FName: string;
     public LName:string;
     public PhoneNo:Number;
+    public StudentID:Number;
     public Addres:string;
     public Email:string;
     public university:string;
@@ -19,7 +20,7 @@ export class Forms {
     public UniversityDoc:File;
 
     
-    constructor(ID:number,fname: string, lname: string,PhoneNo: number,	Addres: string,Email: string,
+    constructor(ID:number,fname: string, lname: string,PhoneNo: number, StudentID:Number,  Addres: string,Email: string,
         university:string , Field:string , ExpectedDOGrad:Date , TotalAvg:number , TypeOfTraining:string,
         DaysAvailable:string , HoursAvailable:Time , ReqTrainingHours:number , SupervisorPhoneNo:number ,
         UniversityDoc:File) {
@@ -27,6 +28,7 @@ export class Forms {
     this.FName = fname;
     this.LName = lname;
     this.PhoneNo = PhoneNo;
+    this.StudentID = StudentID;
     this.Addres = Addres;
     this.Email = Email;
     this.university = university;

@@ -5,10 +5,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Router } from "@angular/router";
 import { DataService } from '../../services/data.service';
 import { Forms } from 'src/app/Forms';
+import { Time } from '@angular/common';
 @Component({
   selector: 'app-application-form',
   templateUrl: './application-form.component.html',
-  styleUrls: ['./application-form.component.css']
+  styleUrls: ['./application-form.component.css'],
+  providers:[DataService]
 })
 export class ApplicationFormComponent implements OnInit {
 
@@ -25,37 +27,56 @@ export class ApplicationFormComponent implements OnInit {
          dataService.getForms().subscribe(
         (data: Forms[] )=> {
           this.forms = data;
-          console.log(data,"jklfjgdj");
+          console.log(data);
         }
       )
+      // dataService.postForms(this.forms[]).subscribe(
+      //     (res) => {
+      //       console.log(res);
+      //     },
+      //     (error) => {
+      //       console.log(error)
+      //     }
+      //   )
    }
-  ngOnInit() {
 
-    console.log("kjfkj",this.dataService);
-    // this.dataService.post().subscribe(  );
+   addForms(ID:number,fname: string, lname: string,PhoneNo: number,	Addres: string,
+    Email: string,university:string , Field:string , ExpectedDOGrad:Date , TotalAvg:number
+    ,TypeOfTraining:string,DaysAvailable:string , HoursAvailable:Time , ReqTrainingHours:number
+    ,SupervisorPhoneNo:number,UniversityDoc:File){
+
+      if(this.dataService.postForms(ID,fname,lname,PhoneNo,Addres,
+        Email,university,Field,ExpectedDOGrad,TotalAvg,TypeOfTraining,DaysAvailable,
+        HoursAvailable, ReqTrainingHours,SupervisorPhoneNo,UniversityDoc)){
+        console.log("Data inserted!")
+      }
+   }
+
+
+  ngOnInit() {    // this.dataService.post().subscribe(  );
     this.personal1Details = this.formBuilder.group({
       fname: ['', Validators.required],
       lname: ['', Validators.required],
-      phone: ['', Validators.required],
+      PhoneNo: ['', Validators.required],
       studentid: ['', Validators.required],
-      email: ['', Validators.required],
-      address: ['', Validators.required]
+      Email: ['', Validators.required],
+      Addres: ['', Validators.required]
     });
 
     this.personal2Details = this.formBuilder.group({
       university: ['', Validators.required],
-      // subphone: ['', Validators],
+      SupervisorPhoneNo: ['', Validators.required],
       corona: ['', Validators.required],
-      feild: ['', Validators.required],
-      daygrad: ['', Validators.required],
-      avg: ['', Validators.required]
+      Field: ['', Validators.required],
+      ExpectedDOGrad: ['', Validators.required],
+      TotalAvg: ['', Validators.required]
     });
 
     this.personal3Details = this.formBuilder.group({
-      training: ['', Validators.required],
-      available: ['', Validators.required],
-      reqtraining: ['', Validators.required],
-      request: ['', Validators.required]
+      TypeOfTraining: ['', Validators.required],
+      DaysAvailable: ['', Validators.required],
+      ReqTrainingHours: ['', Validators.required],
+      UniversityDoc: ['', Validators.required]
 
     });
   }

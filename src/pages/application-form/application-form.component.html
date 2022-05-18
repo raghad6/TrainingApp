@@ -37,9 +37,9 @@
                     <label>
                   <b>Phone Number :</b>
                 </label>
-                    <input class="form-control" type="text" formControlName="phone" name="phone" [ngClass]="{ 'is-invalid': personal1_step && personal1['phone'].errors }" placeholder="Your phone number with country code +97X XXX ..." />
-                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['phone'].errors">
-                        <div class="req" *ngIf="personal1['phone'].errors?.['required']">Phone number is required</div>
+                    <input class="form-control" type="text" formControlName="PhoneNo" name="PhoneNo" [ngClass]="{ 'is-invalid': personal1_step && personal1['PhoneNo'].errors }" placeholder="Your Phone number with country code +97X XXX ..." />
+                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['PhoneNo'].errors">
+                        <div class="req" *ngIf="personal1['PhoneNo'].errors?.['required']">Phone number is required</div>
                     </div>
 
                     <label>
@@ -53,17 +53,17 @@
                     <label for="email">
                   <b>Email :</b>
                 </label>
-                    <input class="form-control" type="email" formControlName="email" [ngClass]="{ 'is-invalid': personal1_step && personal1['email'].errors }" name="email" placeholder="Enter Your Email" />
-                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['email'].errors">
-                        <div class="req" *ngIf="personal1['email'].errors?.['required']">Email is required</div>
+                    <input class="form-control" type="Email" formControlName="Email" [ngClass]="{ 'is-invalid': personal1_step && personal1['Email'].errors }" name="Email" placeholder="Enter Your Email" />
+                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['Email'].errors">
+                        <div class="req" *ngIf="personal1['Email'].errors?.['required']">Email is required</div>
                     </div>
 
                     <label>
                   <b>Address :</b>
                  </label>
-                    <input class="form-control" type="text" formControlName="address" [ngClass]="{ 'is-invalid': personal1_step && personal1['address'].errors }" name="address" placeholder="Enter Your address" />
-                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['address'].errors">
-                        <div class="req" *ngIf="personal1['address'].errors?.['required']">Address is required</div>
+                    <input class="form-control" type="text" formControlName="Addres" [ngClass]="{ 'is-invalid': personal1_step && personal1['Addres'].errors }" name="Addres" placeholder="Enter Your Address" />
+                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal1_step && personal1Details.controls['Addres'].errors">
+                        <div class="req" *ngIf="personal1['Addres'].errors?.['required']">Address is required</div>
                     </div>
                     <br><br>
                     <input (click)="next()" type="button" name="next" class="next action-button butt-center" value="Next" />
@@ -77,7 +77,7 @@
                     <label>
                 <b>University :</b>
               </label>
-                    <input class="form-control" type="text" formControlName="university" [ngClass]="{ 'is-invalid': personal2_step && personal2['university'].errors }" name="university" placeholder="University name" />
+                    <input class="form-control" type="text" formControlName="university" [ngClass]="{ 'is-invalid': personal2_step && personal2['university'].errors }" name="university" placeholder="university name" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['university'].errors">
                         <div class="req" *ngIf="personal2['university'].errors?.['required']">University name is required</div>
                     </div>
@@ -85,9 +85,9 @@
                     <label>
                   <b>Supervisor phone number :</b>
                 </label>
-                    <input class="form-control" type="text" formControlName="subphone" placeholder="University Supervisor phone number" />
-                    <!-- <div *ngIf="personal2_step && personal2Details.controls['subphone'].errors">
-                        <div style=" padding-top: 0%;" *ngIf="personal2['subphone'].errors?.['required']">Supervisor phone number is required</div>
+                    <input class="form-control" type="text" formControlName="SupervisorPhoneNo" placeholder="University Supervisor phone number" />
+                    <!-- <div *ngIf="personal2_step && personal2Details.controls['SupervisorPhoneNo'].errors">
+                        <div style=" padding-top: 0%;" *ngIf="personal2['SupervisorPhoneNo'].errors?.['required']">Supervisor phone number is required</div>
                     </div> -->
 
                     <label>
@@ -101,25 +101,25 @@
                     <label>
                   <b>Feild of study :</b>
                 </label>
-                    <input class="form-control" type="text" formControlName="feild" placeholder="" />
-                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['feild'].errors">
-                        <div class="req" *ngIf="personal2['feild'].errors?.['required']">Feild is required</div>
+                    <input class="form-control" type="text" formControlName="Field" placeholder="" />
+                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['Field'].errors">
+                        <div class="req" *ngIf="personal2['Field'].errors?.['required']">Field is required</div>
                     </div>
 
                     <label>
                   <b>Expected day of graduation :</b>
                 </label>
-                    <input class="form-control" type="date" min="2022-01-01" formControlName="daygrad" placeholder="" />
+                    <input class="form-control" type="date" min="2022-01-01" formControlName="ExpectedDOGrad" placeholder="" />
                     <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['daygrad'].errors">
-                        <div class="req" *ngIf="personal2['daygrad'].errors?.['required']">Expected day of graduation is required</div>
+                        <div class="req" *ngIf="personal2['ExpectedDOGrad'].errors?.['required']">Expected day of graduation is required</div>
                     </div>
 
                     <label>
                   <b>Total average :</b>
                 </label>
-                    <input class="form-control" type="text" formControlName="avg" placeholder="">
-                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['avg'].errors">
-                        <div class="req" *ngIf="personal2['avg'].errors?.['required']">Total Avg is required</div>
+                    <input class="form-control" type="text" formControlName="TotalAvg" placeholder="">
+                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal2_step && personal2Details.controls['TotalAvg'].errors">
+                        <div class="req" *ngIf="personal2['TotalAvg'].errors?.['required']">Total Avg is required</div>
                     </div>
                     <br><br>
                     <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -134,13 +134,13 @@
                     <label>
                 <b>The training is :</b>
               </label><br>
-                    <input type="radio" formControlName="training" value="Mandatory" placeholder="" name="training" checked/>Mandatory<br>
-                    <input type="radio" formControlName="training" value="Optional" placeholder="" name="training" />Optional
-                    <!-- <div *ngIf="personal3_step && personal3Details.controls['training'].errors">
+                    <input type="radio" formControlName="TypeOfTraining" value="Mandatory" placeholder="" name="TypeOfTraining" checked/>Mandatory<br>
+                    <input type="radio" formControlName="TypeOfTraining" value="Optional" placeholder="" name="TypeOfTraining" />Optional
+                    <!-- <div *ngIf="personal3_step && personal3Details.controls['TypeOfTraining'].errors">
                     <div *ngIf="personal3['training'].errors?.['required']"> is required</div>
                 </div> -->
 
-                    <div class="avaliable">
+                    <div class="DaysAvailable">
                         <label>
                     <b>Days and hours available for each day :</b>
                   </label><br>
@@ -161,17 +161,17 @@
                     <label>
                   <b>Required training hours :</b>
                 </label>
-                    <input class="form-control" type="text" formControlName="reqtraining" placeholder="Required training hours.." />
-                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal3_step && personal3Details.controls['reqtraining'].errors">
-                        <div class="req" *ngIf="personal3['reqtraining'].errors?.['required']">Required training hours is required</div>
+                    <input class="form-control" type="text" formControlName="ReqTrainingHours" placeholder="Required training hours.." />
+                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal3_step && personal3Details.controls['ReqTrainingHours'].errors">
+                        <div class="req" *ngIf="personal3['ReqTrainingHours'].errors?.['required']">Required training hours is required</div>
                     </div>
 
                     <label>
                   <b>Upload university request for training :</b>
                 </label>
-                    <input class="form-control" type="file" formControlName="request" placeholder="" />
-                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal3_step && personal3Details.controls['request'].errors">
-                        <div class="req" *ngIf="personal3['request'].errors?.['required']">University request for training is required</div>
+                    <input class="form-control" type="file" formControlName="UniversityDoc" placeholder="" />
+                    <div style="margin-top: 0%; padding-top: 0%;" *ngIf="personal3_step && personal3Details.controls['UniversityDoc'].errors">
+                        <div class="req" *ngIf="personal3['UniversityDoc'].errors?.['required']">University request for training is required</div>
                     </div>
                     <br><br>
                     <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous" />
