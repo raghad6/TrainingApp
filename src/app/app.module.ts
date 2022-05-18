@@ -12,7 +12,7 @@ import { ToDoListComponent } from '../pages/to-do-list/to-do-list.component';
 import { CreateToDoListComponent } from '../pages/create-to-do-list/create-to-do-list.component';
 import { UniTraineesListComponent } from '../pages/uni-trainees-list/uni-trainees-list.component';
 import { TraineeAccessScreenComponent } from '../pages/trainee-access-screen/trainee-access-screen.component';
-import { SignupComponent } from '../pages/signup/signup.component';
+import { SignUpComponent } from '../pages/signup/signup.component';
 import { TraineeReportComponent } from '../pages/trainee-report/trainee-report.component';
 import { FirstOpenComponent } from '../pages/first-open/first-open.component';
 import { ApplicationFormComponent } from '../pages/application-form/application-form.component';
@@ -39,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     CreateToDoListComponent,
     UniTraineesListComponent,
     TraineeAccessScreenComponent,
-    SignupComponent,
+    SignUpComponent,
     TraineeReportComponent,
     FirstOpenComponent,
     HeaderComponent,

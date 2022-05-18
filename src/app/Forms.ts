@@ -20,7 +20,7 @@ export class Forms {
     public UniversityDoc:File;
 
     
-    constructor(ID:number,fname: string, lname: string,PhoneNo: number, StudentID:Number,  Addres: string,Email: string,
+    constructor(ID:number,fname: string, lname: string,PhoneNo: number, StudentID:number,  Addres: string,Email: string,
         university:string , Field:string , ExpectedDOGrad:Date , TotalAvg:number , TypeOfTraining:string,
         DaysAvailable:string , HoursAvailable:Time , ReqTrainingHours:number , SupervisorPhoneNo:number ,
         UniversityDoc:File) {

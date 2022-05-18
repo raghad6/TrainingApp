@@ -18,7 +18,7 @@ export class DataService {
     return this.httpClient.get<Forms[]>(this.URL);
   }
 
-  postForms(ID:number,fname: string, lname: string,PhoneNo: number,	Addres: string,
+  postForms(fname: string, lname: string,PhoneNo: number,	Addres: string,
     Email: string,university:string , Field:string , ExpectedDOGrad:Date , TotalAvg:number
     ,TypeOfTraining:string,DaysAvailable:string , HoursAvailable:Time,ReqTrainingHours:number
     ,SupervisorPhoneNo:number,UniversityDoc:File){

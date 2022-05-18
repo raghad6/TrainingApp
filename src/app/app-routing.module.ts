@@ -9,7 +9,7 @@ import { FinishedtraineesComponent } from '../pages/finishedtrainees/finishedtra
 import { FirstOpenComponent } from '../pages/first-open/first-open.component';
 import { HeaderComponent } from '../pages/header/header.component';
 import { LoginComponent } from '../pages/login/login.component';
-import { SignupComponent } from '../pages/signup/signup.component';
+import { SignUpComponent } from '../pages/signup/signup.component';
 import { ToDoListComponent } from '../pages/to-do-list/to-do-list.component';
 import { TraineeAccessScreenComponent } from '../pages/trainee-access-screen/trainee-access-screen.component';
 import { TraineeProfileComponent } from '../pages/trainee-profile/trainee-profile.component';
@@ -22,7 +22,7 @@ import { UniTraineesListComponent } from '../pages/uni-trainees-list/uni-trainee
 const routes: Routes = [
   { path: '', component: FirstOpenComponent },
   { path: 'login', component: LoginComponent, data: { title: 'Log In' } },
-  { path: 'SignUp', component: SignupComponent, data: { title: 'Sign Up' } },
+  { path: 'SignUp', component: SignUpComponent, data: { title: 'Sign Up' } },
   { path: 'Create-todolist', component: CreateToDoListComponent, data: { title: 'Task List' } },
   { path: 'ToDolist', component: ToDoListComponent, data: { title: 'Task List' } },
   { path: 'Trainee-Access', component: TraineeAccessScreenComponent, data: { title: 'Trainees List' } },

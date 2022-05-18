@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  title = 'Welcom';
+  title = 'Welcome';
 
   constructor(private titleService:Title ,private router: Router) { }
 

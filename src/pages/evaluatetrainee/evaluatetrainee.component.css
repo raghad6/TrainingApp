@@ -8,8 +8,10 @@ button{
     border-radius: 25px;
     color: white;
     border: rgb(17, 226, 10);;
-    float: right;
     font-size: 16px;
+    width: 25%;
+    float: right;
+    margin-right: 4%;
     /* padding: 1px; */
 }
 
