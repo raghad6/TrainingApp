@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<app-header> </app-header>
+<mat-icon (click)="goToPage('')">keyboard_backspace</mat-icon>
+
+<body>
+    <div class="row">
+        <form [formGroup]="personal1Details" id="msform">
+            <div class="container">
+                <ul id="progressbar">
+                    <li [ngClass]="step>=1 ? 'active ' : 'inactive'">First Step</li>
+                    <li [ngClass]="step>=2 ? 'active' : 'inactive'">Second Step</li>
+                    <li [ngClass]="step==3 ? 'active' : 'inactive'">Last Step</li>
+                </ul>
+
+                <fieldset *ngIf="step == 1">
+
+                    <div class="col container">
+                        <input class="form-control" type="text" formControlName="FName"
+                            [ngClass]="{ 'is-invalid': personal1_step && personal1['FName'].errors }"
+                            placeholder="First name">
+                        <div style="margin-top: 0%; padding-top: 0%;"
+                            *ngIf="personal1_step && personal1Details.controls['FName'].errors">
+                            <div class="req" *ngIf="personal1['FName'].errors?.['required']">The first name is required
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col container">
+                        <input class="form-control" type="text" formControlName="LName"
+                            [ngClass]="{ 'is-invalid': personal1_step && personal1['LName'].errors }"
+                            placeholder="Last name">
+                        <div style="margin-top: 0%; padding-top: 0%;"
+                            *ngIf="personal1_step && personal1Details.controls['LName'].errors">
+                            <div class="req" *ngIf="personal1['LName'].errors?.['required']">The last name is required
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <input class="form-control" type="text" formControlName="PhoneNo" name="PhoneNo"
+                        [ngClass]="{ 'is-invalid': personal1_step && personal1['PhoneNo'].errors }"
+                        placeholder="Your PhoneNo number with country code +97X XXX ..." />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal1_step && personal1Details.controls['PhoneNo'].errors">
+                        <div class="req" *ngIf="personal1['PhoneNo'].errors?.['required']">Phone number is required
+                        </div>
+                    </div>
+
+
+                    <input class="form-control" type="text" formControlName="StudentID"
+                        [ngClass]="{ 'is-invalid': personal1_step && personal1['phone'].errors }" name="StudentID"
+                        placeholder="Student ID Number" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal1_step && personal1Details.controls['StudentID'].errors">
+                        <div class="req" *ngIf="personal1['StudentID'].errors?.['required']">ID is required</div>
+                    </div>
+
+
+                    <input class="form-control" type="email" formControlName="Email"
+                        [ngClass]="{ 'is-invalid': personal1_step && personal1['Email'].errors }" name="Email"
+                        placeholder="Enter Your Email" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal1_step && personal1Details.controls['Email'].errors">
+                        <div class="req" *ngIf="personal1['Email'].errors?.['required']">Email is required</div>
+                    </div>
+
+
+                    <input class="form-control" type="text" formControlName="Addres"
+                        [ngClass]="{ 'is-invalid': personal1_step && personal1['Addres'].errors }" name="Addres"
+                        placeholder="Enter Your address" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal1_step && personal1Details.controls['Addres'].errors">
+                        <div class="req" *ngIf="personal1['Addres'].errors?.['required']">Address is required</div>
+                    </div>
+                    <br><br>
+                    <input (click)="next()" type="button" name="next" class="next action-button butt-center"
+                        value="Next" />
+                </fieldset>
+            </div>
+        </form><br>
+        <form [formGroup]="personal2Details" id="msform">
+            <div class="container">
+                <fieldset *ngIf="step == 2">
+
+
+                    <input class="form-control" type="text" formControlName="university"
+                        [ngClass]="{ 'is-invalid': personal2_step && personal2['university'].errors }" name="university"
+                        placeholder="University name" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal2_step && personal2Details.controls['university'].errors">
+                        <div class="req" *ngIf="personal2['university'].errors?.['required']">University name is
+                            required</div>
+                    </div>
+
+
+                    <input class="form-control" type="text" formControlName="SupervisorPhoneNo"
+                        placeholder="University Supervisor phone number" />
+                    <div *ngIf="personal2_step && personal2Details.controls['SupervisorPhoneNo'].errors">
+                        <div style=" padding-top: 0%;" *ngIf="personal2['SupervisorPhoneNo'].errors?.['required']">
+                            Supervisor phone number is required</div>
+                    </div>
+
+                    <label>
+                        <b> Corona vaccination certificate :</b>
+                    </label>
+                    <input class="form-control" type="file" formControlName="CVC"
+                        placeholder="Upload your corona vaccination certificate" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal2_step && personal2Details.controls['CVC'].errors">
+                        <div class="req" *ngIf="personal2['CVC'].errors?.['required']">vaccination certificate is
+                            required</div>
+                    </div>
+
+
+                    <input class="form-control" type="text" formControlName="Field"
+                        placeholder="Enter your field of study" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal2_step && personal2Details.controls['Field'].errors">
+                        <div class="req" *ngIf="personal2['Field'].errors?.['required']">Field is required</div>
+                    </div>
+
+                    <label>
+                        <b>Expected day of graduation :</b>
+                    </label>
+                    <input class="form-control" type="date" min="2022-01-01" formControlName="ExpectedDOGrad"
+                        placeholder="" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal2_step && personal2Details.controls['ExpectedDOGrad'].errors">
+                        <div class="req" *ngIf="personal2['ExpectedDOGrad'].errors?.['required']">Expected day of
+                            graduation is required</div>
+                    </div>
+
+
+                    <input class="form-control" type="text" formControlName="TotalAvg"
+                        placeholder="Enter your total average">
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal2_step && personal2Details.controls['TotalAvg'].errors">
+                        <div class="req" *ngIf="personal2['TotalAvg'].errors?.['required']">Total Avg is required</div>
+                    </div>
+                    <br><br>
+                    <input (click)="previous()" type="button" name="previous" class="previous action-button-previous"
+                        value="Previous" />
+                    <input (click)="next()" type="button" name="next" class="next action-button" value="Next" />
+                </fieldset>
+            </div>
+        </form><br>
+        <form [formGroup]="personal3Details" id="msform">
+            <div class="container">
+                <fieldset *ngIf="step == 3">
+
+                    <label>
+                        <b>The training is :</b>
+                    </label><br>
+                    <input type="radio" formControlName="TypeOfTraining" value="Mandatory" placeholder=""
+                        name="TypeOfTraining" checked />Mandatory<br>
+                    <input type="radio" formControlName="TypeOfTraining" value="Optional" placeholder=""
+                        name="TypeOfTraining" />Optional
+                    <!-- <div *ngIf="personal3_step && personal3Details.controls['training'].errors">
+                    <div *ngIf="personal3['training'].errors?.['required']"> is required</div>
+                </div> -->
+
+                    <div class="DaysAvailable">
+                        <label>
+                            <b>Days and hours available for each day :</b>
+                        </label><br>
+                        <input id="checkbox" type="checkbox" name="sat" value="sat">
+                        <label for="sat"> <b>Saturday</b> <br> From <input type="time"> To <input type="time"> </label>
+                        <br>
+                        <input id="checkbox" type="checkbox" name="sun" value="sun">
+                        <label for="sun"> <b>Sunday</b> <br> From <input type="time"> To <input type="time">
+                        </label><br>
+                        <input id="checkbox" type="checkbox" name="mon" value="mon">
+                        <label for="mon"> <b>Monday</b> <br> From <input type="time"> To <input type="time">
+                        </label><br>
+                        <input id="checkbox" type="checkbox" name="tue" value="tue">
+                        <label for="tue"> <b>Tuesday</b> <br> From <input type="time"> To <input type="time">
+                        </label><br>
+                        <input id="checkbox" type="checkbox" name="wed" value="wed">
+                        <label for="wed"> <b>Wednesdat</b> <br> From <input type="time"> To <input type="time">
+                        </label><br>
+                        <input id="checkbox" type="checkbox" name="thu" value="thu">
+                        <label for="thu"> <b>Thursday</b> <br> From <input type="time"> To <input type="time"> </label>
+                        <br><br>
+                    </div>
+
+
+                    <input class="form-control" type="text" formControlName="ReqTrainingHours"
+                        placeholder="Required training hours.." />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal3_step && personal3Details.controls['ReqTrainingHours'].errors">
+                        <div class="req" *ngIf="personal3['ReqTrainingHours'].errors?.['required']">Required training
+                            hours is required</div>
+                    </div>
+
+                    <label>
+                        <b>Upload university request for training :</b>
+                    </label>
+                    <input class="form-control" type="file" formControlName="UniversityDoc" placeholder="" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal3_step && personal3Details.controls['UniversityDoc'].errors">
+                        <div class="req" *ngIf="personal3['UniversityDoc'].errors?.['required']">University request for
+                            training is required</div>
+                    </div>
+
+                    <br><br>
+                    <input (click)="previous()" type="button" name="previous" class="previous action-button-previous"
+                        value="Previous" />
+                    <input (click)="submit()" type="submit" name="submit" class="submit action-button butt-center"
+                        value="Submit" />
+                </fieldset>
+            </div>
+        </form><br>
+    </div>
+</body>
+
+</html>
+<app-footer></app-footer>
