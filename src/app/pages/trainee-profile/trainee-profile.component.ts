@@ -11,11 +11,15 @@ export class TraineeProfileComponent implements OnInit {
   constructor(private router: Router) { }
   dropdown = false
   name = 'Angular'
+  role:any;
 
+  async ngOnInit()  {
+    this.role = await localStorage.getItem('role');
+    if(this.role!=2){
+      console.log(' in on initthis.role: ', this.role);
 
-
-  ngOnInit(): void {
-    
+   this.goToPage('');
+    }
   }
 goToPage(pageName:string){
       this.router.navigate([`${pageName}`]);
