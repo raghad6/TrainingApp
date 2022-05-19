@@ -24,9 +24,9 @@ body{
     float: none; 
     text-align: center;
     background-color: #fff;
-     margin-top: 15%;
-     row-gap:0 !important;
-     column-gap:0 !important;
+    margin-top: 15%;
+    row-gap:0 !important;
+    column-gap:0 !important;
 }
 
 .col{
@@ -36,14 +36,20 @@ body{
 
 .row{
     row-gap:0 !important;
-        --bs-gutter-x: -0.5rem;
+    --bs-gutter-x: -0.5rem;
 }
 
 .card{
     padding: 0 !important;
     margin: 0 !important;
     border-radius: 0;
-    
+    cursor: pointer;
+    transition: 1s all;
+
+}
+
+.card:hover{
+    background-color: rgba(189, 189, 189, 0.322);
 }
 
 img{
