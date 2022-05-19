@@ -1,35 +1,36 @@
 <app-header></app-header>
-<html>
 <form [formGroup]="loginForm">
-  <div class="imgcontainer">
+    <div class="imgcontainer">
 
-  </div>
+    </div>
 
-  <div class="container">
+    <div class="container">
 
-      <label for="email"><b>Email</b></label>
-      <div class="col container">
-          <input class="form-control" type="email" placeholder="Enter your Email" name="email" required formControlName="email" [ngClass]="{ 'is-invalid': valida['email'].errors }">
-          <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" loginForm.controls[ 'email'].errors ">
-              <div class="req " *ngIf="valida[ 'email'].errors?.[ 'required'] " class="alert-danger">Please enter your Email</div>
-          </div>
-      </div>
+        <label for="email"><b>Email</b></label>
+        <div class="col container">
+            <input class="form-control" [(ngModel)]="email" (ngModelChange)="log()" type="email" placeholder="Enter your Email" name="email" required formControlName="email" [ngClass]="{ 'is-invalid': valida['email'].errors }">
+            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" loginForm.controls[ 'email'].errors ">
+                <div class="req " *ngIf="valida[ 'email'].errors?.[ 'required'] " class="alert-danger">Please enter your Email</div>
+            </div>
+        </div>
 
 
-      <label for="pass"><b>Password</b></label>
-      <div class="col container">
-          <input class="form-control" type="password" placeholder="Enter your Password" name="pass" required formControlName="pass" [ngClass]="{ 'is-invalid': valida['pass'].errors }">
-          <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" loginForm.controls[ 'pass'].errors ">
-              <div class="req " *ngIf="valida[ 'pass'].errors?.[ 'required'] " class=" alert-danger" style=
-              >Please enter your Password</div>
-          </div>
-      </div>
+        <label for="Password"><b>Password</b></label>
+        <div class="col container">
+            <input class="form-control" [(ngModel)]="Password" (ngModelChange)="log()" type="password" placeholder="Enter your Password" name="Password" required formControlName="Password" [ngClass]="{ 'is-invalid': valida['Password'].errors }">
+            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" loginForm.controls[ 'Password'].errors ">
+                <div class="req " *ngIf="valida[ 'Password'].errors?.[ 'required'] " class=" alert-danger">Please enter your Password</div>
+            </div>
+            <div *ngIf="alert" class="alert alert-danger "> Invalid email or password </div>
 
-      <button (click)="submit()" type="submit " [disabled]="!loginForm.valid" value="Submit">Login</button>
-  </div>
+        </div>
+
+        <button (click)="appLogin()" type="submit " [disabled]="!loginForm.valid" value="Submit">Login</button>
+    </div>
 
 </form>
 <h6> Don't have an account? <a href="/SignUp">SignUp</a></h6>
+
 
 
 <app-footer></app-footer>

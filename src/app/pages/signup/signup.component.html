@@ -1,23 +1,42 @@
 <app-header></app-header>
 <form style="border:1px solid #ccc">
-  <div class="container">
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter your Email" name="email" required>
+        <label for="email"><b>Email</b></label>
+        <div class="col container">
+            <input class="form-control" [(ngModel)]="email" (ngModelChange)="log()" type="email" placeholder="Enter your Email" name="email" required formControlName="email" [ngClass]="{ 'is-invalid': valida['email'].errors }">
+            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'email'].errors ">
+                <div class="req " *ngIf="valida[ 'email'].errors?.[ 'required'] " class="alert-danger">Please enter your Email</div>
+            </div>
+        </div>
 
-    <label for="psw"><b>Create Password</b></label>
-    <input type="password" placeholder="Enter your Password" name="psw" required>
+        <label for="psw"><b>Create Password</b></label>
+        <div class="col container">
+            <input class="form-control" [(ngModel)]="psw" (ngModelChange)="log()" type="password" placeholder="Enter your Password" name="psw" required formControlName="psw" [ngClass]="{ 'is-invalid': valida['psw'].errors }">
+            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'psw'].errors ">
+                <div class="req " *ngIf="valida[ 'psw'].errors?.[ 'required'] " class=" alert-danger" style=>Please enter your Password</div>
+            </div>
+        </div>
 
-    <label for="psw-repeat"><b>Confirm Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <label for="psw_repeat"><b>Confirm Password</b></label>
+        <div class="col container">
+            <input class="form-control" [(ngModel)]="psw_repeat" (ngModelChange)="log()" type="password" placeholder="Repeat Password" name="psw_repeat" required formControlName="psw_repeat" [ngClass]="{ 'is-invalid': valida['psw_repeat'].errors }">
+            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'psw_repeatt'].errors ">
+                <div *ngIf="valida[ 'psw_repeat'].touched && valida['psw_repeat'].invalid">
+                    <div class="req " *ngIf="valida[ 'psw_repeat'].errors?.[ 'required'] " class="alert alert-danger">Please confirm your Password</div>
+                    <div class="req " *ngIf="valida[ 'psw_repeat'].errors?.[ 'confirmedValidator']" class="alert alert-danger">Password and Repeat Password must be match.</div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="alert" class="alert alert-danger"> Invalid email or password </div>
 
 
-    
-      <button (click)="goToPage('login')" type="button" class="signupbtn">SignUp</button>
-      <button (click)="goToPage('login')" type="submit" class="cancelbtn">Cancel</button>
+
+        <button (click)="appSignup()" type="submit" class="signupbtn" value="Submit">SignUp</button>
+        <button (click)="goToPage('login')" type="submit" class="cancelbtn">Cancel</button>
     </div>
 </form>
 <app-footer></app-footer>

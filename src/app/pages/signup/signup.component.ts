@@ -11,13 +11,19 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 
 export class SignUpComponent implements OnInit {
 
-
+  email:any;
+  psw:any;
+  psw_repeat:any;
+  // role:any=2;
+  alert: boolean=false;
   Title = 'Sign Up';
   signup = new FormControl('vali');
 
   signupForm = new FormGroup({
     email: new FormControl(''),
-    pass: new FormControl(''),
+    psw: new FormControl(''),
+    psw_repeat: new FormControl(''),
+
   });
   formBuilder: any;
 
@@ -28,12 +34,48 @@ export class SignUpComponent implements OnInit {
     ngOnInit(): void {
       this.signupForm = this.formBuilder.group({
         email: ['', [Validators.required, Validators.email]],
-        pass: ['', Validators.required],
+        psw: ['', Validators.required],
+        psw_repeat: ['', Validators.required],
+
     });
 
     }
 
-    get valida() { return this.signupForm.controls; }
+    get valida() { 
+      return this.signupForm.controls; 
+    }
+
+    log(){
+      console.log('email: ', this.email);
+      console.log('psw: ', this.psw);
+      console.log('psw_repeat: ', this.psw_repeat);
+  
+    }
+
+
+    async appSignup(){
+      console.log('email: ', this.email);
+      console.log('psw: ', this.psw);
+      console.log('psw_repeat: ', this.psw_repeat);
+
+      if(this.email.includes('@') && this.email.length>=11 && ( /[a-zA-Z]/.test(this.psw)) && ( /[0-9]/.test(this.psw)) &&( /[a-zA-Z]/.test(this.psw_repeat)) && ( /[0-9]/.test(this.psw_repeat)) ){
+        this.alert=false;
+
+       console.log("This is valid ");
+    // post req signup
+
+    this.goToPage('login');
+
+
+
+      }else{
+        this.alert=true;
+        console.log("this is not  valid email or password");
+      }
+
+    }
+
+
 
 
 
@@ -43,7 +85,9 @@ export class SignUpComponent implements OnInit {
 
   submit(){
       if (this.signupForm.invalid) { return }
+      else   this.router.navigate([`login`]);
+
     }
-    
+
   }
-  
+

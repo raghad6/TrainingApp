@@ -13,13 +13,17 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  email:any;
+  Password:any;
+  role:any=1;
+  alert: boolean=false;
   Users: User[] = [];
   Title = 'Log In';
   login = new FormControl('vali');
 
   loginForm = new FormGroup({
     email: new FormControl(''),
-    pass: new FormControl(''),
+    Password: new FormControl(''),
   });
   formBuilder: any;
 
@@ -33,15 +37,55 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    localStorage.setItem('role', this.role);
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      pass: ['', Validators.required],
+      Password: ['', Validators.required],
     });
   }
 
   get valida() {
     return this.loginForm.controls;
   }
+
+  log(){
+    console.log('email: ', this.email);
+    console.log('Password: ', this.Password);
+
+  }
+
+  async appLogin(){
+    console.log('email: ', this.email);
+    console.log('Password: ', this.Password);
+
+    if(this.email.includes('@')  && this.email.length>=11 && ( /[a-zA-Z]/.test(this.Password)) && ( /[0-9]/.test(this.Password))){
+      this.alert=false;
+
+     console.log("this is valid ");
+  // post req login
+
+  localStorage.setItem('role', this.role);
+
+  if(this.role==1 || this.role==0 ){
+  this.goToPage('Trainer-profile');
+  }
+  else if(this.role==2 || this.role==0){
+    this.goToPage('Trainee-profile');
+  }
+  else if(this.role==3 || this.role==0){
+    this.goToPage('Uni-profile');
+  }
+
+
+    }else{
+      this.alert=true;
+      console.log("this is not  valid email or password");
+    }
+
+  }
+  // containsNumber(str:String) {
+  //   return /\d/.test(str);
+  // }
 
   goToPage(pageName: string) {
     this.router.navigate([`${pageName}`]);
