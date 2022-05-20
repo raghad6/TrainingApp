@@ -49,7 +49,6 @@ export class SignUpComponent implements OnInit {
       console.log('email: ', this.email);
       console.log('psw: ', this.psw);
       console.log('psw_repeat: ', this.psw_repeat);
-  
     }
 
 
@@ -65,20 +64,12 @@ export class SignUpComponent implements OnInit {
     // post req signup
 
     this.goToPage('login');
-
-
-
       }else{
         this.alert=true;
         console.log("this is not  valid email or password");
       }
 
     }
-
-
-
-
-
   goToPage(pageName:string){
     this.router.navigate([`${pageName}`]);
   }

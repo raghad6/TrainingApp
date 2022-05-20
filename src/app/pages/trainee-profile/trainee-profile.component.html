@@ -1,16 +1,15 @@
-<app-header> <h1>Trainee profile</h1></app-header>
+<app-header>
+  <h1>Trainee profile</h1>
+</app-header>
 
-    
-        <div   >
-            
-            <!-- <button (click)="dropdown = true" class="btn btn-outline-success "  style= " float: right;  border: 0px; background-color: none; "    >
+<div>
+  <!-- <button (click)="dropdown = true" class="btn btn-outline-success "  style= " float: right;  border: 0px; background-color: none; "    >
         <mat-icon   style="display: inline-block; " >notifications_active</mat-icon>
     </button> -->
-    
-    <div class=" container mt-4 mb-4 p-3 d-flex justify-content-center ">
-        <div class="card container d-flex flex-column align-items-center ">
-    
-    <!-- <div class="dropdown-content">
+
+  <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+    <div class="card container d-flex flex-column align-items-center">
+      <!-- <div class="dropdown-content">
               <i class="fa fa-flag-o" style="font-size:24px; color: green; padding: 20px; " ></i>
               <p (click)="goToPage('ToDolist')" >you have a new task!
                   <br> <br> <br> 
@@ -22,23 +21,19 @@
                 <br> <br> <br> 
               </div>  
          -->
-            
-            
-                        
-    
-            
-            <img style="display: inline-block;" class="responsive" src="assets/Favatar.png " />
 
-            <!-- <button class="btn cameB"> -->
-                <!-- <mat-icon>camera_alt</mat-icon> -->
-            <!-- </button><br> -->
-            <h3> Nagham Hejja</h3>
-            <p class="idd" style="opacity: 0.5;">
-                ahmadarafeh@gmail.com
-            </p>
-            
+      <img 
+        style="display: inline-block"
+        class="responsive"
+        src="assets/Favatar.png "/>
 
-            <!-- <div class="notification">
+      <!-- <button class="btn cameB"> -->
+      <!-- <mat-icon>camera_alt</mat-icon> -->
+      <!-- </button><br> -->
+      <h3>Nagham Hejja</h3>
+      <p class="idd" style="opacity: 0.5">ahmadarafeh@gmail.com</p>
+
+      <!-- <div class="notification">
                 <p style="display: inline-block;">Turn On/Off Notifications &nbsp; &nbsp; &nbsp; &nbsp;</p>
                 <label class="switch">
                     <input class="btn btn-outline-success" type="checkbox" checked>
@@ -46,19 +41,25 @@
                 </label>
             </div> <br><br> -->
 
-            <div>
-                <button (click)="goToPage('ToDolist')" class="btn btn-success twoB">My Task List</button> &nbsp;
-                &nbsp;&nbsp; &nbsp;
+      <div>
+        <button (click)="goToPage('ToDolist')" class="btn btn-success twoB">
+          My Task List
+        </button>
+        &nbsp; &nbsp;&nbsp; &nbsp;
 
-                <button (click)="goToPage('Trainee-report')" class="btn btn-success twoB">Write Notes</button>
-                <br><br><br>
-                <button (click)="goToPage('login')" class="btn  lastB">Log out</button>
-            </div>
-        </div>
+        <button
+          (click)="goToPage('Trainee-report')"
+          class="btn btn-success twoB"
+        >
+          Write Notes
+        </button>
+        <br /><br /><br />
+        <button (click)="goToPage('login')" class="btn lastB">Log out</button>
+      </div>
     </div>
-        </div>
-        
-            <br>
-    
-      
-    <app-footer></app-footer>
+  </div>
+</div>
+
+<br />
+
+<app-footer></app-footer>

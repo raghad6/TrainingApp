@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Forms } from '../models/Forms';
-
+import { User } from '../models/user';
+import { Trainer } from '../models/Trainer';
 @Injectable({
   providedIn: 'root',
 })
@@ -29,5 +30,23 @@ export class ApiService {
         headers: headers,
       }
     );
+  }
+
+  postSignUpData(user: User): Observable<any> {
+    const headers = new HttpHeaders();
+    // headers.append('Content-Type', 'aaplicedForms');
+    return this.httpClient.post(
+      environment.api + 'signup',
+      {
+        signup: user,
+      },
+      {
+        headers: headers,
+      }
+    );
+  }
+
+  getTrainerData(): Observable<Trainer[]> {
+    return this.httpClient.get<Trainer[]>(this.API + 'trainer');
   }
 }

@@ -33,29 +33,6 @@ export class ApplicationFormComponent implements OnInit {
       this.forms = data;
       console.log(data);
     });
-
-    // this.addForms(
-    //   new Forms(
-    //     1,
-    //     'a',
-    //     'a',
-    //     2,
-    //     3,
-    //     'a',
-    //     'a@a.a',
-    //     'p',
-    //     'd',
-    //     new Date('2022-05-12'),
-    //     55,
-    //     'Optional',
-    //     '',
-    //     this.currentTime,
-    //     66,
-    //     7,
-    //     'C:\\fakepath\\Intelligent nano-machine.pdf',
-    //     'C:\\fakepath\\مشروع التوجهات.pdf'
-    //   )
-    // );
   }
 
   addForms(form: Forms) {
