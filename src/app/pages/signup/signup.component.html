@@ -7,11 +7,11 @@
         <p>Please fill in this form to create an account.</p>
         <hr>
 
-        <label for="email"><b>Email</b></label>
+        <label for="Email"><b>Email</b></label>
         <div class="col container">
-            <input class="form-control" [(ngModel)]="email" (ngModelChange)="log()" type="email" placeholder="Enter your Email" name="email" required formControlName="email" [ngClass]="{ 'is-invalid': valida['email'].errors }">
-            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'email'].errors ">
-                <div class="req " *ngIf="valida[ 'email'].errors?.[ 'required'] " class="alert-danger">Please enter your Email</div>
+            <input class="form-control" [(ngModel)]="Email" value="Email" (ngModelChange)="log()" type="Email" placeholder="Enter your Email" name="Email" required formControlName="Email" [ngClass]="{ 'is-invalid': valida['Email'].errors }">
+            <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'Email'].errors ">
+                <div class="req " *ngIf="valida[ 'Email'].errors?.[ 'required'] " class="alert-danger">Please enter your Email</div>
             </div>
         </div>
 
@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="alert" class="alert alert-danger"> Invalid email or password </div>
+        <div *ngIf="alert" class="alert alert-danger"> Invalid Email or password </div>
 
 
 

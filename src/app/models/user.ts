@@ -4,10 +4,10 @@ export class User {
   public Password: string;
   public Email: string;
 
-  constructor(ID: number, name: string, pwd: string, email: string) {
+  constructor(ID: number, Name: string, pwd: string, Email: string) {
     this.ID = ID;
-    this.Name = name;
+    this.Name = Name;
     this.Password = pwd;
-    this.Email = email;
+    this.Email = Email;
   }
 }
