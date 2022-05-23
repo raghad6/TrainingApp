@@ -137,4 +137,4 @@ export class ApplicationFormComponent implements OnInit {
   goToPage(pageName: string) {
     this.router.navigate([`${pageName}`]);
   }
-}
+} 

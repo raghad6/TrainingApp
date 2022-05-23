@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
   email:any;
   Password:any;
   role:any=1;
-  alert: boolean=false;
+  alertEmail: boolean=false;
+  alertPass: boolean=false;
   Users: User[] = [];
   Title = 'Log In';
   login = new FormControl('vali');
@@ -59,7 +60,9 @@ export class LoginComponent implements OnInit {
     console.log('Password: ', this.Password);
 
     if(this.email.includes('@')  && this.email.length>=11 && ( /[a-zA-Z]/.test(this.Password)) && ( /[0-9]/.test(this.Password))){
-      this.alert=false;
+      this.alertEmail=false;
+      this.alertPass=false;
+
 
      console.log("this is valid ");
   // post req login
@@ -77,9 +80,15 @@ export class LoginComponent implements OnInit {
   }
 
 
-    }else{
-      this.alert=true;
-      console.log("this is not  valid email or password");
+    }else if(!this.email.includes('@') )
+    {
+      this.alertEmail=true;
+      console.log("this is not  valid email");
+    }
+    else 
+    {
+      this.alertPass=true;
+      console.log("this is not  valid password");
     }
 
   }
