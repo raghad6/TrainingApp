@@ -9,7 +9,7 @@
 
         <label for="Email"><b>Email</b></label>
         <div class="col container">
-            <input class="form-control" [(ngModel)]="Email" value="Email" (ngModelChange)="log()" type="Email" placeholder="Enter your Email" name="Email" required formControlName="Email" [ngClass]="{ 'is-invalid': valida['Email'].errors }">
+            <input class="form-control" [(ngModel)]="Email"  (ngModelChange)="log()" type="Email"  name="Email" required formControlName="Email" [ngClass]="{ 'is-invalid': valida['Email'].errors }">
             <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'Email'].errors ">
                 <div class="req " *ngIf="valida[ 'Email'].errors?.[ 'required'] " class="alert-danger">Please enter your Email</div>
             </div>
@@ -17,7 +17,7 @@
 
         <label for="psw"><b>Create Password</b></label>
         <div class="col container">
-            <input class="form-control" [(ngModel)]="psw" (ngModelChange)="log()" type="password" placeholder="Enter your Password" name="psw" required formControlName="psw" [ngClass]="{ 'is-invalid': valida['psw'].errors }">
+            <input class="form-control" [(ngModel)]="psw" (ngModelChange)="log()" type="password" name="psw" required formControlName="psw" [ngClass]="{ 'is-invalid': valida['psw'].errors }">
             <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'psw'].errors ">
                 <div class="req " *ngIf="valida[ 'psw'].errors?.[ 'required'] " class=" alert-danger" style=>Please enter your Password</div>
             </div>
@@ -25,7 +25,7 @@
 
         <label for="psw_repeat"><b>Confirm Password</b></label>
         <div class="col container">
-            <input class="form-control" [(ngModel)]="psw_repeat" (ngModelChange)="log()" type="password" placeholder="Repeat Password" name="psw_repeat" required formControlName="psw_repeat" [ngClass]="{ 'is-invalid': valida['psw_repeat'].errors }">
+            <input class="form-control" [(ngModel)]="psw_repeat" (ngModelChange)="log()" type="password" name="psw_repeat" required formControlName="psw_repeat" [ngClass]="{ 'is-invalid': valida['psw_repeat'].errors }">
             <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'psw_repeatt'].errors ">
                 <div *ngIf="valida[ 'psw_repeat'].touched && valida['psw_repeat'].invalid">
                     <div class="req " *ngIf="valida[ 'psw_repeat'].errors?.[ 'required'] " class="alert alert-danger">Please confirm your Password</div>

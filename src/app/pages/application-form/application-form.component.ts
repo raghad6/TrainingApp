@@ -11,6 +11,8 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./application-form.component.css'],
 })
 export class ApplicationFormComponent implements OnInit {
+  email:any;
+  alertEmail: boolean=false;
   personal1Details!: FormGroup;
   personal2Details!: FormGroup;
   personal3Details!: FormGroup;
@@ -55,7 +57,8 @@ export class ApplicationFormComponent implements OnInit {
     this.personal2Details = this.formBuilder.group({
       university: ['', Validators.required],
       SupervisorPhoneNo: ['', Validators.required],
-      CVC: ['', Validators.required],
+      // Emailsup: ['', Validators.required],
+      Emailsup: ['', Validators.required],
       Field: ['', Validators.required],
       ExpectedDOGrad: ['', Validators.required],
       TotalAvg: ['', Validators.required],
@@ -81,9 +84,18 @@ export class ApplicationFormComponent implements OnInit {
   next() {
     if (this.step == 1) {
       this.personal1_step = true;
+      if(this.email.includes('@')  && this.email.length>=11){
+        // this.step++;
+return;
+      }else{
+        this.alertEmail=true;
+
+      }
       if (this.personal1Details.invalid) {
+        
         return;
       }
+      
       this.step++;
     }
     if (this.step == 2) {
@@ -129,7 +141,9 @@ export class ApplicationFormComponent implements OnInit {
           this.personal3Details.controls['ReqTrainingHours'].value,
           this.personal2Details.controls['SupervisorPhoneNo'].value,
           this.personal3Details.controls['UniversityDoc'].value,
-          this.personal2Details.controls['CVC'].value
+          this.personal2Details.controls['Emailsup'].value,
+          // this.personal2Details.controls['Emailsup'].value
+
         )
       );
     }

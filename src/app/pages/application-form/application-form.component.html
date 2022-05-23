@@ -40,9 +40,9 @@
                     </div>
 
 
-                    <input class="form-control" type="text" formControlName="PhoneNo" name="PhoneNo"
+                    <input class="form-control" type="number" formControlName="PhoneNo" name="PhoneNo"
                         [ngClass]="{ 'is-invalid': personal1_step && personal1['PhoneNo'].errors }"
-                        placeholder="Your PhoneNo number with country code +97X XXX ..." />
+                        placeholder="Your Phone number" />
                     <div style="margin-top: 0%; padding-top: 0%;"
                         *ngIf="personal1_step && personal1Details.controls['PhoneNo'].errors">
                         <div class="req" *ngIf="personal1['PhoneNo'].errors?.['required']">Phone number is required
@@ -50,21 +50,23 @@
                     </div>
 
 
-                    <input class="form-control" type="text" formControlName="StudentID"
+                    <input class="form-control" type="number" formControlName="StudentID"
                         [ngClass]="{ 'is-invalid': personal1_step && personal1['phone'].errors }" name="StudentID"
-                        placeholder="Student ID Number" />
+                        placeholder="ID Number" />
                     <div style="margin-top: 0%; padding-top: 0%;"
                         *ngIf="personal1_step && personal1Details.controls['StudentID'].errors">
                         <div class="req" *ngIf="personal1['StudentID'].errors?.['required']">ID is required</div>
                     </div>
 
 
-                    <input class="form-control" type="email" formControlName="Email"
+                    <input class="form-control" [(ngModel)]="email" type="email" formControlName="Email"
                         [ngClass]="{ 'is-invalid': personal1_step && personal1['Email'].errors }" name="Email"
                         placeholder="Enter Your Email" />
                     <div style="margin-top: 0%; padding-top: 0%;"
                         *ngIf="personal1_step && personal1Details.controls['Email'].errors">
                         <div class="req" *ngIf="personal1['Email'].errors?.['required']">Email is required</div>
+                        <div *ngIf="alertEmail" class="alert alert-danger " style="border: 0px;"> "Invalid" Email must be valid </div>
+
                     </div>
 
 
@@ -99,21 +101,32 @@
                     <input class="form-control" type="text" formControlName="SupervisorPhoneNo"
                         placeholder="University Supervisor phone number" />
                     <div *ngIf="personal2_step && personal2Details.controls['SupervisorPhoneNo'].errors">
-                        <div style=" padding-top: 0%;" *ngIf="personal2['SupervisorPhoneNo'].errors?.['required']">
+                        <div class="req" style=" padding-top: 0%;" *ngIf="personal2['SupervisorPhoneNo'].errors?.['required']">
                             Supervisor phone number is required</div>
                     </div>
 
-                    <label>
-                        <b> Corona vaccination certificate :</b>
-                    </label>
-                    <input class="form-control" type="file" formControlName="CVC"
-                        placeholder="Upload your corona vaccination certificate" />
+                    <!-- <input class="form-control"  type="email" formControlName="Emailsup"
+                        [ngClass]="{ 'is-invalid': personal2_step && personal2['Emailsup'].errors }" name="Emailsup"
+                        placeholder="Enter Your Supervisor Email" />
                     <div style="margin-top: 0%; padding-top: 0%;"
-                        *ngIf="personal2_step && personal2Details.controls['CVC'].errors">
-                        <div class="req" *ngIf="personal2['CVC'].errors?.['required']">vaccination certificate is
+                        *ngIf="personal2_step && personal2Details.controls['Emailsup'].errors">
+                        <div class="req" *ngIf="personal2['Emailsup'].errors?.['required']">Email is required</div>
+                        <div *ngIf="alertEmail" class="alert alert-danger " style="border: 0px;"> "Invalid" Email must be valid </div>
+                    </div> -->
+
+                    <!-- <label>
+                        <b> Supervisor E :</b>
+                    </label> -->
+                    <input class="form-control" type="email" formControlName="Emailsup"
+                    [ngClass]="{ 'is-invalid': personal2_step && personal2['Emailsup'].errors }" name="Emailsup"
+
+                        placeholder="Supervisor Email" />
+                    <div style="margin-top: 0%; padding-top: 0%;"
+                        *ngIf="personal2_step && personal2Details.controls['Emailsup'].errors">
+                        <div class="req" *ngIf="personal2['Emailsup'].errors?.['required']">Email is
                             required</div>
                     </div>
-
+                    <!-- <div *ngIf="alertEmail" class="alert alert-danger " style="border: 0px;"> "Invalid" Email must be valid </div> -->
 
                     <input class="form-control" type="text" formControlName="Field"
                         placeholder="Enter your field of study" />

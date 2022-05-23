@@ -18,7 +18,8 @@ export class Forms {
   public ReqTrainingHours: number;
   public SupervisorPhoneNo: number;
   public UniversityDoc: string;
-  public CVC: string;
+  // public CVC: string;
+  public Emailsup:string;
 
   constructor(
     ID: number,
@@ -37,8 +38,9 @@ export class Forms {
     HoursAvailable: Time,
     ReqTrainingHours: number,
     SupervisorPhoneNo: number,
+    Emailsup:string,
     UniversityDoc: string,
-    CVC: string
+    // CVC: string
   ) {
     this.ID = ID;
     this.FName = FName;
@@ -56,7 +58,8 @@ export class Forms {
     this.HoursAvailable = HoursAvailable;
     this.ReqTrainingHours = ReqTrainingHours;
     this.SupervisorPhoneNo = SupervisorPhoneNo;
+    this.Emailsup=Emailsup;
     this.UniversityDoc = UniversityDoc;
-    this.CVC = CVC;
+    // this.CVC = CVC;
   }
 }
