@@ -15,9 +15,6 @@
   </form>
   </div>
 
-  <div [hidden]="!newTodo">
-  Typing {{ newTodo }}
-  </div>
 
   <ul class="list-group">
   <li   class="list-group-item" *ngFor="let todo of todos; let i=index">
@@ -28,7 +25,8 @@
     </ul>
 <br><br>
     <div class="mtop20">
-  <button  class="btn btn-outline-success " (click)="deleteSelectedTodos()">Delete Selected</button>
+  <button  class="btn btn-outline-danger " (click)="deleteSelectedTodos()">Delete Selected</button>
+  <button id="done" class="done btn btn-outline-success " >Done</button>
   </div>
 
 </div>
