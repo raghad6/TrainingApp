@@ -17,7 +17,7 @@ export class SignUpComponent implements OnInit {
   alert: boolean = false;
   Title = 'Sign Up';
   signup = new FormControl('vali');
-  user: User[] = [];
+  // user: User[] = [];
 
   signupForm = new FormGroup({
     Email: new FormControl(''),
@@ -57,10 +57,16 @@ export class SignUpComponent implements OnInit {
   }
 
   async appSignup() {
+    // console.log(this.signupForm['Email'].value);
+    
     console.log('Email: ', this.Email);
     console.log('Password: ', this.Password);
     console.log('Password_repeat: ', this.Password_repeat);
+    let us=new User(0,'', this.Password,this.Email);
 
+ this.apiService.postSignUpData(us).subscribe((res) => {
+      console.log(res, 'jkdhfjh');
+    });
     //   if(this.Email.includes('@') && this.Email.length>=11 && ( /[a-zA-Z]/.test(this.Password)) && ( /[0-9]/.test(this.Password)) &&( /[a-zA-Z]/.test(this.Password_repeat)) && ( /[0-9]/.test(this.Password_repeat)) ){
     //     this.alert=false;
 

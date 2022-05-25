@@ -1,3 +1,4 @@
+import { ApiService } from 'src/app/services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
   role:any=1;
   alertEmail: boolean=false;
   alertPass: boolean=false;
+  alertUser: boolean=false;
   Users: User[] = [];
   Title = 'Log In';
   login = new FormControl('vali');
@@ -28,7 +30,7 @@ export class LoginComponent implements OnInit {
   });
   formBuilder: any;
 
-  constructor(private router: Router, formBuilder: FormBuilder) {
+  constructor(private router: Router, formBuilder: FormBuilder, private apiService: ApiService) {
     // dataService.getUserFromServer().subscribe(
     //   (data: User[] )=> {
     //     this.Users = data;
@@ -67,17 +69,43 @@ export class LoginComponent implements OnInit {
      console.log("this is valid ");
   // post req login
 
-  localStorage.setItem('role', this.role);
+  this.apiService.postLoginData(new User(0,'',this.Password,this.email)).subscribe((s:any)=>{
+    console.log(s);
+    this.role=s['Role'];
 
-  if(this.role==1 || this.role==0 ){
-  this.goToPage('Trainer-profile');
-  }
-  else if(this.role==2 || this.role==0){
-    this.goToPage('Trainee-profile');
-  }
-  else if(this.role==3 || this.role==0){
-    this.goToPage('Uni-profile');
-  }
+    if(s['Role']){
+
+      localStorage.setItem('role', this.role);
+
+      if(this.role==1 || this.role==0 ){
+      this.goToPage('Trainer-profile');
+      }
+      else if(this.role==2 || this.role==0){
+        this.goToPage('Trainee-profile');
+      }
+      else if(this.role==3 || this.role==0){
+        this.goToPage('Uni-profile');
+      }
+    
+    }else{
+      this.alertUser=true;
+      console.log("this is not  valid user");
+    }
+  
+  });
+
+
+  // localStorage.setItem('role', this.role);
+
+  // if(this.role==1 || this.role==0 ){
+  // this.goToPage('Trainer-profile');
+  // }
+  // else if(this.role==2 || this.role==0){
+  //   this.goToPage('Trainee-profile');
+  // }
+  // else if(this.role==3 || this.role==0){
+  //   this.goToPage('Uni-profile');
+  // }
 
 
     }else if(!this.email.includes('@') )

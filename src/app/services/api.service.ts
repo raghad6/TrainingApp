@@ -37,15 +37,28 @@ export class ApiService {
     // headers.append('Content-Type', 'aaplicedForms');
     return this.httpClient.post(
       environment.api + 'signup',
-      {
-        signup: user,
-      },
+      
+         user
+      ,
       {
         headers
       }
     );
   }
 
+  postLoginData(user: User): Observable<any> {
+    const headers = new HttpHeaders();
+    // headers.append('Content-Type', 'aaplicedForms');
+    return this.httpClient.post(
+      environment.api + 'login',
+      
+         user
+      ,
+      {
+        headers
+      }
+    );
+  }
   getTrainerData(): Observable<Trainer[]> {
     return this.httpClient.get<Trainer[]>(this.API + 'trainer');
   }
