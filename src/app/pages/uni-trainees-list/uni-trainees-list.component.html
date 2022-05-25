@@ -1,26 +1,10 @@
 <app-header></app-header>
 <mat-icon (click)="goToPage('Uni-profile')">keyboard_backspace</mat-icon>
-
+<br>
 <h1 style="text-align: center;">My Trainees List</h1>
 <div class="list">
-<ul style="list-style-type:none;">
-    <li (click)="goToPage('Trainee-Access')" >Nagham</li>
-    <hr>
-    <li (click)="goToPage('Trainee-Access')">Nagham</li>
-    <hr>
-    <li (click)="goToPage('Trainee-Access')">Nagham</li>
-    <hr> 
-    <li (click)="goToPage('Trainee-Access')">Nagham</li>
-    <hr>
-    <li (click)="goToPage('Trainee-Access')">Nagham</li>
-    <hr>
-    <li (click)="goToPage('Trainee-Access')">Nagham</li>
-    <hr>
-    <li (click)="goToPage('Trainee-Access')">Nagham</li>
-    <hr>
-    <li (click)="goToPage('Trainee-Access')">Nagham</li>
-    <hr>
-    <li (click)="goToPage('Trainee-Access')">Nagham</li>
+<ul style="list-style-type:none;" *ngFor="let traineee of trainee">
+    <li (click)="goToPage('Trainee-Access')" >{{traineee.UserName}}</li>
     <hr>
   </ul>
 </div>

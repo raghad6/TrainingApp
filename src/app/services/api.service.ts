@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Forms } from '../models/Forms';
 import { User } from '../models/user';
 import { Trainer } from '../models/Trainer';
+import { Trainee } from '../models/Trainee';
 @Injectable({
   providedIn: 'root',
 })
@@ -59,7 +60,12 @@ export class ApiService {
       }
     );
   }
+
   getTrainerData(): Observable<Trainer[]> {
     return this.httpClient.get<Trainer[]>(this.API + 'trainer');
+  }
+
+  getTraineesList(): Observable<Trainee[]> {
+    return this.httpClient.get<Trainee[]>(this.API + 'trainee');
   }
 }
