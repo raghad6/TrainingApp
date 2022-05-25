@@ -41,7 +41,7 @@ export class ApiService {
         signup: user,
       },
       {
-        headers: headers,
+        headers
       }
     );
   }
