@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
 
     if(this.email.includes('@')  && this.email.length>=11 && ( /[a-zA-Z]/.test(this.Password)) && ( /[0-9]/.test(this.Password))){
       this.alertEmail=false;
-      this.alertPass=false;
+      this.alertPass=false; 
 
 
      console.log("this is valid ");
