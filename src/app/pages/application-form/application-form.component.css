@@ -433,12 +433,14 @@ h3{
 
   }
 }
-.popbutton{
-  background-color: #649981;
-  padding-bottom: 6%;
-  padding-top: 6%;
-  margin-top: 26%;
-  width: 39%;
+  .popbutton{
+     border-radius: inherit;
+    background-color: #649981;
+    padding-bottom: 7%;
+    padding-top: 6%;
+    margin-top: 22%;
+    width: 38%;
+}
 
 }
 h3{
