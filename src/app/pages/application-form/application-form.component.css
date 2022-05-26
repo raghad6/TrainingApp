@@ -382,3 +382,65 @@ fieldset {
 .form-control.is-invalid, .was-validated .form-control:invalid {
   border-color: #dc3545;
 }
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+h3{
+  font-size: 20px;
+  margin-top: 17%;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 20px;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 6px;
+  right: 19px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: red;
+  cursor: pointer;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  
+  .popup{
+    width: 70%;
+    margin-bottom: 159%;
+    width: 70%;
+    background-color: whitesmoke;
+    margin-top: -145%;
+    padding-bottom: 15%;
+
+  }
+}
+.popbutton{
+  background-color: #649981;
+  padding-bottom: 6%;
+  padding-top: 6%;
+  margin-top: 26%;
+  width: 39%;
+
+}
+h3{
+  margin-top: 10%;
+}
