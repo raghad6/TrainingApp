@@ -20,6 +20,8 @@ export class ApplicationFormComponent implements OnInit {
   personal2_step = false;
   personal3_step = false;
   step = 1;
+  popup = false
+  name = 'Angular';
   forms: Forms[] = [];
   currentTime: Time = {
     hours: 5,
