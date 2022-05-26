@@ -221,13 +221,31 @@
                     <br><br>
                     <input (click)="previous()" type="button" name="previous" class="previous action-button-previous"
                         value="Previous" />
-                    <input (click)="submit()" type="submit" name="submit" class="submit action-button butt-center"
+                    <input (click)="popup=true" type="submit" name="submit" class="submit action-button butt-center"
                         value="Submit" />
+                        
                 </fieldset>
             </div>
         </form><br>
     </div>
 </body>
 
+
+<div class="overlay" *ngIf="popup">
+    <div class="popup">
+      <h2>Thank you..</h2>
+      <h3>Your form has been filled successfully!</h3>
+      <button class="popbutton" (click)="goToPage('')" >OK</button>
+  
+      
+  
+  
+        <a class="close" (click)="popup = false">&times;</a>
+    </div>
+  </div>
+
 </html>
+
+
+
 <app-footer></app-footer>
