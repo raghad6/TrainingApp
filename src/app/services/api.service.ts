@@ -12,6 +12,7 @@ import { Trainee } from '../models/Trainee';
 export class ApiService {
   private readonly API = environment.api;
   private readonly headers = {};
+  
 
   constructor(private httpClient: HttpClient) {}
 
@@ -68,4 +69,10 @@ export class ApiService {
   getTraineesList(): Observable<Trainee[]> {
     return this.httpClient.get<Trainee[]>(this.API + 'trainee');
   }
+
+  getTraineesHoursDone(): Observable<Trainee[]> {
+    return this.httpClient.get<Trainee[]>(this.API + 'trainee');
+  }
+  
 }
+

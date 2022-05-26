@@ -3,43 +3,26 @@
 
 <h1 >Trainees Who Finished Training Hours</h1>
 <div class="list">
-<ul style="list-style-type:none;">
-    <li (click)="popup=true">Nagham</li>
-    <hr>
-    <li (click)="popup=true">Nagham</li>
-    <hr>
-    <li (click)="popup=true">Nagham</li>
-    <hr> 
-    <li (click)="popup=true">Nagham</li>
-    <hr>
-    <li (click)="popup=true">Nagham</li>
-    <hr>
-    <li (click)="popup=true">Nagham</li>
-    <hr>
-    <li (click)="popup=true">Nagham</li>
-    <hr>
-    <li (click)="popup=true">Nagham</li>
-    <hr>
-    <li (click)="popup=true">Nagham</li>
+<ul style="list-style-type:none;" *ngFor="let traineehours of trainee ">
+    <li (click)="popup=true">{{traineehours.UserName}}</li>
     <hr>
   </ul>
 </div>
 
-<div class="overlay" *ngIf="popup">
+<div   *ngIf="popup">
+  <div class="overlay" *ngFor="let traineehours of trainee ">
   <div class="popup">
     <h1> <img src="../../assets/Favatar.png"> Nagham Hijje</h1>
-    <h3>Major: </h3>
-    <h3>year: </h3>  
-    <h3>Email: </h3>
-    <h3>PhoneNo: </h3>  
-    <h3>Total Hours: </h3>  
-
-    
-
+    <h3>Major: {{traineehours.Major}} </h3>
+    <h3>Email: {{traineehours.Email}} </h3>
+    <h3>PhoneNo: {{traineehours.PhoneNo}} </h3>  
+    <h3>Total Hours: {{traineehours.TrainingHours}} </h3>  
 
       <a class="close" (click)="popup = false">&times;</a>
   </div>
 </div>
+</div>
+
 
 
   <app-footer></app-footer>
