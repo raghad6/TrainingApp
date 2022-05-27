@@ -9,7 +9,7 @@
 
         <label for="Email"><b>Email</b></label>
         <div class="col container">
-            <input class="form-control"  type="Email"  name="Email" required formControlName="Email" [(ngModel)]="Email" [ngClass]="{ 'is-invalid': valida['Email'].errors }">
+            <input class="form-control" ype="Email" ame="Email" required formControlName="Email" [(ngModel)]="Email" [ngClass]="{ 'is-invalid': valida['Email'].errors }">
             <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'Email'].errors ">
                 <div class="req " *ngIf="valida[ 'Email'].errors?.[ 'required'] " class="alert-danger">Please enter your Email</div>
             </div>
@@ -25,7 +25,7 @@
 
         <label for="Password_repeat"><b>Confirm Password</b></label>
         <div class="col container">
-            <input class="form-control"   type="password" name="Password_repeat" required  [(ngModel)]="Password_repeat" formControlName="Password_repeat" [ngClass]="{ 'is-invalid': valida['Password_repeat'].errors }">
+            <input class="form-control" tpe="password" name="Password_repeat" required formControlName="Password_repeat" [ngClass]="{ 'is-invalid': valida['Password_repeat'].errors }">
             <div style=" margin-top: 0%; padding-top: 0%; " *ngIf=" signupForm.controls[ 'Password_repeatt'].errors ">
                 <div *ngIf="valida[ 'Password_repeat'].touched && valida['Password_repeat'].invalid">
                     <div class="req " *ngIf="valida[ 'Password_repeat'].errors?.[ 'required'] " class="alert alert-danger">Please confirm your Password</div>
@@ -34,6 +34,8 @@
             </div>
         </div>
         <div *ngIf="alert" class="alert alert-danger"> Invalid Email or password </div>
+        <div *ngIf="alert2" class="alert alert-danger"> Your email isn't already registered</div>
+
 
 
 

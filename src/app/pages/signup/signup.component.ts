@@ -15,6 +15,7 @@ export class SignUpComponent implements OnInit {
   Password_repeat: any;
   // role:any=2;
   alert: boolean = false;
+  alert2: boolean = false;
   Title = 'Sign Up';
   signup = new FormControl('vali');
   // user: User[] = [];
@@ -41,7 +42,7 @@ export class SignUpComponent implements OnInit {
   }
 
   addSignUpData(user: User) {
-    this.apiService.postSignUpData(user).subscribe((res) => {
+    this.apiService.postSignUpNewData(user).subscribe((res) => {
       console.log(res, 'jkdhfjh');
     });
   }
@@ -64,7 +65,7 @@ export class SignUpComponent implements OnInit {
     console.log('Password_repeat: ', this.Password_repeat);
     let us=new User(0,'', this.Password,this.Email);
 
- this.apiService.postSignUpData(us).subscribe((res) => {
+ this.apiService.postSignUpNewData(us).subscribe((res) => {
       console.log(res, 'jkdhfjh');
     });
     //   if(this.Email.includes('@') && this.Email.length>=11 && ( /[a-zA-Z]/.test(this.Password)) && ( /[0-9]/.test(this.Password)) &&( /[a-zA-Z]/.test(this.Password_repeat)) && ( /[0-9]/.test(this.Password_repeat)) ){
@@ -98,4 +99,3 @@ export class SignUpComponent implements OnInit {
     ));
   }
 }
-

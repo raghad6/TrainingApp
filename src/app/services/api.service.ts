@@ -48,6 +48,20 @@ export class ApiService {
     );
   }
 
+  postSignUpNewData(user: User): Observable<any> {
+    const headers = new HttpHeaders();
+    // headers.apapend('Content-Type', 'aaplicedForms');
+    return this.httpClient.post(
+      environment.api + 'signupPass',
+
+         user
+      ,
+      {
+        headers
+      }
+    );
+  }
+
   postLoginData(user: User): Observable<any> {
     const headers = new HttpHeaders();
     // headers.append('Content-Type', 'aaplicedForms');
