@@ -41,7 +41,7 @@ export class ApplicationFormComponent implements OnInit {
 
   addForms(form: Forms) {
     this.apiService.postForms(form).subscribe((res) => {
-      console.log(res);
+      console.log(res,"efjui");
     });
   }
 
@@ -86,13 +86,13 @@ export class ApplicationFormComponent implements OnInit {
   next() {
     if (this.step == 1) {
       this.personal1_step = true;
-      if(this.email.includes('@')  && this.email.length>=11){
-        // this.step++;
-return;
-      }else{
-        this.alertEmail=true;
+//       if(this.email.includes('@')  && this.email.length>=11){
+//         this.step++;
+// return;
+//       }else{
+//         this.alertEmail=true;
 
-      }
+//       }
       if (this.personal1Details.invalid) {
         
         return;
@@ -123,6 +123,7 @@ return;
       if (this.personal3Details.invalid) {
         return;
       }
+        console.log("ksdujf");
 
       this.addForms(
         new Forms(
@@ -139,15 +140,15 @@ return;
           this.personal2Details.controls['TotalAvg'].value,
           this.personal3Details.controls['TypeOfTraining'].value,
           this.personal3Details.controls['DaysAvailable'].value,
-          this.personal3Details.controls['DaysAvailable'].value, // Hours available
+          this.personal3Details.controls['DaysAvailable'].value,
           this.personal3Details.controls['ReqTrainingHours'].value,
           this.personal2Details.controls['SupervisorPhoneNo'].value,
-          this.personal3Details.controls['UniversityDoc'].value,
           this.personal2Details.controls['Emailsup'].value,
-          // this.personal2Details.controls['Emailsup'].value
-
+          this.personal3Details.controls['UniversityDoc'].value,
         )
       );
+      this.popup=true;
+      console.log(this.forms,"trtr");
     }
   }
   goToPage(pageName: string) {

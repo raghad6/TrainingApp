@@ -67,7 +67,9 @@ export class SignUpComponent implements OnInit {
 
  this.apiService.postSignUpNewData(us).subscribe((res) => {
       console.log(res, 'jkdhfjh');
+
     });
+    this.router.navigate([`login`]);
     //   if(this.Email.includes('@') && this.Email.length>=11 && ( /[a-zA-Z]/.test(this.Password)) && ( /[0-9]/.test(this.Password)) &&( /[a-zA-Z]/.test(this.Password_repeat)) && ( /[0-9]/.test(this.Password_repeat)) ){
     //     this.alert=false;
 
@@ -97,5 +99,6 @@ export class SignUpComponent implements OnInit {
       this.signupForm.controls['Password'].value,
 
     ));
+    this.router.navigate([`login`]);
   }
 }

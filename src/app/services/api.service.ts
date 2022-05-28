@@ -1,3 +1,4 @@
+import { Trainee } from './../models/Trainee';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -5,7 +6,6 @@ import { environment } from 'src/environments/environment';
 import { Forms } from '../models/Forms';
 import { User } from '../models/user';
 import { Trainer } from '../models/Trainer';
-import { Trainee } from '../models/Trainee';
 @Injectable({
   providedIn: 'root',
 })
@@ -29,22 +29,22 @@ export class ApiService {
         appform: form,
       },
       {
-        headers: headers,
+        // headers: headers,
       }
     );
   }
 
   postSignUpData(user: User): Observable<any> {
-    const headers = new HttpHeaders();
+    // const headers = new HttpHeaders();
     // headers.append('Content-Type', 'aaplicedForms');
     return this.httpClient.post(
       environment.api + 'signup',
       
          user
       ,
-      {
-        headers
-      }
+      // {
+      //   headers
+      // }
     );
   }
 
@@ -67,7 +67,6 @@ export class ApiService {
     // headers.append('Content-Type', 'aaplicedForms');
     return this.httpClient.post(
       environment.api + 'login',
-      
          user
       ,
       {
@@ -85,6 +84,8 @@ export class ApiService {
   }
 
   getTraineesHoursDone(): Observable<Trainee[]> {
+    // console.log(this.API+ 'trainee/'+id);
+    
     return this.httpClient.get<Trainee[]>(this.API + 'trainee');
   }
   
