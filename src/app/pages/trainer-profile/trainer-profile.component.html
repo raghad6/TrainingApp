@@ -4,15 +4,9 @@
   <div class="container mt-4 mb-4 p-3 d-flex justify-content-center" >
     <div class="card container d-flex flex-column align-items-center"  >          
       <img style="display: inline-block" class="responsive" src="assets/Mavatar.png "/>
-      <!-- <button class="btn cameB">
-              <mat-icon>camera_alt</mat-icon>
-              <span style="font-size: small;display: block; ">
-                Change Profile Picture
-              </span>
-            </button><br> -->
-           
-            <!-- <h1>{{showedtrainer.UserName}}</h1> -->
-            <p class="idd" style="opacity: 0.5">{{this}}</p>
+      <h3 >{{trainer.Username}}</h3>
+      <p class="idd" style="opacity: 0.5">{{trainer.Email}}</p>
+      <br /><br />
       <div>
         <div>
           <button (click)="goToPage('Create-todolist')" class="btn btn-success twoB"> Create Task List</button>

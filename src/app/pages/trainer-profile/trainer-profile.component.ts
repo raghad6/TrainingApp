@@ -10,14 +10,15 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class TrainerProfileComponent implements OnInit {
 
-  trainer:Trainer[]=[];
+  trainer:any;
   showedtrainer!:Trainer;
-  dropdown = false;
-  name = 'Angular';
   role: any;
   
+
   constructor(private router: Router, apiService: ApiService) {
-    apiService.getTrainerData().subscribe((data: Trainer[]) => {
+    let id:any = localStorage.getItem('Email');
+    apiService.getTrainerData1(id).subscribe((data: Trainer[]) => {
+      this.trainer=data[0];
       console.log(data);  
     });
   }
@@ -28,7 +29,7 @@ export class TrainerProfileComponent implements OnInit {
       console.log(' in on initthis.role: ', this.role);
 
       this.goToPage('');
-    }
+    }    
   }
 
   changertranee(shranee:Trainer){

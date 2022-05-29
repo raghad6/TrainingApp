@@ -81,6 +81,10 @@ export class ApiService {
     return this.httpClient.get<Trainer[]>(this.API + 'trainer');
   }
 
+  getTrainerData1(id:string): Observable<Trainer[]> {
+    return this.httpClient.get<Trainer[]>(this.API + 'trainer/' + id);
+  }
+
   getTraineesList(): Observable<Trainee[]> {
     return this.httpClient.get<Trainee[]>(this.API + 'trainee');
   }

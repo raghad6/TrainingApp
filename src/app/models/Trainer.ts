@@ -1,7 +1,7 @@
 export class Trainer {
     public ID: number;
     public ProfilePic: string;
-    public UserName: string;
+    public Username: string;
     public Email: string;
     public Password: string;
     // public FName: string;
@@ -10,11 +10,11 @@ export class Trainer {
     public Department: string;
 
   
-    constructor(ID: number, ProfilePic: string, UserName: string, Email: string, 
+    constructor(ID: number, ProfilePic: string, Username: string, Email: string, 
         Password: string, PhoneNo: number, Department: string) {
       this.ID = ID;
       this.ProfilePic = ProfilePic;
-      this.UserName = UserName;
+      this.Username = Username;
       this.Email = Email;
       this.Password = Password;
       this.PhoneNo = PhoneNo;

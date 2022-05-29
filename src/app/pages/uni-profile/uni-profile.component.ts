@@ -11,8 +11,6 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class UniProfileComponent implements OnInit {
 
- dropdown = false
-  name = 'Angular'
   role:any;
   university:any;
   showUni!:University;
