@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import University from 'src/app/models/University';
+import { ApiService } from 'src/app/services/api.service';
 
 
 @Component({
@@ -9,11 +11,17 @@ import { Router } from '@angular/router';
 })
 export class UniProfileComponent implements OnInit {
 
-  constructor(private router: Router) { }
-  dropdown = false
+ dropdown = false
   name = 'Angular'
   role:any;
+  uni:University[]=[];
 
+  constructor(private router: Router, apiService: ApiService) {
+    apiService.getUniData().subscribe((data: University[]) => {
+      console.log(data);  
+    })
+   }
+ 
   
   async ngOnInit()  {
     this.role = await localStorage.getItem('role');

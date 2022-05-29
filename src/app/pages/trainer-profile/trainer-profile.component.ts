@@ -18,10 +18,8 @@ export class TrainerProfileComponent implements OnInit {
   
   constructor(private router: Router, apiService: ApiService) {
     apiService.getTrainerData().subscribe((data: Trainer[]) => {
-      // this.trainer = data;
-      console.log(data);
+      console.log(data);  
     });
-
   }
 
   async ngOnInit() {

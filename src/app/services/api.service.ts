@@ -6,6 +6,8 @@ import { environment } from 'src/environments/environment';
 import { Forms } from '../models/Forms';
 import { User } from '../models/user';
 import { Trainer } from '../models/Trainer';
+import TasksList from '../models/TasksList';
+import University from '../models/University';
 @Injectable({
   providedIn: 'root',
 })
@@ -85,9 +87,24 @@ export class ApiService {
 
   getTraineesHoursDone(): Observable<Trainee[]> {
     // console.log(this.API+ 'trainee/'+id);
-    
     return this.httpClient.get<Trainee[]>(this.API + 'trainee');
   }
   
+  getUniData(): Observable<University[]> {
+    return this.httpClient.get<University[]>(this.API + 'unitrainingsupervisor');
+  }
+
+  postTaskList(tasks: TasksList): Observable<any> {
+    const headers = new HttpHeaders();
+    // headers.append('Content-Type', 'aaplicedForms');
+    return this.httpClient.post(
+      environment.api + 'tasklist',
+      tasks
+      ,
+      {
+        headers
+      }
+    );
+  }
 }
 

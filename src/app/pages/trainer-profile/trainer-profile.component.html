@@ -10,27 +10,18 @@
                 Change Profile Picture
               </span>
             </button><br> -->
+           
             <!-- <h1>{{showedtrainer.UserName}}</h1> -->
-            <p class="idd" style="opacity: 0.5">[Email]</p>
+            <p class="idd" style="opacity: 0.5">{{this}}</p>
       <div>
         <div>
-          <button
-            (click)="goToPage('Create-todolist')"
-            class="btn btn-success twoB">
-            Create Task List
-          </button>
+          <button (click)="goToPage('Create-todolist')" class="btn btn-success twoB"> Create Task List</button>
           &nbsp; &nbsp;&nbsp; &nbsp;
-
-          <button
-            (click)="goToPage('evaluatetrainee')"
-            class="btn btn-success twoB"
-          >
-            My Trainees
-          </button>
-          <br /><br /><br />
+          <button (click)="goToPage('evaluatetrainee')" class="btn btn-success twoB"> My Trainees</button>
+          <br/><br /><br/>
           <button (click)="goToPage('login')" class="btn lastB">Log out</button>
         </div>
-        <br />
+        <br/>
       </div>
     </div>
     <app-footer></app-footer>
