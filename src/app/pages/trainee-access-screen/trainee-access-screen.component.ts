@@ -10,6 +10,9 @@ import { ApiService } from 'src/app/services/api.service';
 export class TraineeAccessScreenComponent implements OnInit {
 
   traineee:any;
+  popup = false;
+  showedtranee!:Trainee;
+  trainee: Trainee[]=[];
   
   constructor(private router: Router,private apiService: ApiService) {
     this.traineee =JSON.parse(localStorage.getItem('trainee')!.toString());
@@ -23,6 +26,19 @@ export class TraineeAccessScreenComponent implements OnInit {
 
 
   ngOnInit(): void {
+  }
+
+  changertranee(shranee:Trainee){
+    this.showedtranee=shranee;
+    this.popup=true;
+  }
+
+  gettranee(ID:number){
+    this.apiService.getTraineesHoursDone().subscribe((data: Trainee[]) => {
+      this.trainee = data;
+      this.popup=true;
+      console.log(data);
+    });
   }
   goToPage(pageName:string){
     this.router.navigate([`${pageName}`]);

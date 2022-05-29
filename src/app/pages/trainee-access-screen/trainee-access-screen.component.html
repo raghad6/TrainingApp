@@ -14,15 +14,23 @@
             </div>
 
             <br><br>
-            <button (click)="goToPage('Trainee-report')" class="btn btn-success allB ">Training Hours</button><br>
+            <button (click)="changertranee(traineee)" class="btn btn-success allB ">Training Hours</button><br>
 
             <button (click)="goToPage('Trainee-report')" class="btn btn-success allB ">Reports</button><br>
-
             <!-- <button (click)="goToPage('evaluationscreen')" class="btn btn-success allB ">Evaluation </button><br> -->
-
             <!-- <button (click)="goToPage('certificate')" class="btn btn-success allB ">Certificate </button><br> -->
             <br>
         </div>
     </div>
 </div>
+
+<div *ngIf="popup">
+      <div class="overlay" >
+    <div class="popup">
+      <h1> <img src="../../assets/Favatar.png">&nbsp;{{showedtranee.UserName}}</h1>
+      <h3>Total Hours: {{showedtranee.TrainingHours}} </h3>  
+        <a class="close" (click)="popup = false">&times;</a>
+    </div>
+  </div>
+  </div>
 <app-footer></app-footer>

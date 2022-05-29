@@ -15,7 +15,8 @@ export class FinishedtraineesComponent implements OnInit {
   popup = false
   name = 'Angular';
   trainee: Trainee[]=[];
-showedtranee!:Trainee;
+  showedtranee!:Trainee;
+  
   constructor(private router: Router, private apiService: ApiService) {
     this.apiService.getTraineesHoursDone().subscribe((data: Trainee[]) => {
       this.trainee = data;
