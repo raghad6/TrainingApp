@@ -14,10 +14,13 @@ export class UniProfileComponent implements OnInit {
  dropdown = false
   name = 'Angular'
   role:any;
-  uni:University[]=[];
+  university:any;
+  showUni!:University;
 
   constructor(private router: Router, apiService: ApiService) {
-    apiService.getUniData().subscribe((data: University[]) => {
+    let id:any = localStorage.getItem('Email');
+    apiService.getUni1Data(id).subscribe((data: University[]) => {
+      this.university=data[0];
       console.log(data);  
     })
    }
@@ -27,10 +30,16 @@ export class UniProfileComponent implements OnInit {
     this.role = await localStorage.getItem('role');
     if(this.role!=3){
       console.log(' in on initthis.role: ', this.role);
-
    this.goToPage('');
     }
+    // this.changeUni();
   }
+
+  changeUni(unidata:University){
+    this.showUni=unidata;
+    console.log(unidata,"djfj");
+  }
+
   goToPage(pageName:string){
     this.router.navigate([`${pageName}`]);
   }

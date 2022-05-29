@@ -1,9 +1,27 @@
+<!-- <app-header></app-header>
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+  <div *ngFor="let traineehours of university " class="card container d-flex flex-column align-items-center">
+    <img style="display: inline-block" class="responsive" src="assets/Mavatar.png " />
+    <h3  (click)="changeUni(traineehours)">{{traineehours.Username}}</h3>
+    <p class="idd" style="opacity: 0.5">ahmadarafeh@gmail.com</p>
+    <br /><br />
+    <div></div>
+    <button (click)="goToPage('Uni-trainees')" class="btn btn-success twoB">
+      Trainees List</button><br />
+    <button (click)="goToPage('finishedtrainees')" class="btn btn-success twoB">
+      Trainee who finished training hours</button><br />
+    <button (click)="goToPage('login')" class="btn lastB">Log out</button>
+    <br />
+  </div>
+</div>
+<app-footer></app-footer> -->
+
 <app-header></app-header>
 <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
-  <div class="card container d-flex flex-column align-items-center">
+  <div  class="card container d-flex flex-column align-items-center">
     <img style="display: inline-block" class="responsive" src="assets/Mavatar.png " />
-    <h3>Ahmad Arafeh</h3>
-    <p class="idd" style="opacity: 0.5">ahmadarafeh@gmail.com</p>
+    <h3 >{{university.SupervisorName}}</h3>
+    <p class="idd" style="opacity: 0.5">{{university.Email}}</p>
     <br /><br />
     <div></div>
     <button (click)="goToPage('Uni-trainees')" class="btn btn-success twoB">

@@ -94,6 +94,14 @@ export class ApiService {
     return this.httpClient.get<University[]>(this.API + 'unitrainingsupervisor');
   }
 
+  getUni1Data(id:string): Observable<University[]> {
+    return this.httpClient.get<University[]>(this.API + 'unitrainingsupervisor/' + id);
+  }
+
+  getUni2Data(id:string): Observable<Trainee[]> {
+    return this.httpClient.get<Trainee[]>(this.API + 'gettraineebysuper/' + id);
+  }
+
   postTaskList(tasks: TasksList): Observable<any> {
     const headers = new HttpHeaders();
     // headers.append('Content-Type', 'aaplicedForms');

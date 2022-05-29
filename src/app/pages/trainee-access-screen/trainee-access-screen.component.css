@@ -3,6 +3,14 @@
     padding: 0
 }
 
+mat-icon {
+    font-size: xx-large;
+    float: left;
+    margin-left: 3%;
+    margin-top: -24%;
+    position: relative;
+    color: white;
+  }  
 .responsive {
     width: 20%;
     height: auto;

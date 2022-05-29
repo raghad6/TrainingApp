@@ -1,10 +1,10 @@
 <app-header></app-header>
-<mat-icon (click)="goToPage('Uni-profile')">keyboard_backspace</mat-icon>
+<mat-icon (click)="goToPage1('Uni-profile')">keyboard_backspace</mat-icon>
 <br>
 <h1 style="text-align: center;">My Trainees List</h1>
 <div class="list">
 <ul style="list-style-type:none;" *ngFor="let traineee of trainee">
-    <li (click)="goToPage('Trainee-Access')" >{{traineee.UserName}}</li>
+    <li (click)="goToPage('Trainee-Access',traineee)" >{{traineee.UserName}}</li>
     <hr>
   </ul>
 </div>

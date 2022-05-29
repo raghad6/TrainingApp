@@ -1,4 +1,6 @@
 <app-header></app-header>
+<mat-icon (click)="goToPage('Uni-trainees')">keyboard_backspace</mat-icon>
+
 <div>
     <div class=" container mt-4 mb-4 p-3 d-flex justify-content-center ">
         <div class="card container d-flex flex-column align-items-center ">
@@ -7,7 +9,7 @@
                 <img style="margin-right: 15px;" class="responsive" src="assets/Favatar.png " /><br>
 
                 <p style="position: initial;">
-                    Raghad AbuSharar
+                    {{traineee.UserName}}
                 </p>
             </div>
 
@@ -16,9 +18,9 @@
 
             <button (click)="goToPage('Trainee-report')" class="btn btn-success allB ">Reports</button><br>
 
-            <button (click)="goToPage('evaluationscreen')" class="btn btn-success allB ">Evaluation </button><br>
+            <!-- <button (click)="goToPage('evaluationscreen')" class="btn btn-success allB ">Evaluation </button><br> -->
 
-            <button (click)="goToPage('certificate')" class="btn btn-success allB ">Certificate </button><br>
+            <!-- <button (click)="goToPage('certificate')" class="btn btn-success allB ">Certificate </button><br> -->
             <br>
         </div>
     </div>

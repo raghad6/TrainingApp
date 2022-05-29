@@ -14,12 +14,12 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  email:any;
-  Password:any;
-  role:any=1;
-  alertEmail: boolean=false;
-  alertPass: boolean=false;
-  alertUser: boolean=false;
+  email: any;
+  Password: any;
+  role: any = 1;
+  alertEmail: boolean = false;
+  alertPass: boolean = false;
+  alertUser: boolean = false;
   Users: User[] = [];
   Title = 'Log In';
   login = new FormControl('vali');
@@ -51,71 +51,74 @@ export class LoginComponent implements OnInit {
     return this.loginForm.controls;
   }
 
-  log(){
+  log() {
     console.log('email: ', this.email);
     console.log('Password: ', this.Password);
 
   }
 
-  async appLogin(){
+  async appLogin() {
     console.log('email: ', this.email);
     console.log('Password: ', this.Password);
 
-    if(this.email.includes('@')  && this.email.length>=11 && ( /[a-zA-Z]/.test(this.Password)) && ( /[0-9]/.test(this.Password))){
-      this.alertEmail=false;
-      this.alertPass=false; 
+    if (this.email.includes('@') && this.email.length >= 11 && (/[a-zA-Z]/.test(this.Password)) && (/[0-9]/.test(this.Password))) {
+      this.alertEmail = false;
+      this.alertPass = false;
 
 
-     console.log("this is valid ");
-  // post req login
+      console.log("this is valid ");
+      // post req login
 
-  this.apiService.postLoginData(new User(0,'',this.Password,this.email)).subscribe((s:any)=>{
-    console.log(s);
-    this.role=s['Role'];
+      this.apiService.postLoginData(new User(0, '', this.Password, this.email)).subscribe((s: any) => {
+        console.log(s);
+        this.role = s['Role'];
 
-    if(s['Role']){
+        if (s['Role']) {
 
-      localStorage.setItem('role', this.role);
+          localStorage.setItem('role', this.role);
+          localStorage.setItem('ID', s['_id']);
+          localStorage.setItem('Email', s['Email']);
 
-      if(this.role==1 || this.role==0 ){
-      this.goToPage('Trainer-profile');
-      }
-      else if(this.role==2 || this.role==0){
-        this.goToPage('Trainee-profile');
-      }
-      else if(this.role==3 || this.role==0){
-        this.goToPage('Uni-profile');
-      }
-    
-    }else{
-      this.alertUser=true;
-      console.log("this is not  valid user");
+
+          if (this.role == 1 || this.role == 0) {
+            this.goToPage('Trainer-profile');
+          }
+          else if (this.role == 2 || this.role == 0) {
+            this.goToPage('Trainee-profile');
+          }
+          else if (this.role == 3 || this.role == 0) {
+            this.goToPage('Uni-profile');
+          }
+
+        } else {
+          this.alertUser = true;
+          console.log("this is not  valid user");
+        }
+
+      });
+
+
+      // localStorage.setItem('role', this.role);
+
+      // if(this.role==1 || this.role==0 ){
+      // this.goToPage('Trainer-profile');
+      // }
+      // else if(this.role==2 || this.role==0){
+      //   this.goToPage('Trainee-profile');
+      // }
+      // else if(this.role==3 || this.role==0){
+      //   this.goToPage('Uni-profile');
+      // }
+
+
     }
-  
-  });
 
-
-  // localStorage.setItem('role', this.role);
-
-  // if(this.role==1 || this.role==0 ){
-  // this.goToPage('Trainer-profile');
-  // }
-  // else if(this.role==2 || this.role==0){
-  //   this.goToPage('Trainee-profile');
-  // }
-  // else if(this.role==3 || this.role==0){
-  //   this.goToPage('Uni-profile');
-  // }
-
-
-    }else if(!this.email.includes('@') )
-    {
-      this.alertEmail=true;
+    else if (!this.email.includes('@')) {
+      this.alertEmail = true;
       console.log("this is not  valid email");
     }
-    else 
-    {
-      this.alertPass=true;
+    else {
+      this.alertPass = true;
       console.log("this is not  valid password");
     }
 

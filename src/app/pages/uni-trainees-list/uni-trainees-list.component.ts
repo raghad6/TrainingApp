@@ -16,8 +16,10 @@ export class UniTraineesListComponent implements OnInit {
   name = 'Angular';
   trainee:Trainee[]=[];
 
-  constructor(private router: Router,private apiService: ApiService) { 
-    this.apiService.getTraineesList().subscribe((data: Trainee[]) => {
+  constructor(private router: Router,private apiService: ApiService) {
+    let id:any = localStorage.getItem('Email');
+ 
+    this.apiService.getUni2Data(id).subscribe((data: Trainee[]) => {
       this.trainee = data;
       console.log(data);
     });
@@ -25,7 +27,12 @@ export class UniTraineesListComponent implements OnInit {
 
 ngOnInit(): void {
 }
-goToPage(pageName:string){
+goToPage(pageName:string, trainee: any){
+  localStorage.setItem('trainee',JSON.stringify(trainee));
+  this.router.navigate([`${pageName}`]);
+}
+goToPage1(pageName:string){
+  // localStorage.setItem('trainee',trainee);
   this.router.navigate([`${pageName}`]);
 }
 }

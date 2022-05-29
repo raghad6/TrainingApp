@@ -22,10 +22,6 @@ export class Trainee {
       this.TrainingHours = TrainingHours;
       this.HoursStatus = HoursStatus;
       this.PhoneNo	 = PhoneNo	;
-
-
-
-
     }
   }
   
