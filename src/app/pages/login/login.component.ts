@@ -30,14 +30,7 @@ export class LoginComponent implements OnInit {
   });
   formBuilder: any;
 
-  constructor(private router: Router, formBuilder: FormBuilder, private apiService: ApiService) {
-    // dataService.getUserFromServer().subscribe(
-    //   (data: User[] )=> {
-    //     this.Users = data;
-    //     console.log(data);
-    //   }
-    // )
-  }
+  constructor(private router: Router, formBuilder: FormBuilder, private apiService: ApiService) {}
 
   ngOnInit(): void {
     localStorage.setItem('role', this.role);

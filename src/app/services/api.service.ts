@@ -108,7 +108,6 @@ export class ApiService {
 
   postTaskList(tasks: TasksList): Observable<any> {
     const headers = new HttpHeaders();
-    // headers.append('Content-Type', 'aaplicedForms');
     return this.httpClient.post(
       environment.api + 'tasklist',
       tasks
