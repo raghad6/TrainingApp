@@ -11,6 +11,7 @@ export class TraineeAccessScreenComponent implements OnInit {
 
   traineee:any;
   popup = false;
+  popup2 = false;
   showedtranee!:Trainee;
   trainee: Trainee[]=[];
   
@@ -31,6 +32,11 @@ export class TraineeAccessScreenComponent implements OnInit {
   changertranee(shranee:Trainee){
     this.showedtranee=shranee;
     this.popup=true;
+  }
+
+  changertranee2(shranee:Trainee){
+    this.showedtranee=shranee;
+    this.popup2=true;
   }
 
   gettranee(ID:number){
