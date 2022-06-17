@@ -1,28 +1,9 @@
 <app-header></app-header>
 <mat-icon (click)="goToPage('Trainer-profile')">keyboard_backspace</mat-icon>
 
-<ul style="list-style-type:none; margin-top: 10%;">
+<ul style="list-style-type:none; margin-top: 10%;" *ngFor="let traineee of trainee">
     <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>
-    <li>Nagham</li>
+    <li>{{traineee.UserName}}</li>
      <hr>
-     <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>
-    <li>Nagham</li>
-    <hr>
-    <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>
-    <li>Nagham</li>
-    <hr> 
-    <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>     <li>Nagham</li>
-    <hr>
-    <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>    <li>Nagham</li>
-    <hr>
-    <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>    <li>Nagham</li>
-    <hr>
-    <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>    <li>Nagham</li>
-    <hr>
-    <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>    <li>Nagham</li>
-    <hr>
-    <button (click)="goToPage('evaluationscreen')" class="btn btn-success twoB" >Evaluate</button>    <li>Nagham</li>
-    <hr>
-
   </ul>
   <app-footer></app-footer>

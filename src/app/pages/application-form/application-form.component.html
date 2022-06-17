@@ -58,13 +58,12 @@
                         <div class="req" *ngIf="personal1['StudentID'].errors?.['required']">ID is required</div>
                     </div>
 
-
-                    <input class="form-control" [(ngModel)]="email" type="email" formControlName="Email"
-                        [ngClass]="{ 'is-invalid': personal1_step && personal1['Email'].errors }" name="Email"
+ 
+                    <input class="form-control" [(ngModel)]="email" formControlName="Email" type="email"  name="Email"
                         placeholder="Enter Your Email" />
                     <div style="margin-top: 0%; padding-top: 0%;"
                         *ngIf="personal1_step && personal1Details.controls['Email'].errors">
-                        <div class="req" *ngIf="personal1['Email'].errors?.['required']">Email is required</div>
+                        <!-- <div class="req" *ngIf="personal1['Email'].errors?.['required']">Email is required</div> -->
                         <div *ngIf="alertEmail" class="alert alert-danger " style="border: 0px;"> "Invalid" Email must be valid </div>
 
                     </div>
@@ -98,7 +97,7 @@
                     </div>
 
 
-                    <input class="form-control" type="text" formControlName="SupervisorPhoneNo"
+                    <input class="form-control" type="number" formControlName="SupervisorPhoneNo"
                         placeholder="University Supervisor phone number" />
                     <div *ngIf="personal2_step && personal2Details.controls['SupervisorPhoneNo'].errors">
                         <div class="req" style=" padding-top: 0%;" *ngIf="personal2['SupervisorPhoneNo'].errors?.['required']">
@@ -221,13 +220,31 @@
                     <br><br>
                     <input (click)="previous()" type="button" name="previous" class="previous action-button-previous"
                         value="Previous" />
-                    <input (click)="submit()" type="submit" name="submit" class="submit action-button butt-center"
+                        <input (click)="submit()" type="submit" name="submit" class="submit action-button butt-center"
                         value="Submit" />
+                        
                 </fieldset>
             </div>
         </form><br>
     </div>
 </body>
 
+
+<div class="overlay" *ngIf="popup">
+    <div class="popup">
+      <h2>Thank you..</h2>
+      <h3>Your form has been filled successfully!</h3>
+      <button class="popbutton" (click)="goToPage('')" >OK</button>
+  
+      
+  
+  
+        <a class="close" (click)="popup = false">&times;</a>
+    </div>
+  </div>
+
 </html>
+
+
+
 <app-footer></app-footer>

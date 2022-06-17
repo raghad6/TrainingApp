@@ -1,72 +1,17 @@
-<app-header> <h1>Trainee profile</h1></app-header>
-
-    
-        <!-- <div class="dropdown" >
-            
-            <button (click)="dropdown = true" class="btn btn-outline-success "  style= " float: right;  border: 0px; background-color: none; "    >
-        <mat-icon   style="display: inline-block;" >notifications_active</mat-icon>
-    </button> -->
-    
-    
-    <div class=" container mt-4 mb-4 p-3 d-flex justify-content-center ">
-        <div class="card container d-flex flex-column align-items-center ">
-    
-    <!-- <div class="dropdown-content">
-              <i class="fa fa-flag-o" style="font-size:24px; color: green; padding: 20px;" ></i>
-              <p (click)="goToPage('finishedtrainees')" >New trainee finished training hours!
-                  <br> <br> <br> 
-              <p (click)="goToPage('finishedtrainees')">New trainee finished training hours!
-                <br> <br> <br> 
-              <p (click)="goToPage('finishedtrainees')">New trainee finished training hours!
-                <br> <br> <br> 
-              <p (click)="goToPage('finishedtrainees')">New trainee finished training hours!
-                <br> <br> <br> 
-              </div>  -->
-              
-              <img style="display: inline-block;" class="responsive" src="assets/Mavatar.png " />
-
-              <!-- <button class="btn cameB">
-              <mat-icon>camera_alt</mat-icon>
-              <span style="font-size: small;display: block; ">
-                Change Profile Picture
-              </span>
-            </button><br> -->
-  
-        
-            
-
-
-
-            <h3>
-                Ahmad Arafeh
-            </h3>
-            <p class="idd" style="opacity: 0.5;">
-                ahmadarafeh@gmail.com
-            </p>
-            <br><br>
-
-             <div>
-                <!-- <h5 style="text-align: start;">
-                    Notifications
-                    <mat-icon style="display: inline-block;">notifications_active</mat-icon>
-
-                </h5> -->
-                <!-- <br>
-                <p style="display: inline-block;">Turn On/Off Notifications &nbsp; &nbsp; &nbsp; &nbsp;</p>
-                <label class="switch">
-          <input  class="btn btn-outline-success" type="checkbox" checked>
-          <span class="slider round"></span>
-        </label>
-                <br><br><br>  -->
-            </div>
-
-
-
-           <button (click)="goToPage('Uni-trainees')" class="btn btn-success twoB">Trainees List</button><br>
-
-            <button (click)="goToPage('finishedtrainees')" class="btn btn-success twoB">Trainee who finished training hours</button><br>
-            <button (click)="goToPage('login')" class="btn  lastB">Log out</button>
-            <br>
-        </div>
-    </div>
-    <app-footer></app-footer>
+<app-header></app-header>
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+  <div  class="card container d-flex flex-column align-items-center">
+    <img style="display: inline-block" class="responsive" src="assets/Mavatar.png " />
+    <h3 >{{university.SupervisorName}}</h3>
+    <p class="idd" style="opacity: 0.5">{{university.Email}}</p>
+    <br /><br />
+    <div></div>
+    <button (click)="goToPage('Uni-trainees')" class="btn btn-success twoB">
+      Trainees List</button><br />
+    <button (click)="goToPage('finishedtrainees')" class="btn btn-success twoB">
+      Trainee who Done hours</button><br />
+    <button (click)="goToPage('login')" class="btn lastB">Log out</button>
+    <br />
+  </div>
+</div>
+<app-footer></app-footer>

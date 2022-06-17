@@ -76,8 +76,16 @@ form ul , li {
   margin-left: 20px;
 }
 .mtop20 button {
- display: list-item;
- margin-left: 116px;
+ display: inline-block;
+ margin-left: 24px;
+}
+.done button{
+  display: block;
+ margin-left: 70px;
+}
+#done{
+  font-size:20px; 
+  width: 30%;
 }
 .checkbox {
   width: 39px;

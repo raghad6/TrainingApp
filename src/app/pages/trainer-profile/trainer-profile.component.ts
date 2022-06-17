@@ -9,18 +9,19 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./trainer-profile.component.css'],
 })
 export class TrainerProfileComponent implements OnInit {
-  trainer:Trainer[]=[];
-  
-  constructor(private router: Router, apiService: ApiService) {
-    apiService.getTrainerData().subscribe((data: Trainer[]) => {
-      // this.trainer = data;
-      console.log(data);
-    });
 
-  }
-  dropdown = false;
-  name = 'Angular';
+  trainer:any;
+  showedtrainer!:Trainer;
   role: any;
+  
+
+  constructor(private router: Router, apiService: ApiService) {
+    let id:any = localStorage.getItem('Email');
+    apiService.getTrainerData1(id).subscribe((data: Trainer[]) => {
+      this.trainer=data[0];
+      console.log(data);  
+    });
+  }
 
   async ngOnInit() {
     this.role = await localStorage.getItem('role');
@@ -28,8 +29,14 @@ export class TrainerProfileComponent implements OnInit {
       console.log(' in on initthis.role: ', this.role);
 
       this.goToPage('');
-    }
+    }    
   }
+
+  changertranee(shranee:Trainer){
+    this.showedtrainer=shranee;
+    console.log(this.showedtrainer,"kjh");
+  }
+
   goToPage(pageName: string) {
     this.router.navigate([`${pageName}`]);
   }

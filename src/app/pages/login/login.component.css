@@ -1,5 +1,11 @@
-
-
+mat-icon {
+  font-size: xx-large;
+  float: left;
+  margin-left: 3%;
+  margin-top: -24%;
+  position: relative;
+  color: white;
+}  
 .req {
   margin-top: 0%;
   padding-top: 0%;

@@ -7,81 +7,98 @@ import { ApiService } from 'src/app/services/api.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
 })
-
 export class SignUpComponent implements OnInit {
-
-  Email:any;
-  psw:any;
-  psw_repeat:any;
+  Email: any;
+  Password: any;
+  Password_repeat: any;
   // role:any=2;
-  alert: boolean=false;
+  alert: boolean = false;
+  alert2: boolean = false;
   Title = 'Sign Up';
   signup = new FormControl('vali');
-  user:User[]=[];
+  // user: User[] = [];
 
   signupForm = new FormGroup({
     Email: new FormControl(''),
-    psw: new FormControl(''),
-    psw_repeat: new FormControl(''),
-
+    Password: new FormControl(''),
+    Password_repeat: new FormControl(''),
   });
   formBuilder: any;
 
-
-  constructor(private router: Router ,
+  constructor(
+    private router: Router,
     formBuilder: FormBuilder,
-    apiService: ApiService) {}
+    private apiService: ApiService
+  ) {}
 
-    ngOnInit(): void {
-      this.signupForm = this.formBuilder.group({
-        Email: ['', [Validators.required, Validators.email]],
-        psw: ['', Validators.required],
-        psw_repeat: ['', Validators.required],
+  ngOnInit(): void {
+    this.signupForm = this.formBuilder.group({
+      Email: ['', [Validators.required, Validators.email]],
+      Password: ['', Validators.required],
+      Password_repeat: ['', Validators.required],
+    });
+  }
+
+  addSignUpData(user: User) {
+    this.apiService.postSignUpNewData(user).subscribe((res) => {
+      console.log(res, 'jkdhfjh');
+    });
+  }
+
+  get valida() {
+    return this.signupForm.controls;
+  }
+
+  log() {
+    console.log('Email: ', this.Email);
+    console.log('Password: ', this.Password);
+    console.log('Password_repeat: ', this.Password_repeat);
+  }
+
+  async appSignup() {
+    // console.log(this.signupForm['Email'].value);
+    
+    console.log('Email: ', this.Email);
+    console.log('Password: ', this.Password);
+    console.log('Password_repeat: ', this.Password_repeat);
+    let us=new User(0,'', this.Password,this.Email);
+
+ this.apiService.postSignUpNewData(us).subscribe((res) => {
+      console.log(res, 'jkdhfjh');
 
     });
+    this.router.navigate([`login`]);
+    //   if(this.Email.includes('@') && this.Email.length>=11 && ( /[a-zA-Z]/.test(this.Password)) && ( /[0-9]/.test(this.Password)) &&( /[a-zA-Z]/.test(this.Password_repeat)) && ( /[0-9]/.test(this.Password_repeat)) ){
+    //     this.alert=false;
 
-    }
+    //    console.log("This is valid ");
+    // // post req signup
 
-    get valida() { 
-      return this.signupForm.controls; 
-    }
-
-    log(){
-      console.log('Email: ', this.Email);
-      console.log('psw: ', this.psw);
-      console.log('psw_repeat: ', this.psw_repeat);
-    }
-
-
-    async appSignup(){
-      console.log('Email: ', this.Email);
-      console.log('psw: ', this.psw);
-      console.log('psw_repeat: ', this.psw_repeat);
-
-      if(this.Email.includes('@') && this.Email.length>=11 && ( /[a-zA-Z]/.test(this.psw)) && ( /[0-9]/.test(this.psw)) &&( /[a-zA-Z]/.test(this.psw_repeat)) && ( /[0-9]/.test(this.psw_repeat)) ){
-        this.alert=false;
-
-       console.log("This is valid ");
-    // post req signup
-
-    this.goToPage('login');
-      }else{
-        this.alert=true;
-        console.log("this is not  valid Email or password");
-      }
-
-    }
-  goToPage(pageName:string){
+    // this.goToPage('login');
+    //   }else{
+    //     this.alert=true;
+    //     console.log("this is not  valid Email or password");
+    //   }
+  }
+  goToPage(pageName: string) {
     this.router.navigate([`${pageName}`]);
   }
 
-  submit(){
-      if (this.signupForm.invalid) { return }
-      else   this.router.navigate([`login`]);
+  submit() {
+    if (this.signupForm.invalid) {
+      return;
+    } else this.router.navigate([`login`]);
 
-    }
+    this.addSignUpData( 
+      new User
+      (1,
+      this.signupForm.controls['Email'].value,
+      this.signupForm.controls['Email'].value,
+      this.signupForm.controls['Password'].value,
 
+    ));
+    this.router.navigate([`login`]);
   }
-
+}
